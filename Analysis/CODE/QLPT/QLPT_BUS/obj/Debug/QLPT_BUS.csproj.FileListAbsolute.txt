@@ -1,0 +1,44 @@
+D:\DH UIT\Học kì 5\OOAD\Project\QLPT\QLPT_BUS\bin\Debug\QLPT_BUS.dll
+D:\DH UIT\Học kì 5\OOAD\Project\QLPT\QLPT_BUS\bin\Debug\QLPT_BUS.pdb
+D:\DH UIT\Học kì 5\OOAD\Project\QLPT\QLPT_BUS\obj\Debug\QLPT_BUS.csprojAssemblyReference.cache
+D:\DH UIT\Học kì 5\OOAD\Project\QLPT\QLPT_BUS\obj\Debug\QLPT_BUS.csproj.CoreCompileInputs.cache
+D:\DH UIT\Học kì 5\OOAD\Project\QLPT\QLPT_BUS\obj\Debug\QLPT_BUS.dll
+D:\DH UIT\Học kì 5\OOAD\Project\QLPT\QLPT_BUS\obj\Debug\QLPT_BUS.pdb
+D:\DH UIT\Học kì 5\OOAD\Project\QLPT\QLPT_BUS\bin\Debug\QLPT_DAL.dll
+D:\DH UIT\Học kì 5\OOAD\Project\QLPT\QLPT_BUS\bin\Debug\QLPT_Entity.dll
+D:\DH UIT\Học kì 5\OOAD\Project\QLPT\QLPT_BUS\bin\Debug\QLPT_DAL.pdb
+D:\DH UIT\Học kì 5\OOAD\Project\QLPT\QLPT_BUS\bin\Debug\QLPT_Entity.pdb
+D:\DH UIT\Học kì 5\OOAD\Project\QLPT\QLPT_BUS\obj\Debug\QLPT_BUS.csproj.CopyComplete
+C:\Users\kirichigo\Documents\GitHub\QLPT\QLPT_BUS\bin\Debug\QLPT_BUS.dll
+C:\Users\kirichigo\Documents\GitHub\QLPT\QLPT_BUS\bin\Debug\QLPT_BUS.pdb
+C:\Users\kirichigo\Documents\GitHub\QLPT\QLPT_BUS\bin\Debug\QLPT_DAL.dll
+C:\Users\kirichigo\Documents\GitHub\QLPT\QLPT_BUS\bin\Debug\QLPT_Entity.dll
+C:\Users\kirichigo\Documents\GitHub\QLPT\QLPT_BUS\bin\Debug\QLPT_DAL.pdb
+C:\Users\kirichigo\Documents\GitHub\QLPT\QLPT_BUS\bin\Debug\QLPT_Entity.pdb
+C:\Users\kirichigo\Documents\GitHub\QLPT\QLPT_BUS\obj\Debug\QLPT_BUS.csprojAssemblyReference.cache
+C:\Users\kirichigo\Documents\GitHub\QLPT\QLPT_BUS\obj\Debug\QLPT_BUS.csproj.CoreCompileInputs.cache
+C:\Users\kirichigo\Documents\GitHub\QLPT\QLPT_BUS\obj\Debug\QLPT_BUS.csproj.CopyComplete
+C:\Users\kirichigo\Documents\GitHub\QLPT\QLPT_BUS\obj\Debug\QLPT_BUS.dll
+C:\Users\kirichigo\Documents\GitHub\QLPT\QLPT_BUS\obj\Debug\QLPT_BUS.pdb
+D:\Githud\QLPT\QLPT_BUS\bin\Debug\QLPT_BUS.dll
+D:\Githud\QLPT\QLPT_BUS\bin\Debug\QLPT_BUS.pdb
+D:\Githud\QLPT\QLPT_BUS\bin\Debug\QLPT_DAL.dll
+D:\Githud\QLPT\QLPT_BUS\bin\Debug\QLPT_Entity.dll
+D:\Githud\QLPT\QLPT_BUS\bin\Debug\QLPT_DAL.pdb
+D:\Githud\QLPT\QLPT_BUS\bin\Debug\QLPT_Entity.pdb
+D:\Githud\QLPT\QLPT_BUS\obj\Debug\QLPT_BUS.csprojAssemblyReference.cache
+D:\Githud\QLPT\QLPT_BUS\obj\Debug\QLPT_BUS.csproj.CoreCompileInputs.cache
+D:\Githud\QLPT\QLPT_BUS\obj\Debug\QLPT_BUS.csproj.CopyComplete
+D:\Githud\QLPT\QLPT_BUS\obj\Debug\QLPT_BUS.dll
+D:\Githud\QLPT\QLPT_BUS\obj\Debug\QLPT_BUS.pdb
+D:\DH UIT\Semester 6\PTTKHT\TH\CODE\QLPT\QLPT_BUS\bin\Debug\QLPT_BUS.dll
+D:\DH UIT\Semester 6\PTTKHT\TH\CODE\QLPT\QLPT_BUS\bin\Debug\QLPT_BUS.pdb
+D:\DH UIT\Semester 6\PTTKHT\TH\CODE\QLPT\QLPT_BUS\bin\Debug\QLPT_DAL.dll
+D:\DH UIT\Semester 6\PTTKHT\TH\CODE\QLPT\QLPT_BUS\bin\Debug\QLPT_Entity.dll
+D:\DH UIT\Semester 6\PTTKHT\TH\CODE\QLPT\QLPT_BUS\bin\Debug\QLPT_DAL.pdb
+D:\DH UIT\Semester 6\PTTKHT\TH\CODE\QLPT\QLPT_BUS\bin\Debug\QLPT_Entity.pdb
+D:\DH UIT\Semester 6\PTTKHT\TH\CODE\QLPT\QLPT_BUS\obj\Debug\QLPT_BUS.csprojAssemblyReference.cache
+D:\DH UIT\Semester 6\PTTKHT\TH\CODE\QLPT\QLPT_BUS\obj\Debug\QLPT_BUS.csproj.CoreCompileInputs.cache
+D:\DH UIT\Semester 6\PTTKHT\TH\CODE\QLPT\QLPT_BUS\obj\Debug\QLPT_BUS.csproj.CopyComplete
+D:\DH UIT\Semester 6\PTTKHT\TH\CODE\QLPT\QLPT_BUS\obj\Debug\QLPT_BUS.dll
+D:\DH UIT\Semester 6\PTTKHT\TH\CODE\QLPT\QLPT_BUS\obj\Debug\QLPT_BUS.pdb
