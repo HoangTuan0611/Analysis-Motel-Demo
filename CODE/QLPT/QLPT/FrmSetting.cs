@@ -16,7 +16,7 @@ namespace QLPT
     public partial class FrmSetting : Form
     {
         int Kiemtra;
-        BUS_quidinh bus = new BUS_quidinh();
+        BUS_Setting bus = new BUS_Setting();
         E_quidinh ec = new E_quidinh();
         public FrmSetting()
         {

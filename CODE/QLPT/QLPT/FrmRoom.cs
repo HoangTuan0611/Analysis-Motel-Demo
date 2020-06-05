@@ -23,7 +23,7 @@ namespace QLPT
         }
 
         KetNoiDB db = new KetNoiDB();
-        BUS_phongtro bus = new BUS_phongtro();
+        BUS_Room bus = new BUS_Room();
         E_phongtro ec = new E_phongtro();
 
         void KhoaDieuKien()

@@ -16,7 +16,7 @@ namespace QLPT
 {
     public partial class FrmStastistic : Form
     {
-        BUS_thongke bus = new BUS_thongke();
+        BUS_Stastistic bus = new BUS_Stastistic();
         string month;
         string year;
         public FrmStastistic()

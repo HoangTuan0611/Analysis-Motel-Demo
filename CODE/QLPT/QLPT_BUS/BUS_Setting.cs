@@ -9,7 +9,7 @@ using System.Data;
 
 namespace QLPT_BUS
 {
-    public class BUS_quidinh
+    public class BUS_Setting
     {
         DAL_quidinh sql = new DAL_quidinh();
         public void SuaDuLieu(E_quidinh et)

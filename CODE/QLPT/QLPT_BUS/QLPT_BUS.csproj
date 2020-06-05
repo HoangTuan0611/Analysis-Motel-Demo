@@ -41,12 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BUS_khachtro.cs" />
-    <Compile Include="BUS_phongtro.cs" />
-    <Compile Include="BUS_quidinh.cs" />
-    <Compile Include="BUS_thongke.cs" />
-    <Compile Include="BUS_thutien.cs" />
-    <Compile Include="BUS_traphong.cs" />
+    <Compile Include="BUS_HireRoom.cs" />
+    <Compile Include="BUS_Room.cs" />
+    <Compile Include="BUS_Setting.cs" />
+    <Compile Include="BUS_Stastistic.cs" />
+    <Compile Include="BUS_Receipt.cs" />
+    <Compile Include="BUS_Checkout.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -9,7 +9,7 @@ using QLPT_Entity;
 
 namespace QLPT_BUS
 {
-    public class BUS_khachtro
+    public class BUS_HireRoom
     {
         DAL_khachtro sql = new DAL_khachtro();
 

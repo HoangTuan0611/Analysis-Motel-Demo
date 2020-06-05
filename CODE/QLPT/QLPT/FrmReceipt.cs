@@ -26,7 +26,7 @@ namespace QLPT
         string year;
         string month;
         int soluongnguoi;
-        BUS_thutien bus = new BUS_thutien();
+        BUS_Receipt bus = new BUS_Receipt();
         E_thutien ec = new E_thutien();
         public FrmReceipt()
         {

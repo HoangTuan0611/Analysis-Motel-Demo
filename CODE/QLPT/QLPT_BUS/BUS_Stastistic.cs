@@ -8,7 +8,7 @@ using QLPT_Entity;
 using System.Data;
 namespace QLPT_BUS
 {
-    public class BUS_thongke
+    public class BUS_Stastistic
     {
         DAL_thongke sql = new DAL_thongke();
         public DataTable taobang(string DieuKien1,string DieuKien2)

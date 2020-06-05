@@ -25,7 +25,7 @@ namespace QLPT
             InitializeComponent();
         }
         KetNoiDB db = new KetNoiDB();
-        BUS_khachtro bus = new BUS_khachtro();
+        BUS_HireRoom bus = new BUS_HireRoom();
         E_khachtro ec = new E_khachtro();
         
 

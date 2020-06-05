@@ -13,7 +13,7 @@ namespace QLPT
 {
     public partial class FrmCheckOut : Form
     {
-        BUS_traphong bus = new BUS_traphong();
+        BUS_Checkout bus = new BUS_Checkout();
         public FrmCheckOut()
         {
             InitializeComponent();

@@ -8,7 +8,7 @@ using System.Data;
 
 namespace QLPT_BUS
 {
-    public class BUS_traphong
+    public class BUS_Checkout
     {
         DAL_traphong sql = new DAL_traphong();
         public DataTable TaoBang(string DieuKien)

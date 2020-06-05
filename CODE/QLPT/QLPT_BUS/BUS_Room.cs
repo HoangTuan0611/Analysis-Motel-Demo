@@ -9,7 +9,7 @@ using System.Data;
 
 namespace QLPT_BUS
 {
-    public class BUS_phongtro
+    public class BUS_Room
     {
         DAL_phongtro sql = new DAL_phongtro();
 

@@ -9,7 +9,7 @@ using System.Data;
 
 namespace QLPT_BUS
 {
-    public class BUS_thutien
+    public class BUS_Receipt
     {
         DAL_thutien sql = new DAL_thutien();
         public DataTable LayThongtinmapt(string DieuKien)
