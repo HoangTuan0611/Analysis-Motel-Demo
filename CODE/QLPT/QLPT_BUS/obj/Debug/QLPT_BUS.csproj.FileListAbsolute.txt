@@ -42,3 +42,14 @@ D:\DH UIT\Semester 6\PTTKHT\TH\CODE\QLPT\QLPT_BUS\obj\Debug\QLPT_BUS.csproj.Core
 D:\DH UIT\Semester 6\PTTKHT\TH\CODE\QLPT\QLPT_BUS\obj\Debug\QLPT_BUS.csproj.CopyComplete
 D:\DH UIT\Semester 6\PTTKHT\TH\CODE\QLPT\QLPT_BUS\obj\Debug\QLPT_BUS.dll
 D:\DH UIT\Semester 6\PTTKHT\TH\CODE\QLPT\QLPT_BUS\obj\Debug\QLPT_BUS.pdb
+D:\Analysis-Motel-Demo\CODE\QLPT\QLPT_BUS\bin\Debug\QLPT_BUS.dll
+D:\Analysis-Motel-Demo\CODE\QLPT\QLPT_BUS\bin\Debug\QLPT_BUS.pdb
+D:\Analysis-Motel-Demo\CODE\QLPT\QLPT_BUS\bin\Debug\QLPT_DAL.dll
+D:\Analysis-Motel-Demo\CODE\QLPT\QLPT_BUS\bin\Debug\QLPT_Entity.dll
+D:\Analysis-Motel-Demo\CODE\QLPT\QLPT_BUS\bin\Debug\QLPT_DAL.pdb
+D:\Analysis-Motel-Demo\CODE\QLPT\QLPT_BUS\bin\Debug\QLPT_Entity.pdb
+D:\Analysis-Motel-Demo\CODE\QLPT\QLPT_BUS\obj\Debug\QLPT_BUS.csprojAssemblyReference.cache
+D:\Analysis-Motel-Demo\CODE\QLPT\QLPT_BUS\obj\Debug\QLPT_BUS.csproj.CoreCompileInputs.cache
+D:\Analysis-Motel-Demo\CODE\QLPT\QLPT_BUS\obj\Debug\QLPT_BUS.csproj.CopyComplete
+D:\Analysis-Motel-Demo\CODE\QLPT\QLPT_BUS\obj\Debug\QLPT_BUS.dll
+D:\Analysis-Motel-Demo\CODE\QLPT\QLPT_BUS\obj\Debug\QLPT_BUS.pdb

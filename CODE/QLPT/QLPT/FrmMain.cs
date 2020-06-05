@@ -21,29 +21,29 @@ namespace QLPT
         private void FrmMain_Load(object sender, EventArgs e)
         {
             KhoaDieuKien();
-            tbtndangNhap_Click(sender, e);
+            tipLogin_Click(sender, e);
         }
         void KhoaDieuKien()
         {
-            tbtnquydinh.Enabled = false;
-            tbtndangnhap.Enabled = true;
-            tbtnphongtro.Enabled = false;
-            tbtnthongke.Enabled = false;
-            tbtnthuephong.Enabled = false;
+            tipSetting.Enabled = false;
+            tipLogin.Enabled = true;
+            tipRoom.Enabled = false;
+            tipStastistic.Enabled = false;
+            tipHireRoom.Enabled = false;
         }
         void MoDieuKien()
         {
-            tbtnquydinh.Enabled = true;
-            tbtndangnhap.Enabled = true;
-            tbtnphongtro.Enabled = true;
-            tbtnthongke.Enabled = true;
-            tbtnthuephong.Enabled = true;
+            tipSetting.Enabled = true;
+            tipLogin.Enabled = true;
+            tipRoom.Enabled = true;
+            tipStastistic.Enabled = true;
+            tipHireRoom.Enabled = true;
         }
-        private void tbtndangNhap_Click(object sender, EventArgs e)
+        private void tipLogin_Click(object sender, EventArgs e)
         {
-            if (tbtndangnhap.Text == "Đăng nhập" && this.lbltaikhoan.Text == "")
+            if (tipLogin.Text == "Log In" && this.lbltaikhoan.Text == "")
             {
-                Frmdangnhap dn = new Frmdangnhap();
+                FrmLogin dn = new FrmLogin();
                 // chỉ 1 cửa sổ được mở ra!
                 dn.ShowDialog();
 
@@ -51,64 +51,66 @@ namespace QLPT
                 if (!string.IsNullOrEmpty(TaiKhoan))
                 {
                     this.lbltaikhoan.Text = TaiKhoan;
+                    this.lbltaikhoan.BackColor = System.Drawing.Color.Transparent;
+                    this.lbltaikhoan.ForeColor = System.Drawing.Color.Teal;
                     MoDieuKien();
-                    tbtndangnhap.Text = "Đăng xuất";
+                    tipLogin.Text = "Log Out";
                 }
             }
             else
             {
 
                 DialogResult thongbao;
-                thongbao = (MessageBox.Show("Bạn có thật sự muốn đăng xuất?", "Chú ý", MessageBoxButtons.YesNo, MessageBoxIcon.Question));
+                thongbao = (MessageBox.Show("Do you want to Log out", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question));
                 if (thongbao == DialogResult.Yes)
                 {
                     KhoaDieuKien();
                     this.lbltaikhoan.Text = "";
-                    tbtndangnhap.Text = "Đăng nhập";
+                    tipLogin.Text = "Log In";
                 }
 
                 if (this.lbltaikhoan.Text == "")
                 {
                     KhoaDieuKien();
-                    tbtndangnhap.Text = "Đăng nhập";
+                    tipLogin.Text = "Log In";
                 }
 
             }
         }
 
-        private void tbtnthuephong_Click(object sender, EventArgs e)
+        private void tipHireRoom_Click(object sender, EventArgs e)
         {
             Frmkhachtro kt = new Frmkhachtro();
             kt.ShowDialog();
         }
 
-        private void danhSáchPhòngToolStripMenuItem_Click(object sender, EventArgs e)
+        private void tipRoomManagement_Click(object sender, EventArgs e)
         {
-            Frmphongtro pt = new Frmphongtro();
+            FrmRoom pt = new FrmRoom();
             pt.ShowDialog();
         }
 
-        private void TrảPhòngToolStripMenuItem_Click(object sender, EventArgs e)
+        private void tipCheckOut_Click(object sender, EventArgs e)
         {
-            Frmtraphong tp = new Frmtraphong();
+            FrmCheckOut tp = new FrmCheckOut();
             tp.ShowDialog();
         }
 
-        private void ToolStripButton1_Click(object sender, EventArgs e)
+        private void tipSetting_Click(object sender, EventArgs e)
         {
-            Frmquidinh qd = new Frmquidinh();
+            FrmSetting qd = new FrmSetting();
             qd.ShowDialog();
         }
 
-        private void ThuTiềnToolStripMenuItem_Click(object sender, EventArgs e)
+        private void tipReceipt_Click(object sender, EventArgs e)
         {
-            Frmthutien tt = new Frmthutien();
+            FrmReceipt tt = new FrmReceipt();
             tt.ShowDialog();
         }
 
-        private void Tbtnthongke_Click(object sender, EventArgs e)
+        private void tipStastistic_Click(object sender, EventArgs e)
         {
-            Frmthongke tk = new Frmthongke();
+            FrmStastistic tk = new FrmStastistic();
             tk.ShowDialog();
         }
     }

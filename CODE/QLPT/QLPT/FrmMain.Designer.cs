@@ -30,16 +30,16 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.tbtndangnhap = new System.Windows.Forms.ToolStripButton();
-            this.tbtnthuephong = new System.Windows.Forms.ToolStripButton();
-            this.tbtnphongtro = new System.Windows.Forms.ToolStripSplitButton();
-            this.danhSáchPhòngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.thuTiềnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.trảPhòngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tbtnthongke = new System.Windows.Forms.ToolStripButton();
-            this.tbtnquydinh = new System.Windows.Forms.ToolStripButton();
+            this.tipLogin = new System.Windows.Forms.ToolStripButton();
+            this.tipHireRoom = new System.Windows.Forms.ToolStripButton();
+            this.tipRoom = new System.Windows.Forms.ToolStripSplitButton();
+            this.tipRoomManagement = new System.Windows.Forms.ToolStripMenuItem();
+            this.tipReceipt = new System.Windows.Forms.ToolStripMenuItem();
+            this.tipCheckOut = new System.Windows.Forms.ToolStripMenuItem();
+            this.tipStastistic = new System.Windows.Forms.ToolStripButton();
+            this.tipSetting = new System.Windows.Forms.ToolStripButton();
             this.lbltaikhoan = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblUserName = new System.Windows.Forms.Label();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,122 +47,127 @@
             // 
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tbtndangnhap,
-            this.tbtnthuephong,
-            this.tbtnphongtro,
-            this.tbtnthongke,
-            this.tbtnquydinh});
+            this.tipLogin,
+            this.tipHireRoom,
+            this.tipRoom,
+            this.tipStastistic,
+            this.tipSetting});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(878, 27);
+            this.toolStrip1.Size = new System.Drawing.Size(658, 27);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // tbtndangnhap
+            // tipLogin
             // 
-            this.tbtndangnhap.Image = ((System.Drawing.Image)(resources.GetObject("tbtndangnhap.Image")));
-            this.tbtndangnhap.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.tbtndangnhap.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tbtndangnhap.Name = "tbtndangnhap";
-            this.tbtndangnhap.Size = new System.Drawing.Size(106, 24);
-            this.tbtndangnhap.Text = "Đăng nhập";
-            this.tbtndangnhap.Click += new System.EventHandler(this.tbtndangNhap_Click);
+            this.tipLogin.Image = ((System.Drawing.Image)(resources.GetObject("tipLogin.Image")));
+            this.tipLogin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tipLogin.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tipLogin.Name = "tipLogin";
+            this.tipLogin.Size = new System.Drawing.Size(64, 24);
+            this.tipLogin.Text = "Log In";
+            this.tipLogin.Click += new System.EventHandler(this.tipLogin_Click);
             // 
-            // tbtnthuephong
+            // tipHireRoom
             // 
-            this.tbtnthuephong.Image = ((System.Drawing.Image)(resources.GetObject("tbtnthuephong.Image")));
-            this.tbtnthuephong.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tbtnthuephong.Name = "tbtnthuephong";
-            this.tbtnthuephong.Size = new System.Drawing.Size(112, 24);
-            this.tbtnthuephong.Text = "Thuê phòng";
-            this.tbtnthuephong.Click += new System.EventHandler(this.tbtnthuephong_Click);
+            this.tipHireRoom.Image = ((System.Drawing.Image)(resources.GetObject("tipHireRoom.Image")));
+            this.tipHireRoom.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tipHireRoom.Name = "tipHireRoom";
+            this.tipHireRoom.Size = new System.Drawing.Size(88, 24);
+            this.tipHireRoom.Text = "Hire Room";
+            this.tipHireRoom.Click += new System.EventHandler(this.tipHireRoom_Click);
             // 
-            // tbtnphongtro
+            // tipRoom
             // 
-            this.tbtnphongtro.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.danhSáchPhòngToolStripMenuItem,
-            this.thuTiềnToolStripMenuItem,
-            this.trảPhòngToolStripMenuItem});
-            this.tbtnphongtro.Image = ((System.Drawing.Image)(resources.GetObject("tbtnphongtro.Image")));
-            this.tbtnphongtro.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tbtnphongtro.Name = "tbtnphongtro";
-            this.tbtnphongtro.Size = new System.Drawing.Size(113, 24);
-            this.tbtnphongtro.Text = "Phòng trọ";
+            this.tipRoom.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tipRoomManagement,
+            this.tipReceipt,
+            this.tipCheckOut});
+            this.tipRoom.Image = ((System.Drawing.Image)(resources.GetObject("tipRoom.Image")));
+            this.tipRoom.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tipRoom.Name = "tipRoom";
+            this.tipRoom.Size = new System.Drawing.Size(75, 24);
+            this.tipRoom.Text = "Room";
             // 
-            // danhSáchPhòngToolStripMenuItem
+            // tipRoomManagement
             // 
-            this.danhSáchPhòngToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("danhSáchPhòngToolStripMenuItem.Image")));
-            this.danhSáchPhòngToolStripMenuItem.Name = "danhSáchPhòngToolStripMenuItem";
-            this.danhSáchPhòngToolStripMenuItem.Size = new System.Drawing.Size(199, 26);
-            this.danhSáchPhòngToolStripMenuItem.Text = "Danh sách phòng";
-            this.danhSáchPhòngToolStripMenuItem.Click += new System.EventHandler(this.danhSáchPhòngToolStripMenuItem_Click);
+            this.tipRoomManagement.Image = ((System.Drawing.Image)(resources.GetObject("tipRoomManagement.Image")));
+            this.tipRoomManagement.Name = "tipRoomManagement";
+            this.tipRoomManagement.Size = new System.Drawing.Size(184, 26);
+            this.tipRoomManagement.Text = "Room Management";
+            this.tipRoomManagement.Click += new System.EventHandler(this.tipRoomManagement_Click);
             // 
-            // thuTiềnToolStripMenuItem
+            // tipReceipt
             // 
-            this.thuTiềnToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("thuTiềnToolStripMenuItem.Image")));
-            this.thuTiềnToolStripMenuItem.Name = "thuTiềnToolStripMenuItem";
-            this.thuTiềnToolStripMenuItem.Size = new System.Drawing.Size(199, 26);
-            this.thuTiềnToolStripMenuItem.Text = "Thu tiền";
-            this.thuTiềnToolStripMenuItem.Click += new System.EventHandler(this.ThuTiềnToolStripMenuItem_Click);
+            this.tipReceipt.Image = ((System.Drawing.Image)(resources.GetObject("tipReceipt.Image")));
+            this.tipReceipt.Name = "tipReceipt";
+            this.tipReceipt.Size = new System.Drawing.Size(184, 26);
+            this.tipReceipt.Text = "Receipt";
+            this.tipReceipt.Click += new System.EventHandler(this.tipReceipt_Click);
             // 
-            // trảPhòngToolStripMenuItem
+            // tipCheckOut
             // 
-            this.trảPhòngToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("trảPhòngToolStripMenuItem.Image")));
-            this.trảPhòngToolStripMenuItem.Name = "trảPhòngToolStripMenuItem";
-            this.trảPhòngToolStripMenuItem.Size = new System.Drawing.Size(199, 26);
-            this.trảPhòngToolStripMenuItem.Text = "Trả phòng";
-            this.trảPhòngToolStripMenuItem.Click += new System.EventHandler(this.TrảPhòngToolStripMenuItem_Click);
+            this.tipCheckOut.Image = ((System.Drawing.Image)(resources.GetObject("tipCheckOut.Image")));
+            this.tipCheckOut.Name = "tipCheckOut";
+            this.tipCheckOut.Size = new System.Drawing.Size(184, 26);
+            this.tipCheckOut.Text = "Check Out";
+            this.tipCheckOut.Click += new System.EventHandler(this.tipCheckOut_Click);
             // 
-            // tbtnthongke
+            // tipStastistic
             // 
-            this.tbtnthongke.Image = ((System.Drawing.Image)(resources.GetObject("tbtnthongke.Image")));
-            this.tbtnthongke.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tbtnthongke.Name = "tbtnthongke";
-            this.tbtnthongke.Size = new System.Drawing.Size(94, 24);
-            this.tbtnthongke.Text = "Thống kê";
-            this.tbtnthongke.Click += new System.EventHandler(this.Tbtnthongke_Click);
+            this.tipStastistic.Image = ((System.Drawing.Image)(resources.GetObject("tipStastistic.Image")));
+            this.tipStastistic.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tipStastistic.Name = "tipStastistic";
+            this.tipStastistic.Size = new System.Drawing.Size(72, 24);
+            this.tipStastistic.Text = "Statistic";
+            this.tipStastistic.Click += new System.EventHandler(this.tipStastistic_Click);
             // 
-            // tbtnquydinh
+            // tipSetting
             // 
-            this.tbtnquydinh.Image = ((System.Drawing.Image)(resources.GetObject("tbtnquydinh.Image")));
-            this.tbtnquydinh.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tbtnquydinh.Name = "tbtnquydinh";
-            this.tbtnquydinh.Size = new System.Drawing.Size(91, 24);
-            this.tbtnquydinh.Text = "Qui Định";
-            this.tbtnquydinh.Click += new System.EventHandler(this.ToolStripButton1_Click);
+            this.tipSetting.Image = ((System.Drawing.Image)(resources.GetObject("tipSetting.Image")));
+            this.tipSetting.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tipSetting.Name = "tipSetting";
+            this.tipSetting.Size = new System.Drawing.Size(68, 24);
+            this.tipSetting.Text = "Setting";
+            this.tipSetting.Click += new System.EventHandler(this.tipSetting_Click);
             // 
             // lbltaikhoan
             // 
             this.lbltaikhoan.AutoSize = true;
-            this.lbltaikhoan.Location = new System.Drawing.Point(183, 454);
+            this.lbltaikhoan.Location = new System.Drawing.Point(137, 369);
+            this.lbltaikhoan.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbltaikhoan.Name = "lbltaikhoan";
-            this.lbltaikhoan.Size = new System.Drawing.Size(0, 17);
+            this.lbltaikhoan.Size = new System.Drawing.Size(0, 13);
             this.lbltaikhoan.TabIndex = 1;
             // 
-            // label1
+            // lblUserName
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(23, 454);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(154, 17);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Tài khoản người dùng: ";
+            this.lblUserName.AutoSize = true;
+            this.lblUserName.BackColor = System.Drawing.Color.Transparent;
+            this.lblUserName.ForeColor = System.Drawing.Color.Teal;
+            this.lblUserName.Location = new System.Drawing.Point(17, 369);
+            this.lblUserName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblUserName.Name = "lblUserName";
+            this.lblUserName.Size = new System.Drawing.Size(72, 13);
+            this.lblUserName.TabIndex = 2;
+            this.lblUserName.Text = "User Account";
             // 
             // FrmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(878, 490);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(658, 398);
+            this.Controls.Add(this.lblUserName);
             this.Controls.Add(this.lbltaikhoan);
             this.Controls.Add(this.toolStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
             this.Name = "FrmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Quản lý phòng trọ";
+            this.Text = "Motel Management System";
             this.Load += new System.EventHandler(this.FrmMain_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
@@ -174,15 +179,15 @@
         #endregion
 
         private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripButton tbtndangnhap;
-        private System.Windows.Forms.ToolStripButton tbtnthuephong;
-        private System.Windows.Forms.ToolStripButton tbtnthongke;
-        private System.Windows.Forms.ToolStripSplitButton tbtnphongtro;
-        private System.Windows.Forms.ToolStripMenuItem danhSáchPhòngToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem thuTiềnToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem trảPhòngToolStripMenuItem;
+        private System.Windows.Forms.ToolStripButton tipLogin;
+        private System.Windows.Forms.ToolStripButton tipHireRoom;
+        private System.Windows.Forms.ToolStripButton tipStastistic;
+        private System.Windows.Forms.ToolStripSplitButton tipRoom;
+        private System.Windows.Forms.ToolStripMenuItem tipRoomManagement;
+        private System.Windows.Forms.ToolStripMenuItem tipReceipt;
+        private System.Windows.Forms.ToolStripMenuItem tipCheckOut;
         private System.Windows.Forms.Label lbltaikhoan;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ToolStripButton tbtnquydinh;
+        private System.Windows.Forms.Label lblUserName;
+        private System.Windows.Forms.ToolStripButton tipSetting;
     }
 }

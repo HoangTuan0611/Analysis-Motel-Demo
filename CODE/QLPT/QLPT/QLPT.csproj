@@ -52,23 +52,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Frmdangnhap.cs">
+    <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frmdangnhap.Designer.cs">
-      <DependentUpon>Frmdangnhap.cs</DependentUpon>
+    <Compile Include="FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frmquidinh.cs">
+    <Compile Include="FrmSetting.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frmquidinh.Designer.cs">
-      <DependentUpon>Frmquidinh.cs</DependentUpon>
+    <Compile Include="FrmSetting.Designer.cs">
+      <DependentUpon>FrmSetting.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frmthuephong.cs">
+    <Compile Include="FrmHireRoom.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frmthuephong.Designer.cs">
-      <DependentUpon>Frmthuephong.cs</DependentUpon>
+    <Compile Include="FrmHireRoom.Designer.cs">
+      <DependentUpon>FrmHireRoom.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmMain.cs">
       <SubType>Form</SubType>
@@ -76,55 +76,55 @@
     <Compile Include="FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frmphongtro.cs">
+    <Compile Include="FrmRoom.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frmphongtro.Designer.cs">
-      <DependentUpon>Frmphongtro.cs</DependentUpon>
+    <Compile Include="FrmRoom.Designer.cs">
+      <DependentUpon>FrmRoom.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frmthongke.cs">
+    <Compile Include="FrmStastistic.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frmthongke.Designer.cs">
-      <DependentUpon>Frmthongke.cs</DependentUpon>
+    <Compile Include="FrmStastistic.Designer.cs">
+      <DependentUpon>FrmStastistic.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frmthutien.cs">
+    <Compile Include="FrmReceipt.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frmthutien.Designer.cs">
-      <DependentUpon>Frmthutien.cs</DependentUpon>
+    <Compile Include="FrmReceipt.Designer.cs">
+      <DependentUpon>FrmReceipt.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frmtraphong.cs">
+    <Compile Include="FrmCheckOut.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frmtraphong.Designer.cs">
-      <DependentUpon>Frmtraphong.cs</DependentUpon>
+    <Compile Include="FrmCheckOut.Designer.cs">
+      <DependentUpon>FrmCheckOut.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Frmdangnhap.resx">
-      <DependentUpon>Frmdangnhap.cs</DependentUpon>
+    <EmbeddedResource Include="FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frmquidinh.resx">
-      <DependentUpon>Frmquidinh.cs</DependentUpon>
+    <EmbeddedResource Include="FrmSetting.resx">
+      <DependentUpon>FrmSetting.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frmthuephong.resx">
-      <DependentUpon>Frmthuephong.cs</DependentUpon>
+    <EmbeddedResource Include="FrmHireRoom.resx">
+      <DependentUpon>FrmHireRoom.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frmphongtro.resx">
-      <DependentUpon>Frmphongtro.cs</DependentUpon>
+    <EmbeddedResource Include="FrmRoom.resx">
+      <DependentUpon>FrmRoom.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frmthongke.resx">
-      <DependentUpon>Frmthongke.cs</DependentUpon>
+    <EmbeddedResource Include="FrmStastistic.resx">
+      <DependentUpon>FrmStastistic.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frmthutien.resx">
-      <DependentUpon>Frmthutien.cs</DependentUpon>
+    <EmbeddedResource Include="FrmReceipt.resx">
+      <DependentUpon>FrmReceipt.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frmtraphong.resx">
-      <DependentUpon>Frmtraphong.cs</DependentUpon>
+    <EmbeddedResource Include="FrmCheckOut.resx">
+      <DependentUpon>FrmCheckOut.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -108,3 +108,30 @@ D:\DH UIT\Semester 6\PTTKHT\TH\CODE\QLPT\QLPT\obj\Debug\QLPT.csproj.CoreCompileI
 D:\DH UIT\Semester 6\PTTKHT\TH\CODE\QLPT\QLPT\obj\Debug\QLPT.csproj.CopyComplete
 D:\DH UIT\Semester 6\PTTKHT\TH\CODE\QLPT\QLPT\obj\Debug\QLPT.exe
 D:\DH UIT\Semester 6\PTTKHT\TH\CODE\QLPT\QLPT\obj\Debug\QLPT.pdb
+D:\Analysis-Motel-Demo\CODE\QLPT\QLPT\bin\Debug\QLPT.exe.config
+D:\Analysis-Motel-Demo\CODE\QLPT\QLPT\bin\Debug\QLPT.exe
+D:\Analysis-Motel-Demo\CODE\QLPT\QLPT\bin\Debug\QLPT.pdb
+D:\Analysis-Motel-Demo\CODE\QLPT\QLPT\bin\Debug\QLPT_BUS.dll
+D:\Analysis-Motel-Demo\CODE\QLPT\QLPT\bin\Debug\QLPT_DAL.dll
+D:\Analysis-Motel-Demo\CODE\QLPT\QLPT\bin\Debug\QLPT_Entity.dll
+D:\Analysis-Motel-Demo\CODE\QLPT\QLPT\bin\Debug\Microsoft.QualityTools.Testing.Fakes.dll
+D:\Analysis-Motel-Demo\CODE\QLPT\QLPT\bin\Debug\QLPT_BUS.pdb
+D:\Analysis-Motel-Demo\CODE\QLPT\QLPT\bin\Debug\QLPT_DAL.pdb
+D:\Analysis-Motel-Demo\CODE\QLPT\QLPT\bin\Debug\QLPT_Entity.pdb
+D:\Analysis-Motel-Demo\CODE\QLPT\QLPT\bin\Debug\Sqlhelper.1.0.0.0.Fakes.xml
+D:\Analysis-Motel-Demo\CODE\QLPT\QLPT\obj\Debug\QLPT.csprojAssemblyReference.cache
+D:\Analysis-Motel-Demo\CODE\QLPT\QLPT\obj\Debug\QLPT.csproj.ResolveComReference.cache
+D:\Analysis-Motel-Demo\CODE\QLPT\QLPT\obj\Debug\QLPT.Frmkhachtro.resources
+D:\Analysis-Motel-Demo\CODE\QLPT\QLPT\obj\Debug\QLPT.FrmMain.resources
+D:\Analysis-Motel-Demo\CODE\QLPT\QLPT\obj\Debug\QLPT.Properties.Resources.resources
+D:\Analysis-Motel-Demo\CODE\QLPT\QLPT\obj\Debug\QLPT.csproj.GenerateResource.cache
+D:\Analysis-Motel-Demo\CODE\QLPT\QLPT\obj\Debug\QLPT.csproj.CoreCompileInputs.cache
+D:\Analysis-Motel-Demo\CODE\QLPT\QLPT\obj\Debug\QLPT.csproj.CopyComplete
+D:\Analysis-Motel-Demo\CODE\QLPT\QLPT\obj\Debug\QLPT.exe
+D:\Analysis-Motel-Demo\CODE\QLPT\QLPT\obj\Debug\QLPT.pdb
+D:\Analysis-Motel-Demo\CODE\QLPT\QLPT\obj\Debug\QLPT.FrmLogin.resources
+D:\Analysis-Motel-Demo\CODE\QLPT\QLPT\obj\Debug\QLPT.FrmSetting.resources
+D:\Analysis-Motel-Demo\CODE\QLPT\QLPT\obj\Debug\QLPT.FrmRoom.resources
+D:\Analysis-Motel-Demo\CODE\QLPT\QLPT\obj\Debug\QLPT.FrmStastistic.resources
+D:\Analysis-Motel-Demo\CODE\QLPT\QLPT\obj\Debug\QLPT.FrmReceipt.resources
+D:\Analysis-Motel-Demo\CODE\QLPT\QLPT\obj\Debug\QLPT.FrmCheckOut.resources

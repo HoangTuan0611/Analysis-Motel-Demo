@@ -34,3 +34,12 @@ D:\DH UIT\Semester 6\PTTKHT\TH\CODE\QLPT\QLPT_DAL\obj\Debug\QLPT_DAL.csproj.Core
 D:\DH UIT\Semester 6\PTTKHT\TH\CODE\QLPT\QLPT_DAL\obj\Debug\QLPT_DAL.csproj.CopyComplete
 D:\DH UIT\Semester 6\PTTKHT\TH\CODE\QLPT\QLPT_DAL\obj\Debug\QLPT_DAL.dll
 D:\DH UIT\Semester 6\PTTKHT\TH\CODE\QLPT\QLPT_DAL\obj\Debug\QLPT_DAL.pdb
+D:\Analysis-Motel-Demo\CODE\QLPT\QLPT_DAL\bin\Debug\QLPT_DAL.dll
+D:\Analysis-Motel-Demo\CODE\QLPT\QLPT_DAL\bin\Debug\QLPT_DAL.pdb
+D:\Analysis-Motel-Demo\CODE\QLPT\QLPT_DAL\bin\Debug\QLPT_Entity.dll
+D:\Analysis-Motel-Demo\CODE\QLPT\QLPT_DAL\bin\Debug\QLPT_Entity.pdb
+D:\Analysis-Motel-Demo\CODE\QLPT\QLPT_DAL\obj\Debug\QLPT_DAL.csprojAssemblyReference.cache
+D:\Analysis-Motel-Demo\CODE\QLPT\QLPT_DAL\obj\Debug\QLPT_DAL.csproj.CoreCompileInputs.cache
+D:\Analysis-Motel-Demo\CODE\QLPT\QLPT_DAL\obj\Debug\QLPT_DAL.csproj.CopyComplete
+D:\Analysis-Motel-Demo\CODE\QLPT\QLPT_DAL\obj\Debug\QLPT_DAL.dll
+D:\Analysis-Motel-Demo\CODE\QLPT\QLPT_DAL\obj\Debug\QLPT_DAL.pdb
