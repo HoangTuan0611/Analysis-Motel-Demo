@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace QLPT_Entity
 {
-    public class E_quidinh
+    public class E_Setting
     {
         private string _tienphongnho;
         private string _tienphonglon;

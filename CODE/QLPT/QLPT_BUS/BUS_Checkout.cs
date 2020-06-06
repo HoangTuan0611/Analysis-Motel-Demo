@@ -10,7 +10,7 @@ namespace QLPT_BUS
 {
     public class BUS_Checkout
     {
-        DAL_traphong sql = new DAL_traphong();
+        DAL_Checkout sql = new DAL_Checkout();
         public DataTable TaoBang(string DieuKien)
         {
             return sql.TaoBang(DieuKien);

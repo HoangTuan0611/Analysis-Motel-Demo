@@ -8,23 +8,23 @@ using QLPT_Entity;
 
 namespace QLPT_DAL
 {
-    public class DAL_phongtro
+    public class DAL_Room
     {
-        KetNoiDB cn = new KetNoiDB();
+        ConnectDB cn = new ConnectDB();
 
         
         // Thêm Dữ Liệu
-        public void ThemDuLieu(E_phongtro et)
+        public void ThemDuLieu(E_Room et)
         {
             cn.ThucThiCauLenh(@"INSERT INTO phongtro (mapt, tang, tenphong, loai, sltoida, trangthai) VALUES  ('" + et.mapt + "',N'" + et.tang + "',N'" + et.tenphong + "',N'" + et.loai + "',N'" + et.sltoida + "',N'" + et.trangthai + "')");
         }
         //Sửa
-        public void SuaDuLieu(E_phongtro et)
+        public void SuaDuLieu(E_Room et)
         {
             cn.ThucThiCauLenh(@"UPDATE phongtro SET tang = N'" + et.tang + "', tenphong =N'" + et.tenphong + "', loai ='" + et.loai + "', sltoida ='" + et.sltoida + "', trangthai ='" + et.trangthai + "' Where mapt='" + et.mapt + "'");
         }
         //Xoá
-        public void XoaDuLieu(E_phongtro et)
+        public void XoaDuLieu(E_Room et)
         {
 
             cn.ThucThiCauLenh(@"DELETE FROM phongtro  Where mapt='" + et.mapt + "'");

@@ -7,9 +7,9 @@ using System.Data;
 using QLPT_Entity;
 namespace QLPT_DAL
 {
-    public class DAL_thutien
+    public class DAL_Receipt
     {
-        KetNoiDB cn = new KetNoiDB();
+        ConnectDB cn = new ConnectDB();
         public DataTable LayThongtinmapt(string DieuKien)
         {
             return cn.GetDataTable("Select mapt from phongtro " + DieuKien);
@@ -38,7 +38,7 @@ namespace QLPT_DAL
         {
             return cn.GetValue("Select COUNT(*) from thutien where mapt='" + DieuKien1 + "' and MONTH(ngaythu)='" + DieuKien2 + "' and YEAR(ngaythu)='" + DieuKien3 + "'");
         }
-        public void ThemDuLieu(E_thutien et)
+        public void ThemDuLieu(E_Receipt et)
         {
             cn.ThucThiCauLenh(@"INSERT INTO thutien (mapt, tiendien, tiennuoc, tienmang, tienxe, tienphong, ngaythu, tongtien) VALUES  ('" + et.mapt + "',N'" + et.tiendien + "',N'" + et.tiennuoc + "',N'" + et.tienmang + "',N'" + et.tienxe + "',N'" + et.tienphong + "',N'" + et.ngaythu + "',N'" + et.tongtien + "')");
         }

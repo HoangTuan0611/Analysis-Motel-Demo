@@ -11,20 +11,20 @@ namespace QLPT_BUS
 {
     public class BUS_HireRoom
     {
-        DAL_khachtro sql = new DAL_khachtro();
+        DAL_HireRoom sql = new DAL_HireRoom();
 
         // Thêm Dữ Liệu
-        public void ThemDuLieu(E_khachtro et)
+        public void ThemDuLieu(E_HireRoom et)
         {
             sql.ThemDuLieu(et);
         }
         //Sửa
-        public void SuaDuLieu(E_khachtro et)
+        public void SuaDuLieu(E_HireRoom et)
         {
             sql.SuaDuLieu(et);
         }
         //Xoá
-        public void XoaDuLieu(E_khachtro et)
+        public void XoaDuLieu(E_HireRoom et)
         {
             sql.XoaDuLieu(et);
         }

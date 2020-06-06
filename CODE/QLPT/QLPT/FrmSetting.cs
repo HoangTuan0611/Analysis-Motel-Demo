@@ -17,7 +17,7 @@ namespace QLPT
     {
         int Kiemtra;
         BUS_Setting bus = new BUS_Setting();
-        E_quidinh ec = new E_quidinh();
+        E_Setting ec = new E_Setting();
         public FrmSetting()
         {
             InitializeComponent();

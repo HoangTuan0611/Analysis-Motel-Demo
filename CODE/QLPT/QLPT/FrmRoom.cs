@@ -22,9 +22,9 @@ namespace QLPT
             InitializeComponent();
         }
 
-        KetNoiDB db = new KetNoiDB();
+        ConnectDB db = new ConnectDB();
         BUS_Room bus = new BUS_Room();
-        E_phongtro ec = new E_phongtro();
+        E_Room ec = new E_Room();
 
         void KhoaDieuKien()
         {

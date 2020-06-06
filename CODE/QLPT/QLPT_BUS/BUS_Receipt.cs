@@ -11,7 +11,7 @@ namespace QLPT_BUS
 {
     public class BUS_Receipt
     {
-        DAL_thutien sql = new DAL_thutien();
+        DAL_Receipt sql = new DAL_Receipt();
         public DataTable LayThongtinmapt(string DieuKien)
         {
             return sql.LayThongtinmapt(DieuKien);
@@ -40,7 +40,7 @@ namespace QLPT_BUS
         {
             return sql.kiemtra2(DieuKien1, DieuKien2, DieuKien3);
         }
-        public void ThemDuLieu(E_thutien et)
+        public void ThemDuLieu(E_Receipt et)
         {
             sql.ThemDuLieu(et);
         }

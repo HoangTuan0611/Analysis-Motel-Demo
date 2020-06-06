@@ -24,9 +24,9 @@ namespace QLPT
         {
             InitializeComponent();
         }
-        KetNoiDB db = new KetNoiDB();
+        ConnectDB db = new ConnectDB();
         BUS_HireRoom bus = new BUS_HireRoom();
-        E_khachtro ec = new E_khachtro();
+        E_HireRoom ec = new E_HireRoom();
         
 
         void KhoaDieuKien()

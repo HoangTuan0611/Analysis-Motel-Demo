@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace QLPT_DAL
 {
-    public class DAL_traphong
+    public class DAL_Checkout
     {
-        KetNoiDB cn = new KetNoiDB();
+        ConnectDB cn = new ConnectDB();
         public DataTable TaoBang(string DieuKien)
         {
             return cn.GetDataTable("Select * from khachtro " + DieuKien);

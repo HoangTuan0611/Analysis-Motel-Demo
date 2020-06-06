@@ -19,7 +19,7 @@ namespace QLPT
         {
             InitializeComponent();
         }
-        KetNoiDB db = new KetNoiDB();
+        ConnectDB db = new ConnectDB();
 
    
 

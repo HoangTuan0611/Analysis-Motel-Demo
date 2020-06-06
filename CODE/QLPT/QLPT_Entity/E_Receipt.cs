@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace QLPT_Entity
 {
-    public class E_thutien
+    public class E_Receipt
     {
         private string _mapt;
         private string _tiendien;

@@ -11,8 +11,8 @@ namespace QLPT_BUS
 {
     public class BUS_Setting
     {
-        DAL_quidinh sql = new DAL_quidinh();
-        public void SuaDuLieu(E_quidinh et)
+        DAL_Setting sql = new DAL_Setting();
+        public void SuaDuLieu(E_Setting et)
         {
             sql.SuaDuLieu(et);
         }
@@ -20,7 +20,7 @@ namespace QLPT_BUS
         {
             return sql.kiemtra();
         }
-        public void ThemDuLieu(E_quidinh et)
+        public void ThemDuLieu(E_Setting et)
         {
             sql.ThemDuLieu(et);
         }

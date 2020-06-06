@@ -9,22 +9,22 @@ using QLPT_Entity;
 
 namespace QLPT_DAL
 {
-    public class DAL_khachtro
+    public class DAL_HireRoom
     {
-        KetNoiDB cn = new KetNoiDB();
+        ConnectDB cn = new ConnectDB();
 
         // Thêm Dữ Liệu
-        public void ThemDuLieu(E_khachtro et)
+        public void ThemDuLieu(E_HireRoom et)
         {
             cn.ThucThiCauLenh(@"INSERT INTO khachtro (makt, mapt, hoten, cmnd, gioitinh, nghenghiep, sdt) VALUES  ('" + et.makt + "',N'" + et.mapt + "',N'" + et.hoten + "',N'" + et.cmnd + "',N'" + et.gioitinh + "',N'" + et.nghenghiep + "',N'" + et.sdt + "')");
         }
         //Sửa
-        public void SuaDuLieu(E_khachtro et)
+        public void SuaDuLieu(E_HireRoom et)
         {
             cn.ThucThiCauLenh(@"UPDATE khachtro SET mapt = N'" + et.mapt + "', hoten =N'" + et.hoten + "', cmnd ='" + et.cmnd + "', gioitinh ='" + et.gioitinh + "', nghenghiep ='" + et.nghenghiep + "', sdt ='" + et.sdt + "' Where makt='" + et.makt + "'");
         }
         //Xoá
-        public void XoaDuLieu(E_khachtro et)
+        public void XoaDuLieu(E_HireRoom et)
         {
 
             cn.ThucThiCauLenh(@"DELETE FROM khachtro  Where makt='" + et.makt + "'");

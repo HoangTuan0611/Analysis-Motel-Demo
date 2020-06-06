@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace QLPT_DAL
 {
-    public class KetNoiDB
+    public class ConnectDB
     {
         public static SqlConnection connect;
 
@@ -17,20 +17,20 @@ namespace QLPT_DAL
         public static void MoKetNoi()
         {
 
-            if (KetNoiDB.connect == null)
-                KetNoiDB.connect = new SqlConnection("Data Source=DESKTOP-SSFHDII; Database=DataQLPT ;Integrated Security=SSPI;");
+            if (ConnectDB.connect == null)
+                ConnectDB.connect = new SqlConnection("Data Source=DESKTOP-SSFHDII; Database=DataQLPT ;Integrated Security=SSPI;");
 
-            if (KetNoiDB.connect.State != ConnectionState.Open)
-                KetNoiDB.connect.Open();
+            if (ConnectDB.connect.State != ConnectionState.Open)
+                ConnectDB.connect.Open();
         }
 
         public void DongKetNoi()
         {
-            if (KetNoiDB.connect != null)
+            if (ConnectDB.connect != null)
             {
 
-                if (KetNoiDB.connect.State == ConnectionState.Open)
-                    KetNoiDB.connect.Close();
+                if (ConnectDB.connect.State == ConnectionState.Open)
+                    ConnectDB.connect.Close();
             }
 
         }

@@ -10,7 +10,7 @@ namespace QLPT_BUS
 {
     public class BUS_Stastistic
     {
-        DAL_thongke sql = new DAL_thongke();
+        DAL_Stastistic sql = new DAL_Stastistic();
         public DataTable taobang(string DieuKien1,string DieuKien2)
         {
             return sql.TaoBang(DieuKien1, DieuKien2);

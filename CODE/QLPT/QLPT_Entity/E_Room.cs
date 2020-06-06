@@ -6,28 +6,18 @@ using System.Threading.Tasks;
 
 namespace QLPT_Entity
 {
-    public class E_khachtro
+    public class E_Room
     {
-        private string _makt;
+        
         private string _mapt;
-        private string _hoten;
-        private string _cmnd;
-        private string _gioitinh;
-        private string _nghenghiep;
-        private string _sdt;
+        private string _tenphong;
+        private string _tang;
+        private string _loai;
+        private string _sltoida;
+        private string _trangthai;
+       
 
-        public string makt
-        {
-            get
-            {
-                return _makt;
-            }
 
-            set
-            {
-                _makt = value;
-            }
-        }
 
         public string mapt
         {
@@ -42,68 +32,70 @@ namespace QLPT_Entity
             }
         }
 
-        public string hoten
+        public string tenphong
         {
             get
             {
-                return _hoten;
+                return _tenphong;
             }
 
             set
             {
-                _hoten = value;
+                _tenphong = value;
             }
         }
 
-        public string cmnd
+        public string tang
         {
             get
             {
-                return _cmnd;
+                return _tang;
             }
 
             set
             {
-                _cmnd = value;
+                _tang = value;
             }
         }
 
-        public string gioitinh
+        public string loai
         {
             get
             {
-                return _gioitinh;
+                return _loai;
             }
 
             set
             {
-                _gioitinh = value;
+                _loai = value;
             }
         }
-        public string nghenghiep
+        public string sltoida
         {
             get
             {
-                return _nghenghiep;
+                return _sltoida;
             }
 
             set
             {
-                _nghenghiep = value;
+                _sltoida = value;
             }
         }
-        public string sdt
+        public string trangthai
         {
             get
             {
-                return _sdt;
+                return _trangthai;
             }
 
             set
             {
-                _sdt = value;
+                _trangthai = value;
             }
         }
+     
 
     }
 }
+

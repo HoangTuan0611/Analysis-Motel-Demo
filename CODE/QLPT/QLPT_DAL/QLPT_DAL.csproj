@@ -41,13 +41,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DAL_khachtro.cs" />
-    <Compile Include="DAL_phongtro.cs" />
-    <Compile Include="DAL_quidinh.cs" />
-    <Compile Include="DAL_thongke.cs" />
-    <Compile Include="DAL_thutien.cs" />
-    <Compile Include="DAL_traphong.cs" />
-    <Compile Include="KetNoiDB.cs" />
+    <Compile Include="DAL_HireRoom.cs" />
+    <Compile Include="DAL_Room.cs" />
+    <Compile Include="DAL_Setting.cs" />
+    <Compile Include="DAL_Stastistic.cs" />
+    <Compile Include="DAL_Receipt.cs" />
+    <Compile Include="DAL_Checkout.cs" />
+    <Compile Include="ConnectDB.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

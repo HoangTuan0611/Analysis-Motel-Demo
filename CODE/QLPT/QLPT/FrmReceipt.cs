@@ -27,7 +27,7 @@ namespace QLPT
         string month;
         int soluongnguoi;
         BUS_Receipt bus = new BUS_Receipt();
-        E_thutien ec = new E_thutien();
+        E_Receipt ec = new E_Receipt();
         public FrmReceipt()
         {
             InitializeComponent();
