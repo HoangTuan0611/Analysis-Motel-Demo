@@ -9,89 +9,89 @@ namespace QLPT_Entity
     public class E_Room
     {
         
-        private string _mapt;
-        private string _tenphong;
-        private string _tang;
-        private string _loai;
-        private string _sltoida;
-        private string _trangthai;
+        private string _roomID;
+        private string _roomName;
+        private string _floor;
+        private string _type;
+        private string _maxCus;
+        private string _status;
        
 
 
 
-        public string mapt
+        public string roomID
         {
             get
             {
-                return _mapt;
+                return _roomID;
             }
 
             set
             {
-                _mapt = value;
+                _roomID = value;
             }
         }
 
-        public string tenphong
+        public string roomName
         {
             get
             {
-                return _tenphong;
+                return _roomName;
             }
 
             set
             {
-                _tenphong = value;
+                _roomName = value;
             }
         }
 
-        public string tang
+        public string floor
         {
             get
             {
-                return _tang;
+                return _floor;
             }
 
             set
             {
-                _tang = value;
+                _floor = value;
             }
         }
 
-        public string loai
+        public string type
         {
             get
             {
-                return _loai;
+                return _type;
             }
 
             set
             {
-                _loai = value;
+                _type = value;
             }
         }
-        public string sltoida
+        public string maxCus
         {
             get
             {
-                return _sltoida;
+                return _maxCus;
             }
 
             set
             {
-                _sltoida = value;
+                _maxCus = value;
             }
         }
-        public string trangthai
+        public string status
         {
             get
             {
-                return _trangthai;
+                return _status;
             }
 
             set
             {
-                _trangthai = value;
+                _status = value;
             }
         }
      

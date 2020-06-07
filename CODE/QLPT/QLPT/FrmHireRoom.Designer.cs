@@ -1,6 +1,6 @@
 ﻿namespace QLPT
 {
-    partial class Frmkhachtro
+    partial class FrmHireRoom
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frmkhachtro));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmHireRoom));
             this.panel1 = new System.Windows.Forms.Panel();
             this.chkEmptyRoom = new System.Windows.Forms.CheckBox();
             this.lblCurrentSlot = new System.Windows.Forms.Label();
@@ -322,7 +322,7 @@
             this.btnAdd.TabIndex = 2;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.btnthem_Click);
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnDelete
             // 

@@ -15,12 +15,12 @@ using QLPT_Entity;
 namespace QLPT
 {
     
-    public partial class Frmkhachtro : Form
+    public partial class FrmHireRoom : Form
     {
         
-        string kiemtratinhtrangphong;
+        string checkroomstatus;
         string text;
-        public Frmkhachtro()
+        public FrmHireRoom()
         {
             InitializeComponent();
         }
@@ -29,7 +29,7 @@ namespace QLPT
         E_HireRoom ec = new E_HireRoom();
         
 
-        void KhoaDieuKien()
+        void LockCondition()
         {
             btnCancel.Enabled = false;
             txtIdenCard.Enabled = false;
@@ -43,7 +43,7 @@ namespace QLPT
             chkEmptyRoom.Enabled = false;
         }
 
-        void MoDieuKien()
+        void OpenCondition()
         {
             btnCancel.Enabled = true;
             txtIdenCard.Enabled = true;
@@ -67,9 +67,9 @@ namespace QLPT
             cboRoomID.Text = "";
         }
 
-        void HienThi(string where)
+        void Display(string where)
         {
-            grdCustomer.DataSource = bus.TaoBang(where);
+            grdCustomer.DataSource = bus.CreateTable(where);
         }
 
         private void FrmHireRoom_Load(object sender, EventArgs e)
@@ -77,26 +77,26 @@ namespace QLPT
             
             if (chkEmptyRoom.Checked == true)
             {
-                cboRoomID.DataSource = bus.LayThongtinmapt(" where trangthai = 'Trống'");
+                cboRoomID.DataSource = bus.GetRoomID(" where trangthai = 'Trống'");
                 cboRoomID.ValueMember = "mapt";
                 cboRoomID.DisplayMember = "mapt";
             }
             else
             {
-                cboRoomID.DataSource = bus.LayThongtinmapt(" where trangthai != 'Bảo trì'");
+                cboRoomID.DataSource = bus.GetRoomID(" where trangthai != 'Bảo trì'");
                 cboRoomID.ValueMember = "mapt";
                 cboRoomID.DisplayMember = "mapt";
             }
             if (cboRoomID != null)
             {
-                txtMaxSlot.Text = bus.songuoitoida("'" + cboRoomID.Text + "'");
-                txtCurrentSlot.Text = bus.demsoluongnguoi("'" + cboRoomID.Text + "'");
+                txtMaxSlot.Text = bus.maxcustomer("'" + cboRoomID.Text + "'");
+                txtCurrentSlot.Text = bus.countcustomer("'" + cboRoomID.Text + "'");
             }
-            KhoaDieuKien();
-            HienThi("");
+            LockCondition();
+            Display("");
         }
 
-        private string GetGioiTinh()//Lấy giới tính của sinh viên
+        private string GetSex()//Lấy giới tính của sinh viên
         {
 
             if (optMale.Checked)
@@ -105,12 +105,12 @@ namespace QLPT
                 return "Nữ";           
         }
 
-        private void btnthem_Click(object sender, EventArgs e)
+        private void btnAdd_Click(object sender, EventArgs e)
         {
             if (btnAdd.Text == "Add")
             {
 
-                MoDieuKien();
+                OpenCondition();
                 setnull();
                 txtCusID.Focus();
                 btnAdd.Text = "Save";
@@ -127,18 +127,18 @@ namespace QLPT
                 {
                     try
                     {
-                        ec.hoten = txtCusName.Text;
-                        ec.nghenghiep = txtJob.Text;
-                        ec.sdt = txtPhoneNumber.Text;
-                        ec.cmnd = txtIdenCard.Text;
-                        ec.mapt = cboRoomID.Text;
-                        ec.gioitinh = GetGioiTinh();
-                        ec.makt = txtCusID.Text;
+                        ec.cusName = txtCusName.Text;
+                        ec.cusJob = txtJob.Text;
+                        ec.PhoneNo = txtPhoneNumber.Text;
+                        ec.cusIdenCard = txtIdenCard.Text;
+                        ec.roomID = cboRoomID.Text;
+                        ec.cusSex = GetSex();
+                        ec.cusID = txtCusID.Text;
                         int a = int.Parse(txtCurrentSlot.Text);
                         int b = int.Parse(txtMaxSlot.Text);
                         if (a<b) {
-                            bus.ThemDuLieu(ec);
-                            bus.updatetrangthaiphongtro1("'" + cboRoomID.Text + "'");
+                            bus.AddData(ec);
+                            bus.UpdateRoomStatus("'" + cboRoomID.Text + "'");
                             MessageBox.Show("Added data !", "Message");
                         }
                         else { MessageBox.Show("Room full"); }
@@ -151,8 +151,8 @@ namespace QLPT
                     }
                 }
                 btnAdd.Text = "Add";
-                KhoaDieuKien();
-                HienThi("");
+                LockCondition();
+                Display("");
             }
         }
 
@@ -160,7 +160,7 @@ namespace QLPT
         {
             if (btnUpdate.Text == "Update")
             {
-                MoDieuKien();
+                OpenCondition();
                 txtCusID.Focus();
                 btnUpdate.Text = "Save";
             }
@@ -175,34 +175,34 @@ namespace QLPT
                 {
                     try
                     {
-                        ec.hoten = txtCusName.Text;
-                        ec.nghenghiep = txtJob.Text;
-                        ec.sdt = txtPhoneNumber.Text;
-                        ec.cmnd = txtIdenCard.Text;
-                        ec.mapt = cboRoomID.Text;
-                        ec.gioitinh = GetGioiTinh();
-                        ec.makt = txtCusID.Text;
+                        ec.cusName = txtCusName.Text;
+                        ec.cusJob = txtJob.Text;
+                        ec.PhoneNo = txtPhoneNumber.Text;
+                        ec.cusIdenCard = txtIdenCard.Text;
+                        ec.roomID = cboRoomID.Text;
+                        ec.cusSex = GetSex();
+                        ec.cusID = txtCusID.Text;
                         int a = int.Parse(txtCurrentSlot.Text);
                         int b = int.Parse(txtMaxSlot.Text);                     
                         
-                        if (cboRoomID.Text != kiemtratinhtrangphong)
+                        if (cboRoomID.Text != checkroomstatus)
                         {
                             if (a < b)
                             {
-                                bus.SuaDuLieu(ec);
-                                text = bus.demsoluongnguoi("'" + cboRoomID.Text + "'");
-                                if (text == "0") bus.updatetrangthaiphongtro2("'" + cboRoomID.Text + "'");
-                                else bus.updatetrangthaiphongtro1("'" + cboRoomID.Text + "'");
-                                text = bus.demsoluongnguoi("'" + kiemtratinhtrangphong + "'");
-                                if (text == "0") bus.updatetrangthaiphongtro2("'" + kiemtratinhtrangphong + "'");
-                                else bus.updatetrangthaiphongtro1("'" + kiemtratinhtrangphong + "'");
+                                bus.UpdateData(ec);
+                                text = bus.countcustomer("'" + cboRoomID.Text + "'");
+                                if (text == "0") bus.UpdateRoomStatus2("'" + cboRoomID.Text + "'");
+                                else bus.UpdateRoomStatus("'" + cboRoomID.Text + "'");
+                                text = bus.countcustomer("'" + checkroomstatus + "'");
+                                if (text == "0") bus.UpdateRoomStatus2("'" + checkroomstatus + "'");
+                                else bus.UpdateRoomStatus("'" + checkroomstatus + "'");
                                 MessageBox.Show("Updated Success", "Message");
                             }
                         }
                         else
                         {
-                            bus.SuaDuLieu(ec);
-                            bus.updatetrangthaiphongtro1("'" + cboRoomID.Text + "'");
+                            bus.UpdateData(ec);
+                            bus.UpdateRoomStatus("'" + cboRoomID.Text + "'");
                             MessageBox.Show("Updated Success", "Message");
                         }                                                                                                                         
                     }
@@ -212,8 +212,8 @@ namespace QLPT
                         return;
                     }
                 }
-                KhoaDieuKien();
-                HienThi("");
+                LockCondition();
+                Display("");
                 btnUpdate.Text = "Update";
             }
         }
@@ -222,14 +222,14 @@ namespace QLPT
         {
             try
             {
-                ec.makt = txtCusID.Text;
-                bus.XoaDuLieu(ec);
-                text = bus.demsoluongnguoi("'" + kiemtratinhtrangphong + "'");
-                if (text == "0") bus.updatetrangthaiphongtro2("'" + kiemtratinhtrangphong + "'");
-                else bus.updatetrangthaiphongtro1("'" + kiemtratinhtrangphong + "'");
+                ec.cusID = txtCusID.Text;
+                bus.DeleteData(ec);
+                text = bus.countcustomer("'" + checkroomstatus + "'");
+                if (text == "0") bus.UpdateRoomStatus2("'" + checkroomstatus + "'");
+                else bus.UpdateRoomStatus("'" + checkroomstatus + "'");
                 MessageBox.Show("Deleted");
-                KhoaDieuKien();
-                HienThi("");
+                LockCondition();
+                Display("");
             }
             catch
             {
@@ -275,7 +275,7 @@ namespace QLPT
                 int dong = e.RowIndex;
                 txtCusID.Text = grdCustomer.Rows[dong].Cells[0].Value.ToString();
                 cboRoomID.Text = grdCustomer.Rows[dong].Cells[1].Value.ToString();
-                kiemtratinhtrangphong = cboRoomID.Text;
+                checkroomstatus = cboRoomID.Text;
                 txtCusName.Text = grdCustomer.Rows[dong].Cells[2].Value.ToString();      
                 txtIdenCard.Text = grdCustomer.Rows[dong].Cells[3].Value.ToString();              
                 txtJob.Text = grdCustomer.Rows[dong].Cells[5].Value.ToString();
@@ -304,21 +304,21 @@ namespace QLPT
 
         private void CboRoomID_TextChanged(object sender, EventArgs e)
         {
-            txtMaxSlot.Text = bus.songuoitoida("'" + cboRoomID.Text + "'");
-            txtCurrentSlot.Text = bus.demsoluongnguoi("'" + cboRoomID.Text + "'");
+            txtMaxSlot.Text = bus.maxcustomer("'" + cboRoomID.Text + "'");
+            txtCurrentSlot.Text = bus.countcustomer("'" + cboRoomID.Text + "'");
         }
 
         private void ChkEmptyRoom_CheckedChanged(object sender, EventArgs e)
         {
             if (chkEmptyRoom.Checked == true)
             {
-                cboRoomID.DataSource = bus.LayThongtinmapt(" where trangthai != 'Đang cho thuê' and trangthai != 'Bảo trì'");
+                cboRoomID.DataSource = bus.GetRoomID(" where trangthai != 'Đang cho thuê' and trangthai != 'Bảo trì'");
                 cboRoomID.ValueMember = "mapt";
                 cboRoomID.DisplayMember = "mapt";
             }
             else
             {
-                cboRoomID.DataSource = bus.LayThongtinmapt(" where trangthai != 'Bảo trì'");
+                cboRoomID.DataSource = bus.GetRoomID(" where trangthai != 'Bảo trì'");
                 cboRoomID.ValueMember = "mapt";
                 cboRoomID.DisplayMember = "mapt";
             }
@@ -329,7 +329,7 @@ namespace QLPT
             setnull();
             txtCusID.Focus();
             btnAdd.Text = "Add";
-            KhoaDieuKien();
+            LockCondition();
         }
 
         private void txtPhoneNumber_Leave(object sender, EventArgs e)

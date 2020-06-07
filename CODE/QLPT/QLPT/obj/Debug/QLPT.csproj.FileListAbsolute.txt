@@ -121,7 +121,6 @@ D:\Analysis-Motel-Demo\CODE\QLPT\QLPT\bin\Debug\QLPT_Entity.pdb
 D:\Analysis-Motel-Demo\CODE\QLPT\QLPT\bin\Debug\Sqlhelper.1.0.0.0.Fakes.xml
 D:\Analysis-Motel-Demo\CODE\QLPT\QLPT\obj\Debug\QLPT.csprojAssemblyReference.cache
 D:\Analysis-Motel-Demo\CODE\QLPT\QLPT\obj\Debug\QLPT.csproj.ResolveComReference.cache
-D:\Analysis-Motel-Demo\CODE\QLPT\QLPT\obj\Debug\QLPT.Frmkhachtro.resources
 D:\Analysis-Motel-Demo\CODE\QLPT\QLPT\obj\Debug\QLPT.FrmMain.resources
 D:\Analysis-Motel-Demo\CODE\QLPT\QLPT\obj\Debug\QLPT.Properties.Resources.resources
 D:\Analysis-Motel-Demo\CODE\QLPT\QLPT\obj\Debug\QLPT.csproj.GenerateResource.cache
@@ -135,3 +134,4 @@ D:\Analysis-Motel-Demo\CODE\QLPT\QLPT\obj\Debug\QLPT.FrmRoom.resources
 D:\Analysis-Motel-Demo\CODE\QLPT\QLPT\obj\Debug\QLPT.FrmStastistic.resources
 D:\Analysis-Motel-Demo\CODE\QLPT\QLPT\obj\Debug\QLPT.FrmReceipt.resources
 D:\Analysis-Motel-Demo\CODE\QLPT\QLPT\obj\Debug\QLPT.FrmCheckOut.resources
+D:\Analysis-Motel-Demo\CODE\QLPT\QLPT\obj\Debug\QLPT.FrmHireRoom.resources

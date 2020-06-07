@@ -10,7 +10,7 @@ namespace QLPT_DAL
     public class DAL_Receipt
     {
         ConnectDB cn = new ConnectDB();
-        public DataTable LayThongtinmapt(string DieuKien)
+        public DataTable GetRoomID(string DieuKien)
         {
             return cn.GetDataTable("Select mapt from phongtro " + DieuKien);
         }
@@ -18,11 +18,11 @@ namespace QLPT_DAL
         {
             return cn.GetValue("Select " + DieuKien1 + " from phongtro where mapt = " + DieuKien2);
         }
-        public DataTable TaoBang(string DieuKien)
+        public DataTable CreateTable(string DieuKien)
         {
             return cn.GetDataTable("Select * from khachtro " + DieuKien);
         }
-        public string kiemtra()
+        public string check()
         {
             return cn.GetValue("Select COUNT(*) from thamso");
         }
@@ -30,17 +30,17 @@ namespace QLPT_DAL
         {
             return cn.GetValue("Select " + DieuKien1 + " from thamso where id = " + DieuKien2);
         }
-        public string demsoluongnguoi(string DieuKien)
+        public string countCustomer(string DieuKien)
         {
             return cn.GetValue("Select COUNT(*) from khachtro where mapt = " + DieuKien);
         }
-        public string kiemtra2(string DieuKien1,string DieuKien2,string DieuKien3)
+        public string check2(string DieuKien1,string DieuKien2,string DieuKien3)
         {
             return cn.GetValue("Select COUNT(*) from thutien where mapt='" + DieuKien1 + "' and MONTH(ngaythu)='" + DieuKien2 + "' and YEAR(ngaythu)='" + DieuKien3 + "'");
         }
-        public void ThemDuLieu(E_Receipt et)
+        public void AddData(E_Receipt et)
         {
-            cn.ThucThiCauLenh(@"INSERT INTO thutien (mapt, tiendien, tiennuoc, tienmang, tienxe, tienphong, ngaythu, tongtien) VALUES  ('" + et.mapt + "',N'" + et.tiendien + "',N'" + et.tiennuoc + "',N'" + et.tienmang + "',N'" + et.tienxe + "',N'" + et.tienphong + "',N'" + et.ngaythu + "',N'" + et.tongtien + "')");
+            cn.ExcuteQuery(@"INSERT INTO thutien (mapt, tiendien, tiennuoc, tienmang, tienxe, tienphong, ngaythu, tongtien) VALUES  ('" + et.roomID + "',N'" + et.elec + "',N'" + et.water + "',N'" + et.internet + "',N'" + et.parking + "',N'" + et.roomCharge + "',N'" + et.receiptDate + "',N'" + et.total + "')");
         }
     }
 }

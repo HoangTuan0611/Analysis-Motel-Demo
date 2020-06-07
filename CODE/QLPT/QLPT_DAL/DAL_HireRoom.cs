@@ -14,44 +14,44 @@ namespace QLPT_DAL
         ConnectDB cn = new ConnectDB();
 
         // Thêm Dữ Liệu
-        public void ThemDuLieu(E_HireRoom et)
+        public void AddData(E_HireRoom et)
         {
-            cn.ThucThiCauLenh(@"INSERT INTO khachtro (makt, mapt, hoten, cmnd, gioitinh, nghenghiep, sdt) VALUES  ('" + et.makt + "',N'" + et.mapt + "',N'" + et.hoten + "',N'" + et.cmnd + "',N'" + et.gioitinh + "',N'" + et.nghenghiep + "',N'" + et.sdt + "')");
+            cn.ExcuteQuery(@"INSERT INTO khachtro (makt, mapt, hoten, cmnd, gioitinh, nghenghiep, sdt) VALUES  ('" + et.cusID + "',N'" + et.roomID + "',N'" + et.cusName + "',N'" + et.cusIdenCard + "',N'" + et.cusSex + "',N'" + et.cusJob + "',N'" + et.PhoneNo + "')");
         }
         //Sửa
-        public void SuaDuLieu(E_HireRoom et)
+        public void UpdateData(E_HireRoom et)
         {
-            cn.ThucThiCauLenh(@"UPDATE khachtro SET mapt = N'" + et.mapt + "', hoten =N'" + et.hoten + "', cmnd ='" + et.cmnd + "', gioitinh ='" + et.gioitinh + "', nghenghiep ='" + et.nghenghiep + "', sdt ='" + et.sdt + "' Where makt='" + et.makt + "'");
+            cn.ExcuteQuery(@"UPDATE khachtro SET mapt = N'" + et.roomID + "', hoten =N'" + et.cusName + "', cmnd ='" + et.cusIdenCard + "', gioitinh ='" + et.cusSex + "', nghenghiep ='" + et.cusJob + "', sdt ='" + et.PhoneNo + "' Where makt='" + et.cusID + "'");
         }
         //Xoá
-        public void XoaDuLieu(E_HireRoom et)
+        public void DeleteData(E_HireRoom et)
         {
 
-            cn.ThucThiCauLenh(@"DELETE FROM khachtro  Where makt='" + et.makt + "'");
+            cn.ExcuteQuery(@"DELETE FROM khachtro  Where makt='" + et.cusID + "'");
         }
         //Lấy Dữ Liệu
         //TaoBang("") select * from tblKhachHang where MaKH ='1'( ví dụ)
-        public DataTable TaoBang(string DieuKien)
+        public DataTable CreateTable(string DieuKien)
         {
             return cn.GetDataTable("Select * from khachtro " + DieuKien);
         }
-        public DataTable LayThongtinmapt(string DieuKien)
+        public DataTable GetRoomID(string DieuKien)
         {
             return cn.GetDataTable("Select mapt from phongtro " + DieuKien);
         }
-        public void updatetrangthaiphongtro1(string DieuKien)
+        public void UpdateRoomStatus(string DieuKien)
         {
-            cn.ThucThiCauLenh("UPDATE phongtro SET trangthai ='Đang cho thuê' where mapt = " + DieuKien);
+            cn.ExcuteQuery("UPDATE phongtro SET trangthai ='Đang cho thuê' where mapt = " + DieuKien);
         }
-        public void updatetrangthaiphongtro2(string DieuKien)
+        public void UpdateRoomStatus2(string DieuKien)
         {
-            cn.ThucThiCauLenh("UPDATE phongtro SET trangthai ='Trống' where mapt = " + DieuKien);
+            cn.ExcuteQuery("UPDATE phongtro SET trangthai ='Trống' where mapt = " + DieuKien);
         }
-        public string demsoluongnguoi(string DieuKien)
+        public string countcustomer(string DieuKien)
         {
            return cn.GetValue("Select COUNT(*) from khachtro where mapt = " + DieuKien);
         }
-        public string songuoitoida(string DieuKien)
+        public string maxcustomer(string DieuKien)
         {
            return cn.GetValue("Select sltoida from phongtro where mapt = " + DieuKien);
         }

@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using QLPT_DAL;
 using QLPT_Entity;
-using QLPT_DAL;
 using System.Data;
 
 namespace QLPT_BUS
@@ -14,19 +9,19 @@ namespace QLPT_BUS
         DAL_Room sql = new DAL_Room();
 
         // Thêm Dữ Liệu
-        public void ThemDuLieu(E_Room et)
+        public void AddData(E_Room et)
         {
-            sql.ThemDuLieu(et);
+            sql.AddData(et);
         }
         //Sửa
-        public void SuaDuLieu(E_Room et)
+        public void UpdateData(E_Room et)
         {
-            sql.SuaDuLieu(et);
+            sql.UpdateData(et);
         }
         //Xoá
-        public void XoaDuLieu(E_Room et)
+        public void DeleteData(E_Room et)
         {
-            sql.XoaDuLieu(et);
+            sql.DeleteData(et);
         }
         //Lấy Dữ Liệu
         //TaoBang("") select * from tblKhachHang where MaKH ='1'( ví dụ)
@@ -34,13 +29,13 @@ namespace QLPT_BUS
         {
             return sql.TaoBang(DieuKien);
         }
-        public DataTable LayThongtintang(string DieuKien)
+        public DataTable GetFloorInfo(string DieuKien)
         {
-            return sql.LayThongtintang(DieuKien);
+            return sql.GetFloorInfo(DieuKien);
         }
-        public DataTable LayThongtinloaiphong(string DieuKien)
+        public DataTable GetTypeRoomInfo(string DieuKien)
         {
-            return sql.LayThongtinloaiphong(DieuKien);
+            return sql.GetTypeRoomInfo(DieuKien);
         }
 
     }

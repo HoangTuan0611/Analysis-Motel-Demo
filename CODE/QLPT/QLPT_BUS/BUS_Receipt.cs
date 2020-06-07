@@ -12,37 +12,37 @@ namespace QLPT_BUS
     public class BUS_Receipt
     {
         DAL_Receipt sql = new DAL_Receipt();
-        public DataTable LayThongtinmapt(string DieuKien)
+        public DataTable GetRoomID(string Condition)
         {
-            return sql.LayThongtinmapt(DieuKien);
+            return sql.GetRoomID(Condition);
         }
-        public string getvalue(string DieuKien1, string DieuKien2)
+        public string getvalue(string Conditon1, string Condition2)
         {
-            return sql.getvalue(DieuKien1, DieuKien2);
+            return sql.getvalue(Conditon1, Condition2);
         }
-        public DataTable TaoBang(string DieuKien)
+        public DataTable CreateTable(string condition)
         {
-            return sql.TaoBang(DieuKien);
+            return sql.CreateTable(condition);
         }
-        public string kiemtra()
+        public string check()
         {
-            return sql.kiemtra();
+            return sql.check();
         }
-        public string getvalue2(string DieuKien1, string DieuKien2)
+        public string getvalue2(string Condiotn1, string Conditon2)
         {
-            return sql.getvalue2(DieuKien1, DieuKien2);
+            return sql.getvalue2(Condiotn1, Conditon2);
         }
-        public string demsoluongnguoi(string DieuKien)
+        public string countCustomer(string Conditon)
         {
-            return sql.demsoluongnguoi(DieuKien);
+            return sql.countCustomer(Conditon);
         }
-        public string kiemtra2(string DieuKien1,string DieuKien2,string DieuKien3)
+        public string check2(string Condition1,string Condition2,string Condition3)
         {
-            return sql.kiemtra2(DieuKien1, DieuKien2, DieuKien3);
+            return sql.check2(Condition1, Condition2, Condition3);
         }
-        public void ThemDuLieu(E_Receipt et)
+        public void AddData(E_Receipt et)
         {
-            sql.ThemDuLieu(et);
+            sql.AddData(et);
         }
     }
 }

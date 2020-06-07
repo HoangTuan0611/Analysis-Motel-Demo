@@ -32,7 +32,7 @@ namespace QLPT
 
         }
 
-        private void FrmDangNhap_FormClosing(object sender, FormClosingEventArgs e)
+        private void FrmLogin_FormClosing(object sender, FormClosingEventArgs e)
         {
             e.Cancel = true;
         }
@@ -47,7 +47,7 @@ namespace QLPT
             if (dt.Rows.Count > 0)
 
             {
-                FrmMain.TaiKhoan = txtUsername.Text;
+                FrmMain.Account = txtUsername.Text;
                 MessageBox.Show("Welcome to Motel Managememt System");
                 this.Hide();
             }
@@ -61,7 +61,7 @@ namespace QLPT
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            FrmMain.TaiKhoan = txtUsername.Text = "";
+            FrmMain.Account = txtUsername.Text = "";
             DialogResult message;
             message = (MessageBox.Show("Do you want to exit log in ?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question));
             if (message == DialogResult.Yes)

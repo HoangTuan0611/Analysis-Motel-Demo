@@ -11,25 +11,25 @@ namespace QLPT_BUS
     public class BUS_Checkout
     {
         DAL_Checkout sql = new DAL_Checkout();
-        public DataTable TaoBang(string DieuKien)
+        public DataTable CreateTable(string Condition)
         {
-            return sql.TaoBang(DieuKien);
+            return sql.CreateTable(Condition);
         }
-        public DataTable LayThongtinmapt(string DieuKien)
+        public DataTable GetIDRoomInfo(string Condition)
         {
-            return sql.LayThongtinmapt(DieuKien);
+            return sql.GetRoomIDInfo(Condition);
         }
-        public void updatetrangthaiphongtro2(string DieuKien)
+        public void UpdateRoomStatus(string Condition)
         {
-            sql.updatetrangthaiphongtro2(DieuKien);
+            sql.UpdateRoomStatus(Condition);
         }
-        public string getvalue(string DieuKien1, string DieuKien2)
+        public string getvalue(string Condition1, string Condition2)
         {
-            return sql.getvalue(DieuKien1, DieuKien2);
+            return sql.getvalue(Condition1, Condition2);
         }
-        public void Xoa(string DieuKien)
+        public void Delete(string Condition)
         {
-            sql.Xoa(DieuKien);
+            sql.Delete(Condition);
         }
     }
 }

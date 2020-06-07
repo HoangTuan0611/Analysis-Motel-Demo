@@ -21,14 +21,14 @@ namespace QLPT
 
         private void FrmCheckOut_Load(object sender, EventArgs e)
         {
-            cboRoom.DataSource = bus.LayThongtinmapt(" where trangthai ='Đang cho thuê'");
+            cboRoom.DataSource = bus.GetIDRoomInfo(" where trangthai ='Đang cho thuê'");
             cboRoom.ValueMember = "mapt";
             cboRoom.DisplayMember = "mapt";
             if (cboRoom != null)
             {
                 txtRoomName.Text = bus.getvalue("tenphong","'"+cboRoom.Text+"'");
                 txtRoomID.Text = bus.getvalue("mapt","'"+cboRoom.Text+"'");
-                dgthongtinkhachthue.DataSource = bus.TaoBang("where mapt='"+txtRoomID.Text+"'");
+                grdCusHireInfo.DataSource = bus.CreateTable("where mapt='"+txtRoomID.Text+"'");
             }
         }
 
@@ -38,21 +38,21 @@ namespace QLPT
         {
             txtRoomName.Text = bus.getvalue("tenphong", "'" + cboRoom.Text + "'");
             txtRoomID.Text = bus.getvalue("mapt", "'" + cboRoom.Text + "'");
-            dgthongtinkhachthue.DataSource = bus.TaoBang("where mapt='" + txtRoomID.Text + "'");
+            grdCusHireInfo.DataSource = bus.CreateTable("where mapt='" + txtRoomID.Text + "'");
         }
 
         private void btnAgree_Click(object sender, EventArgs e)
         {
-            bus.Xoa("'"+txtRoomID.Text+"'");
-            bus.updatetrangthaiphongtro2("'" + txtRoomID.Text + "'");
-            cboRoom.DataSource = bus.LayThongtinmapt(" where trangthai ='Đang cho thuê'");
+            bus.Delete("'"+txtRoomID.Text+"'");
+            bus.UpdateRoomStatus("'" + txtRoomID.Text + "'");
+            cboRoom.DataSource = bus.GetIDRoomInfo(" where trangthai ='Đang cho thuê'");
             cboRoom.ValueMember = "mapt";
             cboRoom.DisplayMember = "mapt";
             if (cboRoom != null)
             {
                 txtRoomName.Text = bus.getvalue("tenphong", "'" + cboRoom.Text + "'");
                 txtRoomID.Text = bus.getvalue("mapt", "'" + cboRoom.Text + "'");
-                dgthongtinkhachthue.DataSource = bus.TaoBang("where mapt='" + txtRoomID.Text + "'");
+                grdCusHireInfo.DataSource = bus.CreateTable("where mapt='" + txtRoomID.Text + "'");
             }
         }
     }

@@ -37,7 +37,7 @@
             this.lblRoomName = new System.Windows.Forms.Label();
             this.lblRoomID = new System.Windows.Forms.Label();
             this.grpHireCusInfo = new System.Windows.Forms.GroupBox();
-            this.dgthongtinkhachthue = new System.Windows.Forms.DataGridView();
+            this.grdCusHireInfo = new System.Windows.Forms.DataGridView();
             this.makt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mapt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hoten = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,7 +48,7 @@
             this.btnAgree = new System.Windows.Forms.Button();
             this.grpHireRoom.SuspendLayout();
             this.grpHireCusInfo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgthongtinkhachthue)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdCusHireInfo)).BeginInit();
             this.SuspendLayout();
             // 
             // lblChoseRoom
@@ -126,7 +126,7 @@
             // 
             // grpHireCusInfo
             // 
-            this.grpHireCusInfo.Controls.Add(this.dgthongtinkhachthue);
+            this.grpHireCusInfo.Controls.Add(this.grdCusHireInfo);
             this.grpHireCusInfo.Location = new System.Drawing.Point(9, 297);
             this.grpHireCusInfo.Margin = new System.Windows.Forms.Padding(2);
             this.grpHireCusInfo.Name = "grpHireCusInfo";
@@ -136,10 +136,10 @@
             this.grpHireCusInfo.TabStop = false;
             this.grpHireCusInfo.Text = "Customer Info";
             // 
-            // dgthongtinkhachthue
+            // grdCusHireInfo
             // 
-            this.dgthongtinkhachthue.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgthongtinkhachthue.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.grdCusHireInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grdCusHireInfo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.makt,
             this.mapt,
             this.hoten,
@@ -147,13 +147,13 @@
             this.gioitinh,
             this.nghenghiep,
             this.sdt});
-            this.dgthongtinkhachthue.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgthongtinkhachthue.Location = new System.Drawing.Point(2, 15);
-            this.dgthongtinkhachthue.Margin = new System.Windows.Forms.Padding(2);
-            this.dgthongtinkhachthue.Name = "dgthongtinkhachthue";
-            this.dgthongtinkhachthue.RowTemplate.Height = 24;
-            this.dgthongtinkhachthue.Size = new System.Drawing.Size(675, 133);
-            this.dgthongtinkhachthue.TabIndex = 0;
+            this.grdCusHireInfo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grdCusHireInfo.Location = new System.Drawing.Point(2, 15);
+            this.grdCusHireInfo.Margin = new System.Windows.Forms.Padding(2);
+            this.grdCusHireInfo.Name = "grdCusHireInfo";
+            this.grdCusHireInfo.RowTemplate.Height = 24;
+            this.grdCusHireInfo.Size = new System.Drawing.Size(675, 133);
+            this.grdCusHireInfo.TabIndex = 0;
             // 
             // makt
             // 
@@ -236,7 +236,7 @@
             this.grpHireRoom.ResumeLayout(false);
             this.grpHireRoom.PerformLayout();
             this.grpHireCusInfo.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgthongtinkhachthue)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdCusHireInfo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -251,7 +251,7 @@
         private System.Windows.Forms.Label lblRoomID;
         private System.Windows.Forms.GroupBox grpHireCusInfo;
         private System.Windows.Forms.TextBox txtRoomName;
-        private System.Windows.Forms.DataGridView dgthongtinkhachthue;
+        private System.Windows.Forms.DataGridView grdCusHireInfo;
         private System.Windows.Forms.Button btnAgree;
         private System.Windows.Forms.TextBox txtRoomID;
         private System.Windows.Forms.DataGridViewTextBoxColumn makt;

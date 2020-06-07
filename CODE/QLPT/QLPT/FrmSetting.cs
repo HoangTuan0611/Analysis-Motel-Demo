@@ -15,7 +15,7 @@ namespace QLPT
 {
     public partial class FrmSetting : Form
     {
-        int Kiemtra;
+        int Check;
         BUS_Setting bus = new BUS_Setting();
         E_Setting ec = new E_Setting();
         public FrmSetting()
@@ -27,22 +27,22 @@ namespace QLPT
         {
             try
             {
-                ec.tienphongnho = txtBigRoom.Text;
-                ec.tienphonglon = txtSmallRoom.Text;
-                ec.tiendien = txtElec.Text;
-                ec.tiennuoc = txtWater.Text;
-                ec.tienxe = txtParking.Text;
-                ec.tienmang = txtInternet.Text;
-                ec.tienrac = txtGarbage.Text;
-                ec.giamtienlenphong = txtDiscount.Text;
-                if (Kiemtra != 0)
+                ec.smallroomCharge = txtBigRoom.Text;
+                ec.bigroomCharge = txtSmallRoom.Text;
+                ec.elec = txtElec.Text;
+                ec.water = txtWater.Text;
+                ec.parking = txtParking.Text;
+                ec.internet = txtInternet.Text;
+                ec.garbage = txtGarbage.Text;
+                ec.discount = txtDiscount.Text;
+                if (Check != 0)
                 {
-                    bus.SuaDuLieu(ec);
+                    bus.UpdateData(ec);
                     MessageBox.Show("Updated data !", "Message");
                 }
                 else
                 {
-                    bus.ThemDuLieu(ec);
+                    bus.AddData(ec);
                     MessageBox.Show("Added data !", "Message");
                 }
             }
@@ -55,8 +55,8 @@ namespace QLPT
 
         private void FrmSetting_Load(object sender, EventArgs e)
         {
-            Kiemtra = int.Parse(bus.kiemtra());
-            if(Kiemtra!=0)
+            Check = int.Parse(bus.check());
+            if(Check!=0)
             {
                 txtBigRoom.Text = bus.getvalue("tienphongnho", "'1'");
                 txtSmallRoom.Text = bus.getvalue("tienphonglon", "'1'");

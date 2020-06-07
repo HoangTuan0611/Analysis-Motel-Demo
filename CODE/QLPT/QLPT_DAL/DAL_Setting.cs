@@ -11,21 +11,21 @@ namespace QLPT_DAL
     public class DAL_Setting
     {
         ConnectDB cn = new ConnectDB();
-        public void SuaDuLieu(E_Setting et)
+        public void UpdateData(E_Setting et)
         {
-            cn.ThucThiCauLenh(@"UPDATE thamso SET tienphongnho =N'" + et.tienphongnho + "', tienphonglon =N'" + et.tienphonglon + "', tiendien =N'" + et.tiendien + "', tiennuoc =N'" + et.tiennuoc + "', tienxe =N'" + et.tienxe + "', tienmang =N'" + et.tienmang + "', tienrac=N'" + et.tienrac +"', giamtienlenphong=N'" +et.giamtienlenphong +"'");
+            cn.ExcuteQuery(@"UPDATE thamso SET tienphongnho =N'" + et.smallroomCharge + "', tienphonglon =N'" + et.bigroomCharge + "', tiendien =N'" + et.elec + "', tiennuoc =N'" + et.water + "', tienxe =N'" + et.parking + "', tienmang =N'" + et.internet + "', tienrac=N'" + et.garbage +"', giamtienlenphong=N'" +et.discount +"'");
         }
-        public string kiemtra()
+        public string check()
         {
             return cn.GetValue("Select COUNT(*) from thamso");
         }
-        public void ThemDuLieu(E_Setting et)
+        public void AddData(E_Setting et)
         {
-            cn.ThucThiCauLenh(@"INSERT INTO thamso (tienphongnho, tienphonglon, tiendien, tiennuoc, tienxe, tienmang, tienrac, giamtienlenphong) VALUES  ('" + et.tienphongnho + "',N'" + et.tienphonglon + "',N'" + et.tiendien + "',N'" + et.tiennuoc + "',N'" + et.tienxe + "',N'" + et.tienmang + "',N'" + et.tienrac + "',N'" + et.giamtienlenphong +"')");
+            cn.ExcuteQuery(@"INSERT INTO thamso (tienphongnho, tienphonglon, tiendien, tiennuoc, tienxe, tienmang, tienrac, giamtienlenphong) VALUES  ('" + et.smallroomCharge + "',N'" + et.bigroomCharge + "',N'" + et.elec + "',N'" + et.water + "',N'" + et.parking + "',N'" + et.internet + "',N'" + et.garbage + "',N'" + et.discount +"')");
         }
-        public string getvalue(string DieuKien1, string DieuKien2)
+        public string getvalue(string Condition1, string Condition2)
         {
-            return cn.GetValue("Select " + DieuKien1 + " from thamso where id = " + DieuKien2);
+            return cn.GetValue("Select " + Condition1 + " from thamso where id = " + Condition2);
         }
     }
 }

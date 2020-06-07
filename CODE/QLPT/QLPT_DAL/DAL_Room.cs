@@ -14,34 +14,34 @@ namespace QLPT_DAL
 
         
         // Thêm Dữ Liệu
-        public void ThemDuLieu(E_Room et)
+        public void AddData(E_Room et)
         {
-            cn.ThucThiCauLenh(@"INSERT INTO phongtro (mapt, tang, tenphong, loai, sltoida, trangthai) VALUES  ('" + et.mapt + "',N'" + et.tang + "',N'" + et.tenphong + "',N'" + et.loai + "',N'" + et.sltoida + "',N'" + et.trangthai + "')");
+            cn.ExcuteQuery(@"INSERT INTO phongtro (mapt, tang, tenphong, loai, sltoida, trangthai) VALUES  ('" + et.roomID + "',N'" + et.floor + "',N'" + et.roomName + "',N'" + et.type + "',N'" + et.maxCus + "',N'" + et.status + "')");
         }
         //Sửa
-        public void SuaDuLieu(E_Room et)
+        public void UpdateData(E_Room et)
         {
-            cn.ThucThiCauLenh(@"UPDATE phongtro SET tang = N'" + et.tang + "', tenphong =N'" + et.tenphong + "', loai ='" + et.loai + "', sltoida ='" + et.sltoida + "', trangthai ='" + et.trangthai + "' Where mapt='" + et.mapt + "'");
+            cn.ExcuteQuery(@"UPDATE phongtro SET tang = N'" + et.floor + "', tenphong =N'" + et.roomName + "', loai ='" + et.type + "', sltoida ='" + et.maxCus + "', trangthai ='" + et.status + "' Where mapt='" + et.roomID + "'");
         }
         //Xoá
-        public void XoaDuLieu(E_Room et)
+        public void DeleteData(E_Room et)
         {
 
-            cn.ThucThiCauLenh(@"DELETE FROM phongtro  Where mapt='" + et.mapt + "'");
+            cn.ExcuteQuery(@"DELETE FROM phongtro  Where mapt='" + et.roomID + "'");
         }
         //Lấy Dữ Liệu
         //TaoBang("") select * from tblKhachHang where MaKH ='1'( ví dụ)
-        public DataTable TaoBang(string DieuKien)
+        public DataTable TaoBang(string Condition)
         {
-            return cn.GetDataTable("Select * from phongtro" + DieuKien);
+            return cn.GetDataTable("Select * from phongtro" + Condition);
         }
-        public DataTable LayThongtintang(string DieuKien)
+        public DataTable GetFloorInfo(string Condition)
         {
-            return cn.GetDataTable("Select tang from tangphong " + DieuKien);
+            return cn.GetDataTable("Select tang from tangphong " + Condition);
         }
-        public DataTable LayThongtinloaiphong(string DieuKien)
+        public DataTable GetTypeRoomInfo(string Condition)
         {
-            return cn.GetDataTable("Select loai from loaiphong " + DieuKien);
+            return cn.GetDataTable("Select loai from loaiphong " + Condition);
         }
     }
 }

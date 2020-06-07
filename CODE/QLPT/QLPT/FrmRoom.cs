@@ -16,7 +16,7 @@ namespace QLPT
 {
     public partial class FrmRoom : Form
     {
-        string kiemtratrangthai;
+        string checkroomstatus;
         public FrmRoom()
         {
             InitializeComponent();
@@ -26,7 +26,7 @@ namespace QLPT
         BUS_Room bus = new BUS_Room();
         E_Room ec = new E_Room();
 
-        void KhoaDieuKien()
+        void LockCondition()
         {
             txtRoomID.Enabled = false;
 
@@ -38,7 +38,7 @@ namespace QLPT
            
         }
 
-        void MoDieuKien()
+        void OpenCondition()
         {
             txtRoomID.Enabled = false;
 
@@ -59,7 +59,7 @@ namespace QLPT
             cboType.Text = "";
         }
 
-        void HienThi(string where)
+        void Display(string where)
         {
             grdRoom.DataSource = bus.TaoBang(where);
         }
@@ -71,21 +71,21 @@ namespace QLPT
 
         private void FrmRoom_Load(object sender, EventArgs e)
         {
-            cboType.DataSource = bus.LayThongtinloaiphong("");
+            cboType.DataSource = bus.GetTypeRoomInfo("");
             cboType.ValueMember = "loai";
             cboType.DisplayMember = "loai";
-            cboFloor.DataSource = bus.LayThongtintang("");
+            cboFloor.DataSource = bus.GetFloorInfo("");
             cboFloor.ValueMember = "tang";
             cboFloor.DisplayMember = "tang";
-            KhoaDieuKien();
-            HienThi("");
+            LockCondition();
+            Display("");
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
             if (btnAdd.Text == "Add")
             {               
-                MoDieuKien();
+                OpenCondition();
                 cboStatus.Text = "Trống";
                 cboStatus.Enabled = false;
                 setnull();
@@ -104,17 +104,17 @@ namespace QLPT
                 {
                     try
                     {
-                        ec.mapt = txtRoomID.Text;
-                        ec.loai = cboType.Text;
-                        ec.tang = cboFloor.Text;
+                        ec.roomID = txtRoomID.Text;
+                        ec.type = cboType.Text;
+                        ec.floor = cboFloor.Text;
                         if (cboType.Text == "A")
                         {
-                            ec.sltoida = "2";
+                            ec.maxCus = "2";
                         }
-                        else { ec.sltoida = "3"; }
-                        ec.trangthai = cboStatus.Text;
-                        ec.tenphong = txtRoomName.Text;
-                        bus.ThemDuLieu(ec);
+                        else { ec.maxCus = "3"; }
+                        ec.status = cboStatus.Text;
+                        ec.roomName = txtRoomName.Text;
+                        bus.AddData(ec);
                         MessageBox.Show("Add data success", "Message");
 
                     }
@@ -125,8 +125,8 @@ namespace QLPT
                     }
                 }
                 btnAdd.Text = "Add";
-                KhoaDieuKien();
-                HienThi("");
+                LockCondition();
+                Display("");
             }
         }
 
@@ -139,8 +139,8 @@ namespace QLPT
             //}
             if (btnUpdate.Text == "Update")
             {
-                MoDieuKien();
-                if (kiemtratrangthai != "Đang cho thuê")
+                OpenCondition();
+                if (checkroomstatus != "Đang cho thuê")
                 {
                     cboStatus.Enabled = true;
                     txtRoomID.Focus();
@@ -168,14 +168,14 @@ namespace QLPT
                 {
                     try
                     {
-                        ec.mapt = txtRoomID.Text;
-                        ec.loai = cboType.Text;
-                        ec.tang = cboFloor.Text;
+                        ec.roomID = txtRoomID.Text;
+                        ec.type = cboType.Text;
+                        ec.floor = cboFloor.Text;
                         if (cboType.Text == "A")
                         {
-                            ec.sltoida = "2";
+                            ec.maxCus = "2";
                         }
-                        else { ec.sltoida = "3"; }
+                        else { ec.maxCus = "3"; }
                         //if (ec.trangthai == "Đang cho thuê")
                         //{
                         //    cmbtrangthai.Enabled = false;
@@ -184,9 +184,9 @@ namespace QLPT
                         //{
                         //    ec.trangthai = cmbtrangthai.Text;
                         //}
-                        ec.trangthai = cboStatus.Text;
-                        ec.tenphong = txtRoomName.Text;
-                        bus.SuaDuLieu(ec);
+                        ec.status = cboStatus.Text;
+                        ec.roomName = txtRoomName.Text;
+                        bus.UpdateData(ec);
                         MessageBox.Show("Update data success", "Message");
 
                     }
@@ -196,8 +196,8 @@ namespace QLPT
                         return;
                     }
                 }
-                KhoaDieuKien();
-                HienThi("");
+                LockCondition();
+                Display("");
                 btnUpdate.Text = "Update";
             }
         }
@@ -206,11 +206,11 @@ namespace QLPT
         {
             try
             {
-                ec.mapt = txtRoomID.Text;
-                bus.XoaDuLieu(ec);
+                ec.roomID = txtRoomID.Text;
+                bus.DeleteData(ec);
                 MessageBox.Show("Deleted !");
-                KhoaDieuKien();
-                HienThi("");
+                LockCondition();
+                Display("");
             }
             catch
             {
@@ -258,7 +258,7 @@ namespace QLPT
                 txtRoomID.Text = grdRoom.Rows[dong].Cells[0].Value.ToString();                               
                 txtRoomName.Text = grdRoom.Rows[dong].Cells[2].Value.ToString();
                 cboStatus.Text = grdRoom.Rows[dong].Cells[5].Value.ToString();
-                kiemtratrangthai = cboStatus.Text;
+                checkroomstatus = cboStatus.Text;
                 cboType.Text = grdRoom.Rows[dong].Cells[3].Value.ToString();
                 cboFloor.Text = grdRoom.Rows[dong].Cells[1].Value.ToString();
 

@@ -14,45 +14,45 @@ namespace QLPT_BUS
         DAL_HireRoom sql = new DAL_HireRoom();
 
         // Thêm Dữ Liệu
-        public void ThemDuLieu(E_HireRoom et)
+        public void AddData(E_HireRoom et)
         {
-            sql.ThemDuLieu(et);
+            sql.AddData(et);
         }
         //Sửa
-        public void SuaDuLieu(E_HireRoom et)
+        public void UpdateData(E_HireRoom et)
         {
-            sql.SuaDuLieu(et);
+            sql.UpdateData(et);
         }
         //Xoá
-        public void XoaDuLieu(E_HireRoom et)
+        public void DeleteData(E_HireRoom et)
         {
-            sql.XoaDuLieu(et);
+            sql.DeleteData(et);
         }
         //Lấy Dữ Liệu
         //TaoBang("") select * from tblKhachHang where MaKH ='1'( ví dụ)
-        public DataTable TaoBang(string DieuKien)
+        public DataTable CreateTable(string Condition)
         {
-            return sql.TaoBang(DieuKien);
+            return sql.CreateTable(Condition);
         }
-        public DataTable LayThongtinmapt(string DieuKien)
+        public DataTable GetRoomID(string Condition)
         {
-            return sql.LayThongtinmapt(DieuKien);
+            return sql.GetRoomID(Condition);
         }
-        public void updatetrangthaiphongtro1(string DieuKien)
+        public void UpdateRoomStatus(string Condition)
         {
-            sql.updatetrangthaiphongtro1(DieuKien);
+            sql.UpdateRoomStatus(Condition);
         }
-        public void updatetrangthaiphongtro2(string DieuKien)
+        public void UpdateRoomStatus2(string DieuKien)
         {
-            sql.updatetrangthaiphongtro2(DieuKien);
+            sql.UpdateRoomStatus2(DieuKien);
         }
-        public string demsoluongnguoi(string DieuKien)
+        public string countcustomer(string DieuKien)
         {
-            return sql.demsoluongnguoi(DieuKien);
+            return sql.countcustomer(DieuKien);
         }
-        public string songuoitoida(string DieuKien)
+        public string maxcustomer(string DieuKien)
         {
-            return sql.songuoitoida(DieuKien);
+            return sql.maxcustomer(DieuKien);
         }
     } 
 }

@@ -14,18 +14,18 @@ namespace QLPT
 {
     public partial class FrmReceipt : Form
     {
-        int tienphongnho;
-        int tienphonglon;
-        int tiendien;
-        int tiennuoc;
-        int tienmang;
-        int tienrac;
-        int tienxe;
-        int giamtien;
-        int Kiemtra;
+        int smallroomcharge;
+        int bigroomcharge;
+        int elec;
+        int water;
+        int internet;
+        int garbage;
+        int parking;
+        int discount;
+        int check;
         string year;
         string month;
-        int soluongnguoi;
+        int countcustomer;
         BUS_Receipt bus = new BUS_Receipt();
         E_Receipt ec = new E_Receipt();
         public FrmReceipt()
@@ -35,37 +35,37 @@ namespace QLPT
 
         private void FrmReceipt_Load(object sender, EventArgs e)
         {
-            Kiemtra = int.Parse(bus.kiemtra());
+            check = int.Parse(bus.check());
             
-                if (Kiemtra != 0)
+                if (check != 0)
                 {
-                    tienphongnho = int.Parse(bus.getvalue2("tienphongnho", "'1'"));
-                    tienphonglon = int.Parse(bus.getvalue2("tienphonglon", "'1'"));
-                    tiendien = int.Parse(bus.getvalue2("tiendien", "'1'"));
-                    tiennuoc = int.Parse(bus.getvalue2("tiennuoc", "'1'"));
-                    tienxe = int.Parse(bus.getvalue2("tienxe", "'1'"));
-                    tienmang = int.Parse(bus.getvalue2("tienmang", "'1'"));
-                    tienrac = int.Parse(bus.getvalue2("tienrac", "'1'"));
-                    giamtien = int.Parse(bus.getvalue2("giamtienlenphong", "'1'"));
+                    smallroomcharge = int.Parse(bus.getvalue2("tienphongnho", "'1'"));
+                    bigroomcharge = int.Parse(bus.getvalue2("tienphonglon", "'1'"));
+                    elec = int.Parse(bus.getvalue2("tiendien", "'1'"));
+                    water = int.Parse(bus.getvalue2("tiennuoc", "'1'"));
+                    parking = int.Parse(bus.getvalue2("tienxe", "'1'"));
+                    internet = int.Parse(bus.getvalue2("tienmang", "'1'"));
+                    garbage = int.Parse(bus.getvalue2("tienrac", "'1'"));
+                    discount = int.Parse(bus.getvalue2("giamtienlenphong", "'1'"));
                 }
-                cboChoseRoom.DataSource = bus.LayThongtinmapt(" where trangthai = 'Đang cho thuê' ");
+                cboChoseRoom.DataSource = bus.GetRoomID(" where trangthai = 'Đang cho thuê' ");
                 cboChoseRoom.ValueMember = "mapt";
                 cboChoseRoom.DisplayMember = "mapt";
                 if (cboChoseRoom != null)
                 {
-                    soluongnguoi = int.Parse(bus.demsoluongnguoi("'" + cboChoseRoom.Text + "'"));
+                    countcustomer = int.Parse(bus.countCustomer("'" + cboChoseRoom.Text + "'"));
                     txtRoomName.Text = bus.getvalue("tenphong", "'" + cboChoseRoom.Text + "'");
                     txtRoomID.Text = bus.getvalue("mapt", "'" + cboChoseRoom.Text + "'");
                     txtFloor.Text = bus.getvalue("tang", "'" + cboChoseRoom.Text + "'");
                     txtType.Text = bus.getvalue("loai", "'" + cboChoseRoom.Text + "'");
-                    dgthongtinkhachthue.DataSource = bus.TaoBang("where mapt='" + txtRoomID.Text + "'");
-                    txtWater.Text = (soluongnguoi * tiennuoc).ToString();
-                    txtInternet.Text = tienmang.ToString();
+                    dgthongtinkhachthue.DataSource = bus.CreateTable("where mapt='" + txtRoomID.Text + "'");
+                    txtWater.Text = (countcustomer * water).ToString();
+                    txtInternet.Text = internet.ToString();
                     if (txtType.Text == "A")
                     {
-                        txtRoomMoney.Text = tienphongnho.ToString();
+                        txtRoomMoney.Text = smallroomcharge.ToString();
                     }
-                    else { txtRoomMoney.Text = tienphonglon.ToString(); }
+                    else { txtRoomMoney.Text = bigroomcharge.ToString(); }
 
                 }
             
@@ -78,26 +78,26 @@ namespace QLPT
         {
             if (cboChoseRoom != null)
             {
-                soluongnguoi = int.Parse(bus.demsoluongnguoi("'" + cboChoseRoom.Text + "'"));
+                countcustomer = int.Parse(bus.countCustomer("'" + cboChoseRoom.Text + "'"));
                 txtRoomName.Text = bus.getvalue("tenphong", "'" + cboChoseRoom.Text + "'");
                 txtRoomID.Text = bus.getvalue("mapt", "'" + cboChoseRoom.Text + "'");
                 txtFloor.Text = bus.getvalue("tang", "'" + cboChoseRoom.Text + "'");
                 txtType.Text = bus.getvalue("loai", "'" + cboChoseRoom.Text + "'");
-                dgthongtinkhachthue.DataSource = bus.TaoBang("where mapt='" + txtRoomID.Text + "'");
-                txtWater.Text = (soluongnguoi * tiennuoc).ToString();
-                txtInternet.Text = tienmang.ToString();
+                dgthongtinkhachthue.DataSource = bus.CreateTable("where mapt='" + txtRoomID.Text + "'");
+                txtWater.Text = (countcustomer * water).ToString();
+                txtInternet.Text = internet.ToString();
                 if (txtType.Text == "A")
                 {
-                    txtRoomMoney.Text = tienphongnho.ToString();
+                    txtRoomMoney.Text = smallroomcharge.ToString();
                 }             
-                else { txtRoomMoney.Text = tienphonglon.ToString(); }
+                else { txtRoomMoney.Text = bigroomcharge.ToString(); }
                 try
                 {
                     if (txtElec.Text != "" && txtVehicle.Text != "")
                     {
-                        txtTotal.Text = (tienrac + int.Parse(txtRoomMoney.Text) + int.Parse(txtElecMoney.Text)
+                        txtTotal.Text = (garbage + int.Parse(txtRoomMoney.Text) + int.Parse(txtElecMoney.Text)
                                        + int.Parse(txtWater.Text) + int.Parse(txtInternet.Text)
-                                       + int.Parse(txtParking.Text) - ((int.Parse(txtFloor.Text) - 1) * giamtien)).ToString();
+                                       + int.Parse(txtParking.Text) - ((int.Parse(txtFloor.Text) - 1) * discount)).ToString();
                     }
                 }
                 catch { MessageBox.Show("Vui lòng kiểm tra lại tham số ở form qui định","Thông báo"); }
@@ -109,12 +109,12 @@ namespace QLPT
 
             try
             {
-                txtElecMoney.Text = (tiendien * (int.Parse(txtElec.Text))).ToString();
+                txtElecMoney.Text = (elec * (int.Parse(txtElec.Text))).ToString();
                 if (txtVehicle.Text != "")
                 {
-                    txtTotal.Text = (tienrac + int.Parse(txtRoomMoney.Text) + int.Parse(txtElecMoney.Text)
+                    txtTotal.Text = (garbage + int.Parse(txtRoomMoney.Text) + int.Parse(txtElecMoney.Text)
                                        + int.Parse(txtWater.Text) + int.Parse(txtInternet.Text)
-                                       + int.Parse(txtParking.Text) - ((int.Parse(txtFloor.Text) - 1) * giamtien)).ToString();
+                                       + int.Parse(txtParking.Text) - ((int.Parse(txtFloor.Text) - 1) * discount)).ToString();
                 }
             }
             catch { MessageBox.Show("Vui lòng kiểm tra lại tham số ở form qui định", "Thông báo"); }
@@ -124,12 +124,12 @@ namespace QLPT
         {
             try
             {
-                txtParking.Text = (tienxe * (int.Parse(txtVehicle.Text))).ToString();
+                txtParking.Text = (parking * (int.Parse(txtVehicle.Text))).ToString();
                 if (txtElec.Text != "")
                 {
-                    txtTotal.Text = (tienrac + int.Parse(txtRoomMoney.Text) + int.Parse(txtElecMoney.Text)
+                    txtTotal.Text = (garbage + int.Parse(txtRoomMoney.Text) + int.Parse(txtElecMoney.Text)
                                    + int.Parse(txtWater.Text) + int.Parse(txtInternet.Text)
-                                   + int.Parse(txtParking.Text) - ((int.Parse(txtFloor.Text) - 1) * giamtien)).ToString();
+                                   + int.Parse(txtParking.Text) - ((int.Parse(txtFloor.Text) - 1) * discount)).ToString();
                 }
             }
             catch { MessageBox.Show("Please fill out this form", "Message"); }
@@ -147,7 +147,7 @@ namespace QLPT
                 MessageBox.Show("Please fill a number of vehicle", "Message");
                 return;
             }
-            string a = bus.kiemtra2(cboChoseRoom.Text, month, year);
+            string a = bus.check2(cboChoseRoom.Text, month, year);
             if(a!="0")
             {
                 MessageBox.Show("You have completed payment !", "Message");
@@ -158,20 +158,20 @@ namespace QLPT
                 try
                 {
                     
-                    ec.mapt = cboChoseRoom.Text;
-                    ec.tiendien = txtElecMoney.Text;
-                    ec.tiennuoc = txtWater.Text;
-                    ec.tienxe = txtParking.Text;
-                    ec.tienmang = txtInternet.Text;
-                    ec.tongtien = txtTotal.Text;
-                    ec.tienphong = txtRoomMoney.Text;
-                    ec.ngaythu = dtpReceiptDate.Value;
+                    ec.roomID = cboChoseRoom.Text;
+                    ec.elec = txtElecMoney.Text;
+                    ec.water = txtWater.Text;
+                    ec.parking = txtParking.Text;
+                    ec.internet = txtInternet.Text;
+                    ec.total = txtTotal.Text;
+                    ec.roomCharge = txtRoomMoney.Text;
+                    ec.receiptDate = dtpReceiptDate.Value;
                     if (txtElec.Text != "" && txtVehicle.Text != "")
                     {
-                        if (tienphonglon != 0 && tienphongnho!=0&&tiendien!=0&&tiennuoc!=0&&tienmang!=0&&tienrac!=0&&tienxe!=0&&giamtien!=0)
+                        if (bigroomcharge != 0 && smallroomcharge!=0&&elec!=0&&water!=0&&internet!=0&&garbage!=0&&parking!=0&&discount!=0)
                         {
                           
-                            bus.ThemDuLieu(ec);
+                            bus.AddData(ec);
                             MessageBox.Show("Payment success !", "Message");
                             return;
                         }

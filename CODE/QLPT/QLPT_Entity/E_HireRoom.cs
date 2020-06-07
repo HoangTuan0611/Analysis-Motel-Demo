@@ -8,100 +8,100 @@ namespace QLPT_Entity
 {
     public class E_HireRoom
     {
-        private string _makt;
-        private string _mapt;
-        private string _hoten;
-        private string _cmnd;
-        private string _gioitinh;
-        private string _nghenghiep;
-        private string _sdt;
+        private string _cusID;
+        private string _roomID;
+        private string _cusName;
+        private string _cusIdenCard;
+        private string _cusSex;
+        private string _cusJob;
+        private string _PhoneNo;
 
-        public string makt
+        public string cusID
         {
             get
             {
-                return _makt;
+                return _cusID;
             }
 
             set
             {
-                _makt = value;
+                _cusID = value;
             }
         }
 
-        public string mapt
+        public string roomID
         {
             get
             {
-                return _mapt;
+                return _roomID;
             }
 
             set
             {
-                _mapt = value;
+                _roomID = value;
             }
         }
 
-        public string hoten
+        public string cusName
         {
             get
             {
-                return _hoten;
+                return _cusName;
             }
 
             set
             {
-                _hoten = value;
+                _cusName = value;
             }
         }
 
-        public string cmnd
+        public string cusIdenCard
         {
             get
             {
-                return _cmnd;
+                return _cusIdenCard;
             }
 
             set
             {
-                _cmnd = value;
+                _cusIdenCard = value;
             }
         }
 
-        public string gioitinh
+        public string cusSex
         {
             get
             {
-                return _gioitinh;
+                return _cusSex;
             }
 
             set
             {
-                _gioitinh = value;
+                _cusSex = value;
             }
         }
-        public string nghenghiep
+        public string cusJob
         {
             get
             {
-                return _nghenghiep;
+                return _cusJob;
             }
 
             set
             {
-                _nghenghiep = value;
+                _cusJob = value;
             }
         }
-        public string sdt
+        public string PhoneNo
         {
             get
             {
-                return _sdt;
+                return _PhoneNo;
             }
 
             set
             {
-                _sdt = value;
+                _PhoneNo = value;
             }
         }
 

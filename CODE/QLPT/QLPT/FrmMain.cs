@@ -16,14 +16,14 @@ namespace QLPT
         {
             InitializeComponent();
         }
-        public static string TaiKhoan = string.Empty;
+        public static string Account = string.Empty;
 
         private void FrmMain_Load(object sender, EventArgs e)
         {
-            KhoaDieuKien();
+            LockConditon();
             tipLogin_Click(sender, e);
         }
-        void KhoaDieuKien()
+        void LockConditon()
         {
             tipSetting.Enabled = false;
             tipLogin.Enabled = true;
@@ -31,7 +31,7 @@ namespace QLPT
             tipStastistic.Enabled = false;
             tipHireRoom.Enabled = false;
         }
-        void MoDieuKien()
+        void OpenCondition()
         {
             tipSetting.Enabled = true;
             tipLogin.Enabled = true;
@@ -48,30 +48,30 @@ namespace QLPT
                 dn.ShowDialog();
 
                 // nếu chuỗi có giá trị!
-                if (!string.IsNullOrEmpty(TaiKhoan))
+                if (!string.IsNullOrEmpty(Account))
                 {
-                    this.lbltaikhoan.Text = TaiKhoan;
+                    this.lbltaikhoan.Text = Account;
                     this.lbltaikhoan.BackColor = System.Drawing.Color.Transparent;
                     this.lbltaikhoan.ForeColor = System.Drawing.Color.Teal;
-                    MoDieuKien();
+                    OpenCondition();
                     tipLogin.Text = "Log Out";
                 }
             }
             else
             {
 
-                DialogResult thongbao;
-                thongbao = (MessageBox.Show("Do you want to Log out", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question));
-                if (thongbao == DialogResult.Yes)
+                DialogResult message;
+                message = (MessageBox.Show("Do you want to Log out", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question));
+                if (message == DialogResult.Yes)
                 {
-                    KhoaDieuKien();
+                    LockConditon();
                     this.lbltaikhoan.Text = "";
                     tipLogin.Text = "Log In";
                 }
 
                 if (this.lbltaikhoan.Text == "")
                 {
-                    KhoaDieuKien();
+                    LockConditon();
                     tipLogin.Text = "Log In";
                 }
 
@@ -80,7 +80,7 @@ namespace QLPT
 
         private void tipHireRoom_Click(object sender, EventArgs e)
         {
-            Frmkhachtro kt = new Frmkhachtro();
+            FrmHireRoom kt = new FrmHireRoom();
             kt.ShowDialog();
         }
 

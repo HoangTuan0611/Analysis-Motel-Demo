@@ -35,7 +35,7 @@ namespace QLPT_DAL
 
         }
         //insert update delete 
-        public void ThucThiCauLenh(string strSQL)
+        public void ExcuteQuery(string strSQL)
         {
             try
             {
