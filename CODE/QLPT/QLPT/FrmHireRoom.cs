@@ -114,7 +114,7 @@ namespace QLPT
                 setnull();
                 txtCusID.Focus();
                 btnAdd.Text = "Save";
-                MaTuTang();
+                AutoIncreamentID();
             }
             else if(btnAdd.Text == "Save")
             {
@@ -237,20 +237,20 @@ namespace QLPT
             }
         }
 
-        private void MaTuTang()
+        private void AutoIncreamentID()
         {
             DataTable dt = db.GetDataTable("Select * from khachtro");
             string h = "";
 
             if (dt.Rows.Count <= 0)
             {
-                h = "KT00001";
+                h = "CUS00001";
             }
 
             else
             {
                 int k;//lấy giá trị số trong chuỗi mã nhân viên đã có
-                h = "KT";//ký tự mặc định của mã nhân viên
+                h = "CUS";//ký tự mặc định của mã nhân viên
                 k = Convert.ToInt32(dt.Rows[dt.Rows.Count - 1][0].ToString().Substring(2, 5));
                 k = k + 1;
                 if (k < 10)

@@ -381,52 +381,52 @@
             // 
             this.makt.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.makt.DataPropertyName = "makt";
-            this.makt.HeaderText = "Mã khách trọ";
+            this.makt.HeaderText = "Customer ID";
             this.makt.Name = "makt";
             // 
             // mapt
             // 
             this.mapt.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.mapt.DataPropertyName = "mapt";
-            this.mapt.HeaderText = "Mã phòng trọ";
+            this.mapt.HeaderText = "Room ID";
             this.mapt.Name = "mapt";
             // 
             // hoten
             // 
             this.hoten.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.hoten.DataPropertyName = "hoten";
-            this.hoten.HeaderText = "Họ tên";
+            this.hoten.HeaderText = "Name";
             this.hoten.Name = "hoten";
             // 
             // cmnd
             // 
             this.cmnd.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.cmnd.DataPropertyName = "cmnd";
-            this.cmnd.HeaderText = "CMND";
+            this.cmnd.HeaderText = "Identification Card";
             this.cmnd.Name = "cmnd";
             // 
             // gioitinh
             // 
             this.gioitinh.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.gioitinh.DataPropertyName = "gioitinh";
-            this.gioitinh.HeaderText = "Giới tính";
+            this.gioitinh.HeaderText = "Sex";
             this.gioitinh.Name = "gioitinh";
             // 
             // nghenghiep
             // 
             this.nghenghiep.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.nghenghiep.DataPropertyName = "nghenghiep";
-            this.nghenghiep.HeaderText = "Nghề nghiệp";
+            this.nghenghiep.HeaderText = "Job";
             this.nghenghiep.Name = "nghenghiep";
             // 
             // sdt
             // 
             this.sdt.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.sdt.DataPropertyName = "sdt";
-            this.sdt.HeaderText = "SĐT";
+            this.sdt.HeaderText = "Phone Number";
             this.sdt.Name = "sdt";
             // 
-            // Frmkhachtro
+            // FrmHireRoom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -438,7 +438,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
-            this.Name = "Frmkhachtro";
+            this.Name = "FrmHireRoom";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hire Room";
             this.Load += new System.EventHandler(this.FrmHireRoom_Load);
@@ -475,6 +475,12 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView grdCustomer;
         private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Label lblCurrentSlot;
+        private System.Windows.Forms.Label lblMaxSlot;
+        private System.Windows.Forms.TextBox txtCurrentSlot;
+        private System.Windows.Forms.TextBox txtMaxSlot;
+        private System.Windows.Forms.CheckBox chkEmptyRoom;
+        private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.DataGridViewTextBoxColumn makt;
         private System.Windows.Forms.DataGridViewTextBoxColumn mapt;
         private System.Windows.Forms.DataGridViewTextBoxColumn hoten;
@@ -482,11 +488,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn gioitinh;
         private System.Windows.Forms.DataGridViewTextBoxColumn nghenghiep;
         private System.Windows.Forms.DataGridViewTextBoxColumn sdt;
-        private System.Windows.Forms.Label lblCurrentSlot;
-        private System.Windows.Forms.Label lblMaxSlot;
-        private System.Windows.Forms.TextBox txtCurrentSlot;
-        private System.Windows.Forms.TextBox txtMaxSlot;
-        private System.Windows.Forms.CheckBox chkEmptyRoom;
-        private System.Windows.Forms.Button btnCancel;
     }
 }

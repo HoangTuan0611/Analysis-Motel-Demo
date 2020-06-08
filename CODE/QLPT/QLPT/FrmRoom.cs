@@ -91,7 +91,7 @@ namespace QLPT
                 setnull();
                 txtRoomID.Focus();
                 btnAdd.Text = "Save";
-                MaTuTang();
+                AutoIncreamentID();
             }
             else if (btnAdd.Text == "Save")
             {
@@ -217,21 +217,21 @@ namespace QLPT
                 MessageBox.Show("Can't delete ");
             }
         }
-        private void MaTuTang()
+        private void AutoIncreamentID()
         {
 
             DataTable dt = db.GetDataTable("Select * from phongtro");
             string h = "";
-            if (dt == null) { h = "PT00001"; goto here; }
+            if (dt == null) { h = "R00001"; goto here; }
             if (dt.Rows.Count <= 0)
             {
-                h = "PT00001";
+                h = "R00001";
             }
 
             else
             {
                 int k;//lấy giá trị số trong chuỗi mã nhân viên đã có
-                h = "PT";//ký tự mặc định của mã nhân viên
+                h = "R";//ký tự mặc định của mã nhân viên
                 k = Convert.ToInt32(dt.Rows[dt.Rows.Count - 1][0].ToString().Substring(2, 5));
                 k = k + 1;
                 if (k < 10)

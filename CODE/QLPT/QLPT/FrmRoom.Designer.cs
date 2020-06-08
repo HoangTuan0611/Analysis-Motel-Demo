@@ -275,42 +275,42 @@
             // 
             this.mapt.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.mapt.DataPropertyName = "mapt";
-            this.mapt.HeaderText = "Mã phòng trọ";
+            this.mapt.HeaderText = "Room ID";
             this.mapt.Name = "mapt";
             // 
             // tenphong
             // 
             this.tenphong.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.tenphong.DataPropertyName = "tenphong";
-            this.tenphong.HeaderText = "Tên phòng";
+            this.tenphong.HeaderText = "Name";
             this.tenphong.Name = "tenphong";
             // 
             // tang
             // 
             this.tang.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.tang.DataPropertyName = "tang";
-            this.tang.HeaderText = "Tầng";
+            this.tang.HeaderText = "Floor";
             this.tang.Name = "tang";
             // 
             // loaiphong
             // 
             this.loaiphong.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.loaiphong.DataPropertyName = "loai";
-            this.loaiphong.HeaderText = "Loại phòng";
+            this.loaiphong.HeaderText = "Room Type";
             this.loaiphong.Name = "loaiphong";
             // 
             // sltoida
             // 
             this.sltoida.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.sltoida.DataPropertyName = "sltoida";
-            this.sltoida.HeaderText = "Số lượng người tối đa";
+            this.sltoida.HeaderText = "Max Slot";
             this.sltoida.Name = "sltoida";
             // 
             // trangthai
             // 
             this.trangthai.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.trangthai.DataPropertyName = "trangthai";
-            this.trangthai.HeaderText = "Trạng thái";
+            this.trangthai.HeaderText = "Room Status";
             this.trangthai.Name = "trangthai";
             // 
             // FrmRoom
@@ -359,12 +359,12 @@
         private System.Windows.Forms.DataGridView grdRoom;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.ComboBox cboStatus;
+        private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.DataGridViewTextBoxColumn mapt;
         private System.Windows.Forms.DataGridViewTextBoxColumn tenphong;
         private System.Windows.Forms.DataGridViewTextBoxColumn tang;
         private System.Windows.Forms.DataGridViewTextBoxColumn loaiphong;
         private System.Windows.Forms.DataGridViewTextBoxColumn sltoida;
         private System.Windows.Forms.DataGridViewTextBoxColumn trangthai;
-        private System.Windows.Forms.Button btnCancel;
     }
 }

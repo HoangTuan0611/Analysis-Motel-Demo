@@ -38,6 +38,7 @@
             this.lblRoomID = new System.Windows.Forms.Label();
             this.grpHireCusInfo = new System.Windows.Forms.GroupBox();
             this.grdCusHireInfo = new System.Windows.Forms.DataGridView();
+            this.btnAgree = new System.Windows.Forms.Button();
             this.makt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mapt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hoten = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,7 +46,6 @@
             this.gioitinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nghenghiep = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sdt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnAgree = new System.Windows.Forms.Button();
             this.grpHireRoom.SuspendLayout();
             this.grpHireCusInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdCusHireInfo)).BeginInit();
@@ -155,55 +155,6 @@
             this.grdCusHireInfo.Size = new System.Drawing.Size(675, 133);
             this.grdCusHireInfo.TabIndex = 0;
             // 
-            // makt
-            // 
-            this.makt.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.makt.DataPropertyName = "makt";
-            this.makt.HeaderText = "Mã khách trọ";
-            this.makt.Name = "makt";
-            // 
-            // mapt
-            // 
-            this.mapt.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.mapt.DataPropertyName = "mapt";
-            this.mapt.HeaderText = "Mã phòng trọ";
-            this.mapt.Name = "mapt";
-            // 
-            // hoten
-            // 
-            this.hoten.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.hoten.DataPropertyName = "hoten";
-            this.hoten.HeaderText = "Họ tên";
-            this.hoten.Name = "hoten";
-            // 
-            // cmnd
-            // 
-            this.cmnd.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.cmnd.DataPropertyName = "cmnd";
-            this.cmnd.HeaderText = "CMND";
-            this.cmnd.Name = "cmnd";
-            // 
-            // gioitinh
-            // 
-            this.gioitinh.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.gioitinh.DataPropertyName = "gioitinh";
-            this.gioitinh.HeaderText = "Giới tính";
-            this.gioitinh.Name = "gioitinh";
-            // 
-            // nghenghiep
-            // 
-            this.nghenghiep.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.nghenghiep.DataPropertyName = "nghenghiep";
-            this.nghenghiep.HeaderText = "Nghề nghiệp";
-            this.nghenghiep.Name = "nghenghiep";
-            // 
-            // sdt
-            // 
-            this.sdt.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.sdt.DataPropertyName = "sdt";
-            this.sdt.HeaderText = "Số điện thoại";
-            this.sdt.Name = "sdt";
-            // 
             // btnAgree
             // 
             this.btnAgree.Location = new System.Drawing.Point(337, 254);
@@ -214,6 +165,55 @@
             this.btnAgree.Text = "Agree";
             this.btnAgree.UseVisualStyleBackColor = true;
             this.btnAgree.Click += new System.EventHandler(this.btnAgree_Click);
+            // 
+            // makt
+            // 
+            this.makt.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.makt.DataPropertyName = "makt";
+            this.makt.HeaderText = "Customer ID";
+            this.makt.Name = "makt";
+            // 
+            // mapt
+            // 
+            this.mapt.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.mapt.DataPropertyName = "mapt";
+            this.mapt.HeaderText = "Room ID";
+            this.mapt.Name = "mapt";
+            // 
+            // hoten
+            // 
+            this.hoten.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.hoten.DataPropertyName = "hoten";
+            this.hoten.HeaderText = "Name";
+            this.hoten.Name = "hoten";
+            // 
+            // cmnd
+            // 
+            this.cmnd.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.cmnd.DataPropertyName = "cmnd";
+            this.cmnd.HeaderText = "Identification";
+            this.cmnd.Name = "cmnd";
+            // 
+            // gioitinh
+            // 
+            this.gioitinh.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.gioitinh.DataPropertyName = "gioitinh";
+            this.gioitinh.HeaderText = "Sex";
+            this.gioitinh.Name = "gioitinh";
+            // 
+            // nghenghiep
+            // 
+            this.nghenghiep.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nghenghiep.DataPropertyName = "nghenghiep";
+            this.nghenghiep.HeaderText = "Job";
+            this.nghenghiep.Name = "nghenghiep";
+            // 
+            // sdt
+            // 
+            this.sdt.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.sdt.DataPropertyName = "sdt";
+            this.sdt.HeaderText = "Phone Number";
+            this.sdt.Name = "sdt";
             // 
             // FrmCheckOut
             // 
