@@ -1,7 +1,9 @@
-﻿using System;
+﻿using CrystalDecisions.Windows.Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.OleDb;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -38,6 +40,7 @@ namespace QLPT
             tipRoom.Enabled = true;
             tipStastistic.Enabled = true;
             tipHireRoom.Enabled = true;
+ 
         }
         private void tipLogin_Click(object sender, EventArgs e)
         {

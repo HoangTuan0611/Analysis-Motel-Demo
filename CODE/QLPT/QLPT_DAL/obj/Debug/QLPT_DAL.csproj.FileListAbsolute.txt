@@ -43,3 +43,12 @@ D:\Analysis-Motel-Demo\CODE\QLPT\QLPT_DAL\obj\Debug\QLPT_DAL.csproj.CoreCompileI
 D:\Analysis-Motel-Demo\CODE\QLPT\QLPT_DAL\obj\Debug\QLPT_DAL.csproj.CopyComplete
 D:\Analysis-Motel-Demo\CODE\QLPT\QLPT_DAL\obj\Debug\QLPT_DAL.dll
 D:\Analysis-Motel-Demo\CODE\QLPT\QLPT_DAL\obj\Debug\QLPT_DAL.pdb
+D:\TH.Analyst & Design Information System\00.TEAM02\Analysis-Motel-Demo\CODE\QLPT\QLPT_DAL\bin\Debug\QLPT_DAL.dll
+D:\TH.Analyst & Design Information System\00.TEAM02\Analysis-Motel-Demo\CODE\QLPT\QLPT_DAL\bin\Debug\QLPT_DAL.pdb
+D:\TH.Analyst & Design Information System\00.TEAM02\Analysis-Motel-Demo\CODE\QLPT\QLPT_DAL\bin\Debug\QLPT_Entity.dll
+D:\TH.Analyst & Design Information System\00.TEAM02\Analysis-Motel-Demo\CODE\QLPT\QLPT_DAL\bin\Debug\QLPT_Entity.pdb
+D:\TH.Analyst & Design Information System\00.TEAM02\Analysis-Motel-Demo\CODE\QLPT\QLPT_DAL\obj\Debug\QLPT_DAL.csprojAssemblyReference.cache
+D:\TH.Analyst & Design Information System\00.TEAM02\Analysis-Motel-Demo\CODE\QLPT\QLPT_DAL\obj\Debug\QLPT_DAL.csproj.CoreCompileInputs.cache
+D:\TH.Analyst & Design Information System\00.TEAM02\Analysis-Motel-Demo\CODE\QLPT\QLPT_DAL\obj\Debug\QLPT_DAL.csproj.CopyComplete
+D:\TH.Analyst & Design Information System\00.TEAM02\Analysis-Motel-Demo\CODE\QLPT\QLPT_DAL\obj\Debug\QLPT_DAL.dll
+D:\TH.Analyst & Design Information System\00.TEAM02\Analysis-Motel-Demo\CODE\QLPT\QLPT_DAL\obj\Debug\QLPT_DAL.pdb

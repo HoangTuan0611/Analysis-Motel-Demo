@@ -14,5 +14,6 @@ namespace QLPT_DAL
         {
             return cn.GetDataTable("Select * from thutien where MONTH(ngaythu)='" + DieuKien1 + "' and YEAR(ngaythu)='" + DieuKien2 + "'");
         }
+
     }
 }

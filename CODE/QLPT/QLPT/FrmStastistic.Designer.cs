@@ -42,16 +42,17 @@
             this.tongtien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtngaythu = new System.Windows.Forms.DateTimePicker();
             this.btnxem = new System.Windows.Forms.Button();
-            this.btnexcel = new System.Windows.Forms.Button();
+            this.btnReport = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dvthutien)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(137, 22);
+            this.label1.Location = new System.Drawing.Point(183, 27);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(37, 13);
+            this.label1.Size = new System.Drawing.Size(47, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Month";
             // 
@@ -68,9 +69,11 @@
             this.tienxe,
             this.tienphong,
             this.tongtien});
-            this.dvthutien.Location = new System.Drawing.Point(1, 70);
+            this.dvthutien.Location = new System.Drawing.Point(1, 86);
+            this.dvthutien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dvthutien.Name = "dvthutien";
-            this.dvthutien.Size = new System.Drawing.Size(875, 321);
+            this.dvthutien.RowHeadersWidth = 51;
+            this.dvthutien.Size = new System.Drawing.Size(1167, 395);
             this.dvthutien.TabIndex = 1;
             // 
             // mathu
@@ -78,6 +81,7 @@
             this.mathu.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.mathu.DataPropertyName = "mathu";
             this.mathu.HeaderText = "Mã Thu";
+            this.mathu.MinimumWidth = 6;
             this.mathu.Name = "mathu";
             // 
             // mapt
@@ -85,6 +89,7 @@
             this.mapt.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.mapt.DataPropertyName = "mapt";
             this.mapt.HeaderText = "Mã Phòng Trọ";
+            this.mapt.MinimumWidth = 6;
             this.mapt.Name = "mapt";
             // 
             // ngaythu
@@ -92,6 +97,7 @@
             this.ngaythu.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.ngaythu.DataPropertyName = "ngaythu";
             this.ngaythu.HeaderText = "Ngày Thu";
+            this.ngaythu.MinimumWidth = 6;
             this.ngaythu.Name = "ngaythu";
             // 
             // tiendien
@@ -99,6 +105,7 @@
             this.tiendien.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.tiendien.DataPropertyName = "tiendien";
             this.tiendien.HeaderText = "Tiền Điện";
+            this.tiendien.MinimumWidth = 6;
             this.tiendien.Name = "tiendien";
             // 
             // tiennuoc
@@ -106,6 +113,7 @@
             this.tiennuoc.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.tiennuoc.DataPropertyName = "tiennuoc";
             this.tiennuoc.HeaderText = "Tiền Nước";
+            this.tiennuoc.MinimumWidth = 6;
             this.tiennuoc.Name = "tiennuoc";
             // 
             // tienmang
@@ -113,6 +121,7 @@
             this.tienmang.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.tienmang.DataPropertyName = "tienmang";
             this.tienmang.HeaderText = "Tiền Mạng";
+            this.tienmang.MinimumWidth = 6;
             this.tienmang.Name = "tienmang";
             // 
             // tienxe
@@ -120,6 +129,7 @@
             this.tienxe.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.tienxe.DataPropertyName = "tienxe";
             this.tienxe.HeaderText = "Tiền Xe";
+            this.tienxe.MinimumWidth = 6;
             this.tienxe.Name = "tienxe";
             // 
             // tienphong
@@ -127,6 +137,7 @@
             this.tienphong.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.tienphong.DataPropertyName = "tienphong";
             this.tienphong.HeaderText = "Tiền Phòng";
+            this.tienphong.MinimumWidth = 6;
             this.tienphong.Name = "tienphong";
             // 
             // tongtien
@@ -134,51 +145,55 @@
             this.tongtien.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.tongtien.DataPropertyName = "tongtien";
             this.tongtien.HeaderText = "Tổng Tiền";
+            this.tongtien.MinimumWidth = 6;
             this.tongtien.Name = "tongtien";
             // 
             // dtngaythu
             // 
             this.dtngaythu.CustomFormat = "MM/yyyy";
             this.dtngaythu.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtngaythu.Location = new System.Drawing.Point(191, 18);
+            this.dtngaythu.Location = new System.Drawing.Point(255, 22);
+            this.dtngaythu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtngaythu.Name = "dtngaythu";
-            this.dtngaythu.Size = new System.Drawing.Size(74, 20);
+            this.dtngaythu.Size = new System.Drawing.Size(97, 22);
             this.dtngaythu.TabIndex = 2;
             this.dtngaythu.ValueChanged += new System.EventHandler(this.Dtngaythu_ValueChanged);
             // 
             // btnxem
             // 
-            this.btnxem.Location = new System.Drawing.Point(297, 17);
+            this.btnxem.Location = new System.Drawing.Point(396, 21);
+            this.btnxem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnxem.Name = "btnxem";
-            this.btnxem.Size = new System.Drawing.Size(75, 23);
+            this.btnxem.Size = new System.Drawing.Size(100, 28);
             this.btnxem.TabIndex = 3;
             this.btnxem.Text = "View";
             this.btnxem.UseVisualStyleBackColor = true;
             this.btnxem.Click += new System.EventHandler(this.Btnxem_Click);
             // 
-            // btnexcel
+            // btnReport
             // 
-            this.btnexcel.Location = new System.Drawing.Point(403, 17);
-            this.btnexcel.Name = "btnexcel";
-            this.btnexcel.Size = new System.Drawing.Size(75, 23);
-            this.btnexcel.TabIndex = 4;
-            this.btnexcel.Text = "Excel";
-            this.btnexcel.UseVisualStyleBackColor = true;
-            this.btnexcel.Click += new System.EventHandler(this.Btnexcel_Click);
+            this.btnReport.Location = new System.Drawing.Point(537, 21);
+            this.btnReport.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnReport.Name = "btnReport";
+            this.btnReport.Size = new System.Drawing.Size(100, 28);
+            this.btnReport.TabIndex = 4;
+            this.btnReport.Text = "Report";
+            this.btnReport.UseVisualStyleBackColor = true;
+            this.btnReport.Click += new System.EventHandler(this.Btnreport_Click);
             // 
             // FrmStastistic
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.ClientSize = new System.Drawing.Size(886, 401);
-            this.Controls.Add(this.btnexcel);
+            this.ClientSize = new System.Drawing.Size(1181, 494);
+            this.Controls.Add(this.btnReport);
             this.Controls.Add(this.btnxem);
             this.Controls.Add(this.dtngaythu);
             this.Controls.Add(this.dvthutien);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.Name = "FrmStastistic";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -196,7 +211,7 @@
         private System.Windows.Forms.DataGridView dvthutien;
         private System.Windows.Forms.DateTimePicker dtngaythu;
         private System.Windows.Forms.Button btnxem;
-        private System.Windows.Forms.Button btnexcel;
+        private System.Windows.Forms.Button btnReport;
         private System.Windows.Forms.DataGridViewTextBoxColumn mathu;
         private System.Windows.Forms.DataGridViewTextBoxColumn mapt;
         private System.Windows.Forms.DataGridViewTextBoxColumn ngaythu;

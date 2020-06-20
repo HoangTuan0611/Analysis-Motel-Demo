@@ -18,7 +18,7 @@ namespace QLPT_DAL
         {
 
             if (ConnectDB.connect == null)
-                ConnectDB.connect = new SqlConnection("Data Source=DESKTOP-SSFHDII; Database=DataQLPT ;Integrated Security=SSPI;");
+                ConnectDB.connect = new SqlConnection(@"Data Source=DESKTOP-19MG1RT\SQLEXPRESS01;Initial Catalog=DataQLPT;Integrated Security=SSPI;");
 
             if (ConnectDB.connect.State != ConnectionState.Open)
                 ConnectDB.connect.Open();
@@ -182,6 +182,32 @@ namespace QLPT_DAL
                 temp = sqldr[0].ToString();
             DongKetNoi();
             return temp;
+        }
+
+        public static DataTable GetReport(string strSQL)
+        {
+            DataTable dt = new DataTable();
+            SqlConnection conn = new SqlConnection(_ChuoiKetNoi);
+            try
+            {
+                conn.Open();
+                SqlCommand comm = new SqlCommand();
+                comm.Connection = conn;
+                comm.CommandType = CommandType.Text;
+                comm.CommandText = strSQL;
+                SqlDataAdapter adapter = new SqlDataAdapter(comm);
+                adapter.Fill(dt);
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return dt;
         }
     }
 }

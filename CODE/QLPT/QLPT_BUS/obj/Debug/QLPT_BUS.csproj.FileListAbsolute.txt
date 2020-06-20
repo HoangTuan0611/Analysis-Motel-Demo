@@ -53,3 +53,14 @@ D:\Analysis-Motel-Demo\CODE\QLPT\QLPT_BUS\obj\Debug\QLPT_BUS.csproj.CoreCompileI
 D:\Analysis-Motel-Demo\CODE\QLPT\QLPT_BUS\obj\Debug\QLPT_BUS.csproj.CopyComplete
 D:\Analysis-Motel-Demo\CODE\QLPT\QLPT_BUS\obj\Debug\QLPT_BUS.dll
 D:\Analysis-Motel-Demo\CODE\QLPT\QLPT_BUS\obj\Debug\QLPT_BUS.pdb
+D:\TH.Analyst & Design Information System\00.TEAM02\Analysis-Motel-Demo\CODE\QLPT\QLPT_BUS\bin\Debug\QLPT_BUS.dll
+D:\TH.Analyst & Design Information System\00.TEAM02\Analysis-Motel-Demo\CODE\QLPT\QLPT_BUS\bin\Debug\QLPT_BUS.pdb
+D:\TH.Analyst & Design Information System\00.TEAM02\Analysis-Motel-Demo\CODE\QLPT\QLPT_BUS\bin\Debug\QLPT_DAL.dll
+D:\TH.Analyst & Design Information System\00.TEAM02\Analysis-Motel-Demo\CODE\QLPT\QLPT_BUS\bin\Debug\QLPT_Entity.dll
+D:\TH.Analyst & Design Information System\00.TEAM02\Analysis-Motel-Demo\CODE\QLPT\QLPT_BUS\bin\Debug\QLPT_DAL.pdb
+D:\TH.Analyst & Design Information System\00.TEAM02\Analysis-Motel-Demo\CODE\QLPT\QLPT_BUS\bin\Debug\QLPT_Entity.pdb
+D:\TH.Analyst & Design Information System\00.TEAM02\Analysis-Motel-Demo\CODE\QLPT\QLPT_BUS\obj\Debug\QLPT_BUS.csprojAssemblyReference.cache
+D:\TH.Analyst & Design Information System\00.TEAM02\Analysis-Motel-Demo\CODE\QLPT\QLPT_BUS\obj\Debug\QLPT_BUS.csproj.CoreCompileInputs.cache
+D:\TH.Analyst & Design Information System\00.TEAM02\Analysis-Motel-Demo\CODE\QLPT\QLPT_BUS\obj\Debug\QLPT_BUS.csproj.CopyComplete
+D:\TH.Analyst & Design Information System\00.TEAM02\Analysis-Motel-Demo\CODE\QLPT\QLPT_BUS\obj\Debug\QLPT_BUS.dll
+D:\TH.Analyst & Design Information System\00.TEAM02\Analysis-Motel-Demo\CODE\QLPT\QLPT_BUS\obj\Debug\QLPT_BUS.pdb
