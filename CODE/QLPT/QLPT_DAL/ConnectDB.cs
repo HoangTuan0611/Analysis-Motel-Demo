@@ -18,7 +18,7 @@ namespace QLPT_DAL
         {
 
             if (ConnectDB.connect == null)
-                ConnectDB.connect = new SqlConnection("Data Source=DESKTOP-SSFHDII; Database=DataQLPT ;Integrated Security=SSPI;");
+                ConnectDB.connect = new SqlConnection(@"Server=.; Database=DataQLPT ;Integrated Security=SSPI;");
 
             if (ConnectDB.connect.State != ConnectionState.Open)
                 ConnectDB.connect.Open();
@@ -69,7 +69,7 @@ namespace QLPT_DAL
             }
         }
        
-        public static string _ChuoiKetNoi = (@"Data Source=DESKTOP-SSFHDII\SQLEXPRESS;; Database=DataQLPT ;Integrated Security=SSPI");
+        public static string _ChuoiKetNoi = (@"Server=.; Database=DataQLPT ;Integrated Security=SSPI");
         public static DataTable GetDanhSach(string strSQL)
         {
             DataTable dt = new DataTable();

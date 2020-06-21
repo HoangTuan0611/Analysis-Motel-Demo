@@ -109,7 +109,6 @@ namespace QLPT
         {
             if (btnAdd.Text == "Add")
             {
-
                 OpenCondition();
                 setnull();
                 txtCusID.Focus();
@@ -251,7 +250,7 @@ namespace QLPT
             {
                 int k;//lấy giá trị số trong chuỗi mã nhân viên đã có
                 h = "CUS";//ký tự mặc định của mã nhân viên
-                k = Convert.ToInt32(dt.Rows[dt.Rows.Count - 1][0].ToString().Substring(2, 5));
+                k = Convert.ToInt32(dt.Rows[dt.Rows.Count - 1][0].ToString().Substring(3, 5));
                 k = k + 1;
                 if (k < 10)
 
