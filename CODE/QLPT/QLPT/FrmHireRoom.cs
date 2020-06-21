@@ -250,10 +250,9 @@ namespace QLPT
             {
                 int k;//lấy giá trị số trong chuỗi mã nhân viên đã có
                 h = "CUS";//ký tự mặc định của mã nhân viên
-<<<<<<< HEAD
+
                 string str = dt.Rows[dt.Rows.Count - 1][0].ToString().Substring(3, 5);
-=======
->>>>>>> 5e53a9ee24e7b0e02f353aec840616d96a16e973
+
                 k = Convert.ToInt32(dt.Rows[dt.Rows.Count - 1][0].ToString().Substring(3, 5));
                 k = k + 1;
                 if (k < 10)
