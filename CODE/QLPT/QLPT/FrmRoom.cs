@@ -222,16 +222,16 @@ namespace QLPT
 
             DataTable dt = db.GetDataTable("Select * from phongtro");
             string h = "";
-            if (dt == null) { h = "R00001"; goto here; }
+            if (dt == null) { h = "RM00001"; goto here; }
             if (dt.Rows.Count <= 0)
             {
-                h = "R00001";
+                h = "RM00001";
             }
 
             else
             {
                 int k;//lấy giá trị số trong chuỗi mã nhân viên đã có
-                h = "R";//ký tự mặc định của mã nhân viên
+                h = "RM";//ký tự mặc định của mã nhân viên
                 k = Convert.ToInt32(dt.Rows[dt.Rows.Count - 1][0].ToString().Substring(2, 5));
                 k = k + 1;
                 if (k < 10)
