@@ -18,7 +18,7 @@ namespace QLPT_DAL
         {
 
             if (ConnectDB.connect == null)
-                ConnectDB.connect = new SqlConnection(@"Server=DESKTOP-19MG1RT\SQLEXPRESS01; Database=DataQLPT ;Integrated Security=SSPI;");
+                ConnectDB.connect = new SqlConnection(@"Server=.; Database=DataQLPT ;Integrated Security=SSPI;");
 
             if (ConnectDB.connect.State != ConnectionState.Open)
                 ConnectDB.connect.Open();
@@ -70,32 +70,32 @@ namespace QLPT_DAL
         }
        
         public static string _ChuoiKetNoi = (@"Server=.; Database=DataQLPT ;Integrated Security=SSPI");
-        
-        //public static DataTable GetDanhSach(string strSQL)
-        //{
-        //    DataTable dt = new DataTable();
-        //    SqlConnection conn = new SqlConnection(_ChuoiKetNoi);
-        //    try
-        //    {
-        //        conn.Open();
-        //        SqlCommand comm = new SqlCommand();
-        //        comm.Connection = conn;
-        //        comm.CommandType = CommandType.Text;
-        //        comm.CommandText = strSQL;
-        //        SqlDataAdapter adapter = new SqlDataAdapter(comm);
-        //        adapter.Fill(dt);
-        //    }
-        //    catch (Exception ex)
-        //    {
 
-        //        throw ex;
-        //    }
-        //    finally
-        //    {
-        //        conn.Close();
-        //    }
-        //    return dt;
-        //}
+        public static DataTable GetDanhSach(string strSQL)
+        {
+            DataTable dt = new DataTable();
+            SqlConnection conn = new SqlConnection(_ChuoiKetNoi);
+            try
+            {
+                conn.Open();
+                SqlCommand comm = new SqlCommand();
+                comm.Connection = conn;
+                comm.CommandType = CommandType.Text;
+                comm.CommandText = strSQL;
+                SqlDataAdapter adapter = new SqlDataAdapter(comm);
+                adapter.Fill(dt);
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return dt;
+        }
         //public DataTable GetDataTableDSS(string strSQL)//lệnh select.....
         //{
         //    try
