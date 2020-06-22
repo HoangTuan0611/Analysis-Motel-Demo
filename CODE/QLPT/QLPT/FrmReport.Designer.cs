@@ -91,7 +91,7 @@
 
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer2;
-        private rptTienPhong rptTienPhong1;
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer3;
+        private rptTienPhong rptTienPhong1;
     }
 }
