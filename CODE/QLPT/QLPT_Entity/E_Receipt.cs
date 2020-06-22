@@ -8,26 +8,26 @@ namespace QLPT_Entity
 {
     public class E_Receipt
     {
-        private string _roomID;
-        private string _elec;
-        private string _water;
-        private string _internet;
-        private string _parking;
-        private string _roomCharge;
-        private string _total;
-        private DateTime _receiptDate;
-        
+        private string _mapt;
+        private string _tiendien;
+        private string _tiennuoc;
+        private string _tienmang;
+        private string _tienxe;
+        private string _tienphong;
+        private string _tongtien;
+        private DateTime _ngaythu;
+
 
         public string roomID
         {
             get
             {
-                return _roomID;
+                return _mapt;
             }
 
             set
             {
-                _roomID = value;
+                _mapt = value;
             }
         }
 
@@ -35,12 +35,12 @@ namespace QLPT_Entity
         {
             get
             {
-                return _elec;
+                return _tiendien;
             }
 
             set
             {
-                _elec = value;
+                _tiendien = value;
             }
         }
 
@@ -48,12 +48,12 @@ namespace QLPT_Entity
         {
             get
             {
-                return _roomCharge;
+                return _tienphong;
             }
 
             set
             {
-                _roomCharge = value;
+                _tienphong = value;
             }
         }
 
@@ -61,12 +61,12 @@ namespace QLPT_Entity
         {
             get
             {
-                return _water;
+                return _tiennuoc;
             }
 
             set
             {
-                _water = value;
+                _tiennuoc = value;
             }
         }
 
@@ -74,47 +74,47 @@ namespace QLPT_Entity
         {
             get
             {
-                return _parking;
+                return _tienxe;
             }
 
             set
             {
-                _parking = value;
+                _tienxe = value;
             }
         }
         public string internet
         {
             get
             {
-                return _internet;
+                return _tienmang;
             }
 
             set
             {
-                _internet = value;
+                _tienmang = value;
             }
         }
         public string total
         {
             get
             {
-                return _total;
+                return _tongtien;
             }
 
             set
             {
-                _total = value;
+                _tongtien = value;
             }
         }
         public DateTime receiptDate
         {
             get
             {
-                return _receiptDate;
+                return _ngaythu;
             }
             set
             {
-                _receiptDate = value;
+                _ngaythu = value;
             }
         }
     }
