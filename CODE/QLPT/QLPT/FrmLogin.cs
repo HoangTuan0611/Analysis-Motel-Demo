@@ -39,7 +39,7 @@ namespace QLPT
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            string strcon = @"Server=DESKTOP-19MG1RT\SQLEXPRESS01; Database=DataQLPT ;Integrated Security=SSPI;";
+            string strcon = @"Server=.; Database=DataQLPT ;Integrated Security=SSPI;";
             string user = txtUsername.Text.Trim();
             string pass = txtPassword.Text.Trim();
             DataTable dt = SqlHelper.ExecuteDataset(strcon, "DangNhap_Login", user, pass).Tables[0];

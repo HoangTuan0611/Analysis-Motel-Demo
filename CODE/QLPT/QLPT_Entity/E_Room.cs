@@ -8,14 +8,15 @@ namespace QLPT_Entity
 {
     public class E_Room
     {
-        
-        private string _roomID;
-        private string _roomName;
-        private string _floor;
-        private string _type;
-        private string _maxCus;
-        private string _status;
-       
+
+        private string _mapt;
+        private string _tenphong;
+        private string _tang;
+        private string _loai;
+        private string _sltoida;
+        private string _trangthai;
+
+
 
 
 
@@ -23,12 +24,12 @@ namespace QLPT_Entity
         {
             get
             {
-                return _roomID;
+                return _mapt;
             }
 
             set
             {
-                _roomID = value;
+                _mapt = value;
             }
         }
 
@@ -36,12 +37,12 @@ namespace QLPT_Entity
         {
             get
             {
-                return _roomName;
+                return _tenphong;
             }
 
             set
             {
-                _roomName = value;
+                _tenphong = value;
             }
         }
 
@@ -49,12 +50,12 @@ namespace QLPT_Entity
         {
             get
             {
-                return _floor;
+                return _tang;
             }
 
             set
             {
-                _floor = value;
+                _tang = value;
             }
         }
 
@@ -62,36 +63,36 @@ namespace QLPT_Entity
         {
             get
             {
-                return _type;
+                return _loai;
             }
 
             set
             {
-                _type = value;
+                _loai = value;
             }
         }
         public string maxCus
         {
             get
             {
-                return _maxCus;
+                return _sltoida;
             }
 
             set
             {
-                _maxCus = value;
+                _sltoida = value;
             }
         }
         public string status
         {
             get
             {
-                return _status;
+                return _trangthai;
             }
 
             set
             {
-                _status = value;
+                _trangthai = value;
             }
         }
      

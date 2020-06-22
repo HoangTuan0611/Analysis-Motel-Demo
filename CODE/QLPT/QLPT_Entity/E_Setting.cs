@@ -8,25 +8,25 @@ namespace QLPT_Entity
 {
     public class E_Setting
     {
-        private string _smallroomCharge;
-        private string _bigroomCharge;
-        private string _elec;
-        private string _water;
-        private string _parking;
-        private string _internet;
-        private string _garbage;
-        private string _discount;
+        private string _tienphongnho;
+        private string _tienphonglon;
+        private string _tiendien;
+        private string _tiennuoc;
+        private string _tienxe;
+        private string _tienmang;
+        private string _tienrac;
+        private string _giamtienlenphong;
 
         public string smallroomCharge
         {
             get
             {
-                return _smallroomCharge;
+                return _tienphongnho;
             }
 
             set
             {
-                _smallroomCharge = value;
+                _tienphongnho = value;
             }
         }
 
@@ -34,12 +34,12 @@ namespace QLPT_Entity
         {
             get
             {
-                return _bigroomCharge;
+                return _tienphonglon;
             }
 
             set
             {
-                _bigroomCharge = value;
+                _tienphonglon = value;
             }
         }
 
@@ -47,12 +47,12 @@ namespace QLPT_Entity
         {
             get
             {
-                return _elec;
+                return _tiendien;
             }
 
             set
             {
-                _elec = value;
+                _tiendien = value;
             }
         }
 
@@ -60,12 +60,12 @@ namespace QLPT_Entity
         {
             get
             {
-                return _water;
+                return _tiennuoc;
             }
 
             set
             {
-                _water = value;
+                _tiennuoc = value;
             }
         }
 
@@ -73,48 +73,48 @@ namespace QLPT_Entity
         {
             get
             {
-                return _parking;
+                return _tienxe;
             }
 
             set
             {
-                _parking = value;
+                _tienxe = value;
             }
         }
         public string internet
         {
             get
             {
-                return _internet;
+                return _tienmang;
             }
 
             set
             {
-                _internet = value;
+                _tienmang = value;
             }
         }
         public string garbage
         {
             get
             {
-                return _garbage;
+                return _tienrac;
             }
 
             set
             {
-                _garbage = value;
+                _tienrac = value;
             }
         }
         public string discount
         {
             get
             {
-                return _discount;
+                return _giamtienlenphong;
             }
 
             set
             {
-                _discount = value;
+                _giamtienlenphong = value;
             }
         }
 
