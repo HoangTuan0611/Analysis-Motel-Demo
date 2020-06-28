@@ -16,14 +16,14 @@ namespace QLPT {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class rptTienPhong : ReportClass {
+    public class rptReceipt : ReportClass {
         
-        public rptTienPhong() {
+        public rptReceipt() {
         }
         
         public override string ResourceName {
             get {
-                return "rptTienPhong.rpt";
+                return "rptReceipt.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace QLPT {
         
         public override string FullResourceName {
             get {
-                return "QLPT.rptTienPhong.rpt";
+                return "QLPT.rptReceipt.rpt";
             }
             set {
                 // Do nothing
@@ -90,9 +90,9 @@ namespace QLPT {
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedrptTienPhong : Component, ICachedReport {
+    public class CachedrptReceipt : Component, ICachedReport {
         
-        public CachedrptTienPhong() {
+        public CachedrptReceipt() {
         }
         
         [Browsable(false)]
@@ -129,7 +129,7 @@ namespace QLPT {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            rptTienPhong rpt = new rptTienPhong();
+            rptReceipt rpt = new rptReceipt();
             rpt.Site = this.Site;
             return rpt;
         }

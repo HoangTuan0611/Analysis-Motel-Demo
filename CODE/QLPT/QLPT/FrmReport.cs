@@ -21,10 +21,25 @@ namespace QLPT
         }
         private void FrmReport_Load(object sender, EventArgs e)
         {
-            ReportDocument myReportDocument;
-            myReportDocument = new ReportDocument();
-            myReportDocument.Load(@"D:\project\Analysis-Motel-Demo\CODE\QLPT\QLPT\rptTienPhong.rpt");
+            SqlConnection con = new SqlConnection();
+            SqlCommand cmd = new SqlCommand();
+            con.ConnectionString = "Data Source=DESKTOP-8I4FATD;Initial Catalog = DataQLPT; " + "Integrated Security = true; ";
+            con.Open();
+
+            cmd = new SqlCommand("select * from thutien", con);
+            SqlDataAdapter adt = new SqlDataAdapter(cmd);
+            DataSet ds = new DataSet();
+            adt.Fill(ds, "thutien");
+
+            ReportDocument reportDocument1 = new ReportDocument();
+            reportDocument1.Load(@"D:\Githud\Analysis-Motel-Demo\CODE\QLPT\QLPT\rptReceipt.rpt");
+
+           
+            reportDocument1.SetDataSource(ds.Tables["thutien"]);
+            crystalReportViewer1.ReportSource=reportDocument1;
+            crystalReportViewer1.Refresh();
 
         }
     }
+    
 }

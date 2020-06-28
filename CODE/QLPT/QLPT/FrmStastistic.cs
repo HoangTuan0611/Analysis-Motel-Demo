@@ -11,6 +11,8 @@ using QLPT_BUS;
 //using Microsoft.Office.Interop.Excel;
 using Excel = Microsoft.Office.Interop.Excel;
 using Microsoft.CSharp;
+using System.Data.SqlClient;
+using CrystalDecisions.CrystalReports.Engine;
 
 namespace QLPT
 {

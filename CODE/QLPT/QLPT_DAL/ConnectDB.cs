@@ -17,7 +17,8 @@ namespace QLPT_DAL
         public static void MoKetNoi()
         {
 
-            if (ConnectDB.connect == null)
+            if (ConnectDB.connect == null) 
+
                 ConnectDB.connect = new SqlConnection(@"Server=.; Database=DataQLPT ;Integrated Security=SSPI;");
 
             if (ConnectDB.connect.State != ConnectionState.Open)
