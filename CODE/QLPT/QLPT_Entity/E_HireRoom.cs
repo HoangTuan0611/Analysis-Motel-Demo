@@ -8,15 +8,27 @@ namespace QLPT_Entity
 {
     public class E_HireRoom
     {
+        private string _mathue;
         private string _makt;
         private string _mapt;
-        private string _hoten;
-        private string _cmnd;
-        private string _gioitinh;
-        private string _nghenghiep;
-        private string _sdt;
+        private DateTime _ngaybd;
+        private DateTime _ngaykt;
+    
 
-        public string cusID
+        public string ConID
+        {
+            get
+            {
+                return _mathue;
+            }
+
+            set
+            {
+                _mathue = value;
+            }
+        }
+
+        public string CusID
         {
             get
             {
@@ -29,7 +41,7 @@ namespace QLPT_Entity
             }
         }
 
-        public string roomID
+        public string RoomID
         {
             get
             {
@@ -42,68 +54,29 @@ namespace QLPT_Entity
             }
         }
 
-        public string cusName
+        public DateTime Dateto
         {
             get
             {
-                return _hoten;
+                return _ngaykt;
             }
 
             set
             {
-                _hoten = value;
+                _ngaykt = value;
             }
         }
-
-        public string cusIdenCard
+        public DateTime Datefrom
         {
             get
             {
-                return _cmnd;
+                return _ngaybd;
             }
 
             set
             {
-                _cmnd = value;
+                _ngaybd = value;
             }
         }
-
-        public string cusSex
-        {
-            get
-            {
-                return _gioitinh;
-            }
-
-            set
-            {
-                _gioitinh = value;
-            }
-        }
-        public string cusJob
-        {
-            get
-            {
-                return _nghenghiep;
-            }
-
-            set
-            {
-                _nghenghiep = value;
-            }
-        }
-        public string PhoneNo
-        {
-            get
-            {
-                return _sdt;
-            }
-
-            set
-            {
-                _sdt = value;
-            }
-        }
-
     }
 }

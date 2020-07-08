@@ -80,7 +80,7 @@ namespace QLPT
 
         private void tipHireRoom_Click(object sender, EventArgs e)
         {
-            FrmHireRoom kt = new FrmHireRoom();
+            FrmCustomer kt = new FrmCustomer();
             kt.ShowDialog();
         }
 
@@ -112,6 +112,12 @@ namespace QLPT
         {
             FrmStastistic tk = new FrmStastistic();
             tk.ShowDialog();
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            FrmHireRoom hr = new FrmHireRoom();
+            hr.ShowDialog();
         }
     }
 }

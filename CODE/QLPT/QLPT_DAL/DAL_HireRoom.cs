@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -12,48 +11,24 @@ namespace QLPT_DAL
     public class DAL_HireRoom
     {
         ConnectDB cn = new ConnectDB();
-
         // Thêm Dữ Liệu
         public void AddData(E_HireRoom et)
         {
-            cn.ExcuteQuery(@"INSERT INTO khachtro (makt, mapt, hoten, cmnd, gioitinh, nghenghiep, sdt) VALUES  ('" + et.cusID + "',N'" + et.roomID + "',N'" + et.cusName + "',N'" + et.cusIdenCard + "',N'" + et.cusSex + "',N'" + et.cusJob + "',N'" + et.PhoneNo + "')");
+            cn.ExcuteQuery(@"INSERT INTO thuephong (mathue, makt, mapt, ngaybd, ngaykt) VALUES  ('" + et.ConID + "',N'" + et.CusID + "',N'" + et.RoomID + "',N'" + et.Datefrom + "',N'" + et.Dateto + "')");
         }
-        //Sửa
-        public void UpdateData(E_HireRoom et)
-        {
-            cn.ExcuteQuery(@"UPDATE khachtro SET mapt = N'" + et.roomID + "', hoten =N'" + et.cusName + "', cmnd ='" + et.cusIdenCard + "', gioitinh ='" + et.cusSex + "', nghenghiep ='" + et.cusJob + "', sdt ='" + et.PhoneNo + "' Where makt='" + et.cusID + "'");
-        }
-        //Xoá
-        public void DeleteData(E_HireRoom et)
-        {
 
-            cn.ExcuteQuery(@"DELETE FROM khachtro  Where makt='" + et.cusID + "'");
-        }
-        //Lấy Dữ Liệu
-        //TaoBang("") select * from tblKhachHang where MaKH ='1'( ví dụ)
-        public DataTable CreateTable(string DieuKien)
+        public DataTable CreateTable(string Condition)
         {
-            return cn.GetDataTable("Select * from khachtro " + DieuKien);
+            return cn.GetDataTable("Select * from thuephong" + Condition);
         }
         public DataTable GetRoomID(string DieuKien)
         {
             return cn.GetDataTable("Select mapt from phongtro " + DieuKien);
         }
-        public void UpdateRoomStatus(string DieuKien)
+        public DataTable GetCustomerID(string DieuKien)
         {
-            cn.ExcuteQuery("UPDATE phongtro SET trangthai ='Đang cho thuê' where mapt = " + DieuKien);
-        }
-        public void UpdateRoomStatus2(string DieuKien)
-        {
-            cn.ExcuteQuery("UPDATE phongtro SET trangthai ='Trống' where mapt = " + DieuKien);
-        }
-        public string countcustomer(string DieuKien)
-        {
-           return cn.GetValue("Select COUNT(*) from khachtro where mapt = " + DieuKien);
-        }
-        public string maxcustomer(string DieuKien)
-        {
-           return cn.GetValue("Select sltoida from phongtro where mapt = " + DieuKien);
+            return cn.GetDataTable("Select makt from khachtro " + DieuKien);
         }
     }
+
 }

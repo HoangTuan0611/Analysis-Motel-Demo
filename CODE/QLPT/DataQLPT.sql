@@ -13,6 +13,14 @@ loai nvarchar(10) primary key,
 soluong int,
 )
 go
+create table thuephong(
+mathue varchar (50) primary key,
+makt varchar(50) references khachtro,
+mapt varchar (50) references phongtro,
+ngaybd smalldatetime,
+ngaykt smalldatetime,
+)
+go
 drop table phongtro
 create table phongtro(
 mapt varchar (50) primary key,
@@ -25,7 +33,6 @@ trangthai nvarchar(50),
 go
 create table khachtro(
 makt varchar(50) primary key,
-mapt varchar(50),
 hoten nvarchar(50),
 cmnd varchar(15),
 gioitinh nvarchar(10),
@@ -47,12 +54,6 @@ ngaythu smalldatetime,
 tongtien int,
 )
 
-create table thuephong(
-mathuephong int primary key,
-makt varchar(50) REFERENCES khachtro,
-mapt varchar(50) REFERENCES phongtro,
-ngaythue smalldatetime,
-)
 
 go
 create table thamso(
@@ -94,7 +95,7 @@ SELECT *
 	where @username = USERNAME
 			and @password = PASS
 
-<<<<<<< HEAD
+
 			
 =======
 Select phongtro.mapt from phongtro where trangthai != 'Da cho thue'

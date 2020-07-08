@@ -59,6 +59,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmHireRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmHireRoom.Designer.cs">
+      <DependentUpon>FrmHireRoom.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,11 +83,11 @@
     <Compile Include="FrmSetting.Designer.cs">
       <DependentUpon>FrmSetting.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmHireRoom.cs">
+    <Compile Include="FrmCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmHireRoom.Designer.cs">
-      <DependentUpon>FrmHireRoom.cs</DependentUpon>
+    <Compile Include="FrmCustomer.Designer.cs">
+      <DependentUpon>FrmCustomer.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmMain.cs">
       <SubType>Form</SubType>
@@ -121,6 +127,9 @@
       <DependentUpon>rptReceipt.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <EmbeddedResource Include="FrmHireRoom.resx">
+      <DependentUpon>FrmHireRoom.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -130,8 +139,8 @@
     <EmbeddedResource Include="FrmSetting.resx">
       <DependentUpon>FrmSetting.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmHireRoom.resx">
-      <DependentUpon>FrmHireRoom.cs</DependentUpon>
+    <EmbeddedResource Include="FrmCustomer.resx">
+      <DependentUpon>FrmCustomer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>

@@ -152,7 +152,6 @@ D:\Githud\Analysis-Motel-Demo\CODE\QLPT\QLPT\obj\Debug\QLPT.csprojAssemblyRefere
 D:\Githud\Analysis-Motel-Demo\CODE\QLPT\QLPT\obj\Debug\QLPT.csproj.ResolveComReference.cache
 D:\Githud\Analysis-Motel-Demo\CODE\QLPT\QLPT\obj\Debug\QLPT.FrmLogin.resources
 D:\Githud\Analysis-Motel-Demo\CODE\QLPT\QLPT\obj\Debug\QLPT.FrmSetting.resources
-D:\Githud\Analysis-Motel-Demo\CODE\QLPT\QLPT\obj\Debug\QLPT.FrmHireRoom.resources
 D:\Githud\Analysis-Motel-Demo\CODE\QLPT\QLPT\obj\Debug\QLPT.FrmMain.resources
 D:\Githud\Analysis-Motel-Demo\CODE\QLPT\QLPT\obj\Debug\QLPT.FrmRoom.resources
 D:\Githud\Analysis-Motel-Demo\CODE\QLPT\QLPT\obj\Debug\QLPT.FrmStastistic.resources
@@ -231,3 +230,5 @@ D:\Githud\Analysis-Motel-Demo\CODE\QLPT\QLPT\bin\Debug\CrystalDecisions.ReportAp
 D:\Githud\Analysis-Motel-Demo\CODE\QLPT\QLPT\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
 D:\Githud\Analysis-Motel-Demo\CODE\QLPT\QLPT\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
 D:\Githud\Analysis-Motel-Demo\CODE\QLPT\QLPT\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+D:\Githud\Analysis-Motel-Demo\CODE\QLPT\QLPT\obj\Debug\QLPT.FrmCustomer.resources
+D:\Githud\Analysis-Motel-Demo\CODE\QLPT\QLPT\obj\Debug\QLPT.FrmHireRoom.resources

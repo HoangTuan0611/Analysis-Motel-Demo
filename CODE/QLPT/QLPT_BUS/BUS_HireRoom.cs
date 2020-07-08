@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using QLPT_DAL;
 using QLPT_Entity;
+using System.Data;
 
 namespace QLPT_BUS
 {
@@ -18,18 +18,6 @@ namespace QLPT_BUS
         {
             sql.AddData(et);
         }
-        //Sửa
-        public void UpdateData(E_HireRoom et)
-        {
-            sql.UpdateData(et);
-        }
-        //Xoá
-        public void DeleteData(E_HireRoom et)
-        {
-            sql.DeleteData(et);
-        }
-        //Lấy Dữ Liệu
-        //TaoBang("") select * from tblKhachHang where MaKH ='1'( ví dụ)
         public DataTable CreateTable(string Condition)
         {
             return sql.CreateTable(Condition);
@@ -38,21 +26,9 @@ namespace QLPT_BUS
         {
             return sql.GetRoomID(Condition);
         }
-        public void UpdateRoomStatus(string Condition)
+        public DataTable GetCustomerID(string Condition)
         {
-            sql.UpdateRoomStatus(Condition);
+            return sql.GetCustomerID(Condition);
         }
-        public void UpdateRoomStatus2(string DieuKien)
-        {
-            sql.UpdateRoomStatus2(DieuKien);
-        }
-        public string countcustomer(string DieuKien)
-        {
-            return sql.countcustomer(DieuKien);
-        }
-        public string maxcustomer(string DieuKien)
-        {
-            return sql.maxcustomer(DieuKien);
-        }
-    } 
+    }
 }

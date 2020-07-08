@@ -34,10 +34,9 @@ namespace QLPT
             ReportDocument reportDocument1 = new ReportDocument();
             reportDocument1.Load(@"D:\Githud\Analysis-Motel-Demo\CODE\QLPT\QLPT\rptReceipt.rpt");
 
-           
             reportDocument1.SetDataSource(ds.Tables["thutien"]);
-            crystalReportViewer1.ReportSource=reportDocument1;
             crystalReportViewer1.Refresh();
+            crystalReportViewer1.ReportSource=reportDocument1;
 
         }
     }
