@@ -53,3 +53,16 @@ D:\Githud\Analysis-Motel-Demo\CODE\QLPT\QLPT_Entity\bin\Debug\es\DevExpress.Xpo.
 D:\Githud\Analysis-Motel-Demo\CODE\QLPT\QLPT_Entity\bin\Debug\ja\DevExpress.Xpo.v19.2.resources.dll
 D:\Githud\Analysis-Motel-Demo\CODE\QLPT\QLPT_Entity\bin\Debug\ru\DevExpress.Xpo.v19.2.resources.dll
 D:\Githud\Analysis-Motel-Demo\CODE\QLPT\QLPT_Entity\obj\Debug\QLPT_Entity.csproj.CopyComplete
+D:\Analysis-Motel-Demo\CODE\QLPT\QLPT_Entity\bin\Debug\DevExpress.Data.v19.2.dll
+D:\Analysis-Motel-Demo\CODE\QLPT\QLPT_Entity\bin\Debug\DevExpress.Xpo.v19.2.dll
+D:\Analysis-Motel-Demo\CODE\QLPT\QLPT_Entity\bin\Debug\DevExpress.Data.v19.2.xml
+D:\Analysis-Motel-Demo\CODE\QLPT\QLPT_Entity\bin\Debug\DevExpress.Xpo.v19.2.xml
+D:\Analysis-Motel-Demo\CODE\QLPT\QLPT_Entity\bin\Debug\de\DevExpress.Data.v19.2.resources.dll
+D:\Analysis-Motel-Demo\CODE\QLPT\QLPT_Entity\bin\Debug\es\DevExpress.Data.v19.2.resources.dll
+D:\Analysis-Motel-Demo\CODE\QLPT\QLPT_Entity\bin\Debug\ja\DevExpress.Data.v19.2.resources.dll
+D:\Analysis-Motel-Demo\CODE\QLPT\QLPT_Entity\bin\Debug\ru\DevExpress.Data.v19.2.resources.dll
+D:\Analysis-Motel-Demo\CODE\QLPT\QLPT_Entity\bin\Debug\de\DevExpress.Xpo.v19.2.resources.dll
+D:\Analysis-Motel-Demo\CODE\QLPT\QLPT_Entity\bin\Debug\es\DevExpress.Xpo.v19.2.resources.dll
+D:\Analysis-Motel-Demo\CODE\QLPT\QLPT_Entity\bin\Debug\ja\DevExpress.Xpo.v19.2.resources.dll
+D:\Analysis-Motel-Demo\CODE\QLPT\QLPT_Entity\bin\Debug\ru\DevExpress.Xpo.v19.2.resources.dll
+D:\Analysis-Motel-Demo\CODE\QLPT\QLPT_Entity\obj\Debug\QLPT_Entity.csproj.CopyComplete

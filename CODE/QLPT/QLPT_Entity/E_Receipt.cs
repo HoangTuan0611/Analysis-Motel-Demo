@@ -8,7 +8,8 @@ namespace QLPT_Entity
 {
     public class E_Receipt
     {
-        private string _mapt;
+        //private string _mapt;
+        private string _mathue;
         private string _tiendien;
         private string _tiennuoc;
         private string _tienmang;
@@ -18,16 +19,28 @@ namespace QLPT_Entity
         private DateTime _ngaythu;
 
 
+        //public string roomID
+        //{
+        //    get
+        //    {
+        //        return _mapt;
+        //    }
+
+        //    set
+        //    {
+        //        _mapt = value;
+        //    }
+        //}
         public string roomID
         {
             get
             {
-                return _mapt;
+                return _mathue;
             }
 
             set
             {
-                _mapt = value;
+                _mathue = value;
             }
         }
 

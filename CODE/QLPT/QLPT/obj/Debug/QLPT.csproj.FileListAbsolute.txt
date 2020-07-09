@@ -232,3 +232,6 @@ D:\Githud\Analysis-Motel-Demo\CODE\QLPT\QLPT\bin\Debug\CrystalDecisions.ReportAp
 D:\Githud\Analysis-Motel-Demo\CODE\QLPT\QLPT\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
 D:\Githud\Analysis-Motel-Demo\CODE\QLPT\QLPT\obj\Debug\QLPT.FrmCustomer.resources
 D:\Githud\Analysis-Motel-Demo\CODE\QLPT\QLPT\obj\Debug\QLPT.FrmHireRoom.resources
+D:\Analysis-Motel-Demo\CODE\QLPT\QLPT\bin\Debug\stdole.dll
+D:\Analysis-Motel-Demo\CODE\QLPT\QLPT\obj\Debug\QLPT.FrmReport.resources
+D:\Analysis-Motel-Demo\CODE\QLPT\QLPT\obj\Debug\QLPT.FrmCustomer.resources
