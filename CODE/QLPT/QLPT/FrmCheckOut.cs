@@ -21,14 +21,24 @@ namespace QLPT
 
         private void FrmCheckOut_Load(object sender, EventArgs e)
         {
-            cboRoom.DataSource = bus.GetIDRoomInfo(" where trangthai ='Đang cho thuê'");
-            cboRoom.ValueMember = "mapt";
-            cboRoom.DisplayMember = "mapt";
+            //cboRoom.DataSource = bus.GetIDRoomInfo(" where trangthai ='Đang cho thuê'");
+            //cboRoom.ValueMember = "mapt";
+            //cboRoom.DisplayMember = "mapt";
+            //if (cboRoom != null)
+            //{
+            //    txtRoomName.Text = bus.getvalue("tenphong","'"+cboRoom.Text+"'");
+            //    txtRoomID.Text = bus.getvalue("mapt","'"+cboRoom.Text+"'");
+            //    grdCusHireInfo.DataSource = bus.CreateTable("where mapt='"+txtRoomID.Text+"'");
+            //}
+
+            cboRoom.DataSource = bus.GetIDHireRoomInfo("");
+            cboRoom.ValueMember = "mathue";
+            cboRoom.DisplayMember = "mathue";
             if (cboRoom != null)
             {
-                txtRoomName.Text = bus.getvalue("tenphong","'"+cboRoom.Text+"'");
-                txtRoomID.Text = bus.getvalue("mapt","'"+cboRoom.Text+"'");
-                grdCusHireInfo.DataSource = bus.CreateTable("where mapt='"+txtRoomID.Text+"'");
+                txtRoomName.Text = bus.getvalue("makt", "'" + cboRoom.Text + "'");
+                txtRoomID.Text = bus.getvalue("mapt", "'" + cboRoom.Text + "'");
+                grdCusHireInfo.DataSource = bus.CreateTable("where mathue='" + txtRoomID.Text + "'&&thuephong.mapt=phongtro.mapt");
             }
         }
 
@@ -36,23 +46,25 @@ namespace QLPT
 
         private void cboRoom_TextChanged(object sender, EventArgs e)
         {
-            txtRoomName.Text = bus.getvalue("tenphong", "'" + cboRoom.Text + "'");
+            txtRoomName.Text = bus.getvalue("makt", "'" + cboRoom.Text + "'");
             txtRoomID.Text = bus.getvalue("mapt", "'" + cboRoom.Text + "'");
-            grdCusHireInfo.DataSource = bus.CreateTable("where mapt='" + txtRoomID.Text + "'");
+            grdCusHireInfo.DataSource = bus.CreateTable("where mathue='" + txtRoomID.Text + "'");
+            //grdCusHireInfo.DataSource = bus.CreateTable("where mathue='" + txtRoomID.Text + "'&&thuephong.mapt=phongtro.mapt");
         }
 
         private void btnAgree_Click(object sender, EventArgs e)
         {
             bus.Delete("'"+txtRoomID.Text+"'");
             bus.UpdateRoomStatus("'" + txtRoomID.Text + "'");
-            cboRoom.DataSource = bus.GetIDRoomInfo(" where trangthai ='Đang cho thuê'");
-            cboRoom.ValueMember = "mapt";
-            cboRoom.DisplayMember = "mapt";
+            cboRoom.DataSource = bus.GetIDHireRoomInfo("");
+            cboRoom.ValueMember = "mathue";
+            cboRoom.DisplayMember = "mathue";
             if (cboRoom != null)
             {
-                txtRoomName.Text = bus.getvalue("tenphong", "'" + cboRoom.Text + "'");
+                txtRoomName.Text = bus.getvalue("makt", "'" + cboRoom.Text + "'");
                 txtRoomID.Text = bus.getvalue("mapt", "'" + cboRoom.Text + "'");
-                grdCusHireInfo.DataSource = bus.CreateTable("where mapt='" + txtRoomID.Text + "'");
+                grdCusHireInfo.DataSource = bus.CreateTable("where mathue='" + txtRoomID.Text + "'");
+                //grdCusHireInfo.DataSource = bus.CreateTable("where mathue='" + txtRoomID.Text + "'&&thuephong.mapt=phongtro.mapt");
             }
         }
     }
