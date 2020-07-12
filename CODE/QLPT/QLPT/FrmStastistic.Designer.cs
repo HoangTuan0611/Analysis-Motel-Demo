@@ -31,6 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmStastistic));
             this.label1 = new System.Windows.Forms.Label();
             this.dvthutien = new System.Windows.Forms.DataGridView();
+            this.dtngaythu = new System.Windows.Forms.DateTimePicker();
+            this.btnxem = new System.Windows.Forms.Button();
+            this.btnreport = new System.Windows.Forms.Button();
             this.mathu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mapt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ngaythu = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -40,19 +43,15 @@
             this.tienxe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tienphong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tongtien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtngaythu = new System.Windows.Forms.DateTimePicker();
-            this.btnxem = new System.Windows.Forms.Button();
-            this.btnreport = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dvthutien)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(183, 27);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(137, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 17);
+            this.label1.Size = new System.Drawing.Size(37, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Month";
             // 
@@ -69,12 +68,41 @@
             this.tienxe,
             this.tienphong,
             this.tongtien});
-            this.dvthutien.Location = new System.Drawing.Point(1, 86);
-            this.dvthutien.Margin = new System.Windows.Forms.Padding(4);
+            this.dvthutien.Location = new System.Drawing.Point(1, 70);
             this.dvthutien.Name = "dvthutien";
             this.dvthutien.RowHeadersWidth = 51;
-            this.dvthutien.Size = new System.Drawing.Size(1167, 395);
+            this.dvthutien.Size = new System.Drawing.Size(875, 321);
             this.dvthutien.TabIndex = 1;
+            // 
+            // dtngaythu
+            // 
+            this.dtngaythu.CustomFormat = "MM/yyyy";
+            this.dtngaythu.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtngaythu.Location = new System.Drawing.Point(191, 18);
+            this.dtngaythu.Name = "dtngaythu";
+            this.dtngaythu.Size = new System.Drawing.Size(74, 20);
+            this.dtngaythu.TabIndex = 2;
+            this.dtngaythu.ValueChanged += new System.EventHandler(this.Dtngaythu_ValueChanged);
+            // 
+            // btnxem
+            // 
+            this.btnxem.Location = new System.Drawing.Point(297, 17);
+            this.btnxem.Name = "btnxem";
+            this.btnxem.Size = new System.Drawing.Size(75, 23);
+            this.btnxem.TabIndex = 3;
+            this.btnxem.Text = "View";
+            this.btnxem.UseVisualStyleBackColor = true;
+            this.btnxem.Click += new System.EventHandler(this.Btnxem_Click);
+            // 
+            // btnreport
+            // 
+            this.btnreport.Location = new System.Drawing.Point(403, 17);
+            this.btnreport.Name = "btnreport";
+            this.btnreport.Size = new System.Drawing.Size(75, 23);
+            this.btnreport.TabIndex = 4;
+            this.btnreport.Text = "Report";
+            this.btnreport.UseVisualStyleBackColor = true;
+            this.btnreport.Click += new System.EventHandler(this.BtnReport_Click);
             // 
             // mathu
             // 
@@ -88,7 +116,7 @@
             // 
             this.mapt.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.mapt.DataPropertyName = "mapt";
-            this.mapt.HeaderText = "Mã Phòng Trọ";
+            this.mapt.HeaderText = "Mã Thuê";
             this.mapt.MinimumWidth = 6;
             this.mapt.Name = "mapt";
             // 
@@ -148,52 +176,19 @@
             this.tongtien.MinimumWidth = 6;
             this.tongtien.Name = "tongtien";
             // 
-            // dtngaythu
-            // 
-            this.dtngaythu.CustomFormat = "MM/yyyy";
-            this.dtngaythu.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtngaythu.Location = new System.Drawing.Point(255, 22);
-            this.dtngaythu.Margin = new System.Windows.Forms.Padding(4);
-            this.dtngaythu.Name = "dtngaythu";
-            this.dtngaythu.Size = new System.Drawing.Size(97, 22);
-            this.dtngaythu.TabIndex = 2;
-            this.dtngaythu.ValueChanged += new System.EventHandler(this.Dtngaythu_ValueChanged);
-            // 
-            // btnxem
-            // 
-            this.btnxem.Location = new System.Drawing.Point(396, 21);
-            this.btnxem.Margin = new System.Windows.Forms.Padding(4);
-            this.btnxem.Name = "btnxem";
-            this.btnxem.Size = new System.Drawing.Size(100, 28);
-            this.btnxem.TabIndex = 3;
-            this.btnxem.Text = "View";
-            this.btnxem.UseVisualStyleBackColor = true;
-            this.btnxem.Click += new System.EventHandler(this.Btnxem_Click);
-            // 
-            // btnreport
-            // 
-            this.btnreport.Location = new System.Drawing.Point(537, 21);
-            this.btnreport.Margin = new System.Windows.Forms.Padding(4);
-            this.btnreport.Name = "btnreport";
-            this.btnreport.Size = new System.Drawing.Size(100, 28);
-            this.btnreport.TabIndex = 4;
-            this.btnreport.Text = "Report";
-            this.btnreport.UseVisualStyleBackColor = true;
-            this.btnreport.Click += new System.EventHandler(this.BtnReport_Click);
-            // 
             // FrmStastistic
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.ClientSize = new System.Drawing.Size(1181, 494);
+            this.ClientSize = new System.Drawing.Size(886, 401);
             this.Controls.Add(this.btnreport);
             this.Controls.Add(this.btnxem);
             this.Controls.Add(this.dtngaythu);
             this.Controls.Add(this.dvthutien);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.Name = "FrmStastistic";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

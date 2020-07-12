@@ -33,14 +33,14 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dgthongtinkhachthue = new System.Windows.Forms.DataGridView();
             this.grpHireInfo = new System.Windows.Forms.GroupBox();
-            this.txtType = new System.Windows.Forms.TextBox();
-            this.lblType = new System.Windows.Forms.Label();
-            this.txtFloor = new System.Windows.Forms.TextBox();
-            this.lblFloor = new System.Windows.Forms.Label();
+            this.txtEndHire = new System.Windows.Forms.TextBox();
+            this.lblend = new System.Windows.Forms.Label();
+            this.txtStartHire = new System.Windows.Forms.TextBox();
+            this.lblstart = new System.Windows.Forms.Label();
             this.txtRoomName = new System.Windows.Forms.TextBox();
             this.txtRoomID = new System.Windows.Forms.TextBox();
-            this.lblRoomName = new System.Windows.Forms.Label();
             this.lblRoomID = new System.Windows.Forms.Label();
+            this.lblCusID = new System.Windows.Forms.Label();
             this.cboChoseRoom = new System.Windows.Forms.ComboBox();
             this.lblChoseRoom = new System.Windows.Forms.Label();
             this.lblReceiptDate = new System.Windows.Forms.Label();
@@ -119,14 +119,14 @@
             // 
             // grpHireInfo
             // 
-            this.grpHireInfo.Controls.Add(this.txtType);
-            this.grpHireInfo.Controls.Add(this.lblType);
-            this.grpHireInfo.Controls.Add(this.txtFloor);
-            this.grpHireInfo.Controls.Add(this.lblFloor);
+            this.grpHireInfo.Controls.Add(this.txtEndHire);
+            this.grpHireInfo.Controls.Add(this.lblend);
+            this.grpHireInfo.Controls.Add(this.txtStartHire);
+            this.grpHireInfo.Controls.Add(this.lblstart);
             this.grpHireInfo.Controls.Add(this.txtRoomName);
             this.grpHireInfo.Controls.Add(this.txtRoomID);
-            this.grpHireInfo.Controls.Add(this.lblRoomName);
             this.grpHireInfo.Controls.Add(this.lblRoomID);
+            this.grpHireInfo.Controls.Add(this.lblCusID);
             this.grpHireInfo.Enabled = false;
             this.grpHireInfo.Location = new System.Drawing.Point(11, 106);
             this.grpHireInfo.Margin = new System.Windows.Forms.Padding(2);
@@ -137,37 +137,37 @@
             this.grpHireInfo.TabStop = false;
             this.grpHireInfo.Text = "Hire Room Info";
             // 
-            // txtType
+            // txtEndHire
             // 
-            this.txtType.Location = new System.Drawing.Point(301, 64);
-            this.txtType.Name = "txtType";
-            this.txtType.Size = new System.Drawing.Size(69, 20);
-            this.txtType.TabIndex = 7;
+            this.txtEndHire.Location = new System.Drawing.Point(301, 64);
+            this.txtEndHire.Name = "txtEndHire";
+            this.txtEndHire.Size = new System.Drawing.Size(83, 20);
+            this.txtEndHire.TabIndex = 7;
             // 
-            // lblType
+            // lblend
             // 
-            this.lblType.AutoSize = true;
-            this.lblType.Location = new System.Drawing.Point(237, 67);
-            this.lblType.Name = "lblType";
-            this.lblType.Size = new System.Drawing.Size(31, 13);
-            this.lblType.TabIndex = 6;
-            this.lblType.Text = "Type";
+            this.lblend.AutoSize = true;
+            this.lblend.Location = new System.Drawing.Point(237, 67);
+            this.lblend.Name = "lblend";
+            this.lblend.Size = new System.Drawing.Size(64, 13);
+            this.lblend.TabIndex = 6;
+            this.lblend.Text = "Data of End";
             // 
-            // txtFloor
+            // txtStartHire
             // 
-            this.txtFloor.Location = new System.Drawing.Point(301, 34);
-            this.txtFloor.Name = "txtFloor";
-            this.txtFloor.Size = new System.Drawing.Size(69, 20);
-            this.txtFloor.TabIndex = 5;
+            this.txtStartHire.Location = new System.Drawing.Point(301, 34);
+            this.txtStartHire.Name = "txtStartHire";
+            this.txtStartHire.Size = new System.Drawing.Size(83, 20);
+            this.txtStartHire.TabIndex = 5;
             // 
-            // lblFloor
+            // lblstart
             // 
-            this.lblFloor.AutoSize = true;
-            this.lblFloor.Location = new System.Drawing.Point(237, 37);
-            this.lblFloor.Name = "lblFloor";
-            this.lblFloor.Size = new System.Drawing.Size(30, 13);
-            this.lblFloor.TabIndex = 4;
-            this.lblFloor.Text = "Floor";
+            this.lblstart.AutoSize = true;
+            this.lblstart.Location = new System.Drawing.Point(237, 37);
+            this.lblstart.Name = "lblstart";
+            this.lblstart.Size = new System.Drawing.Size(67, 13);
+            this.lblstart.TabIndex = 4;
+            this.lblstart.Text = "Date of Start";
             // 
             // txtRoomName
             // 
@@ -185,30 +185,30 @@
             this.txtRoomID.Size = new System.Drawing.Size(76, 20);
             this.txtRoomID.TabIndex = 2;
             // 
-            // lblRoomName
-            // 
-            this.lblRoomName.AutoSize = true;
-            this.lblRoomName.Location = new System.Drawing.Point(7, 64);
-            this.lblRoomName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblRoomName.Name = "lblRoomName";
-            this.lblRoomName.Size = new System.Drawing.Size(66, 13);
-            this.lblRoomName.TabIndex = 1;
-            this.lblRoomName.Text = "Room Name";
-            // 
             // lblRoomID
             // 
             this.lblRoomID.AutoSize = true;
-            this.lblRoomID.Location = new System.Drawing.Point(7, 31);
+            this.lblRoomID.Location = new System.Drawing.Point(7, 64);
             this.lblRoomID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblRoomID.Name = "lblRoomID";
             this.lblRoomID.Size = new System.Drawing.Size(49, 13);
-            this.lblRoomID.TabIndex = 0;
+            this.lblRoomID.TabIndex = 1;
             this.lblRoomID.Text = "Room ID";
+            // 
+            // lblCusID
+            // 
+            this.lblCusID.AutoSize = true;
+            this.lblCusID.Location = new System.Drawing.Point(7, 31);
+            this.lblCusID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCusID.Name = "lblCusID";
+            this.lblCusID.Size = new System.Drawing.Size(65, 13);
+            this.lblCusID.TabIndex = 0;
+            this.lblCusID.Text = "Customer ID";
             // 
             // cboChoseRoom
             // 
             this.cboChoseRoom.FormattingEnabled = true;
-            this.cboChoseRoom.Location = new System.Drawing.Point(107, 49);
+            this.cboChoseRoom.Location = new System.Drawing.Point(123, 49);
             this.cboChoseRoom.Margin = new System.Windows.Forms.Padding(2);
             this.cboChoseRoom.Name = "cboChoseRoom";
             this.cboChoseRoom.Size = new System.Drawing.Size(116, 21);
@@ -221,9 +221,9 @@
             this.lblChoseRoom.Location = new System.Drawing.Point(18, 51);
             this.lblChoseRoom.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblChoseRoom.Name = "lblChoseRoom";
-            this.lblChoseRoom.Size = new System.Drawing.Size(68, 13);
+            this.lblChoseRoom.Size = new System.Drawing.Size(101, 13);
             this.lblChoseRoom.TabIndex = 8;
-            this.lblChoseRoom.Text = "Chose Room";
+            this.lblChoseRoom.Text = "Chose HireRoom ID";
             // 
             // lblReceiptDate
             // 
@@ -435,7 +435,7 @@
             // makt
             // 
             this.makt.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.makt.DataPropertyName = "makt";
+            this.makt.DataPropertyName = "mathue";
             this.makt.HeaderText = "Customer ID";
             this.makt.Name = "makt";
             // 
@@ -521,8 +521,8 @@
         private System.Windows.Forms.GroupBox grpHireInfo;
         private System.Windows.Forms.TextBox txtRoomName;
         private System.Windows.Forms.TextBox txtRoomID;
-        private System.Windows.Forms.Label lblRoomName;
         private System.Windows.Forms.Label lblRoomID;
+        private System.Windows.Forms.Label lblCusID;
         private System.Windows.Forms.ComboBox cboChoseRoom;
         private System.Windows.Forms.Label lblChoseRoom;
         private System.Windows.Forms.Label lblReceiptDate;
@@ -541,12 +541,12 @@
         private System.Windows.Forms.Label lblRoomMoney;
         private System.Windows.Forms.Label lbltotal;
         private System.Windows.Forms.Label lblElec;
-        private System.Windows.Forms.TextBox txtFloor;
-        private System.Windows.Forms.Label lblFloor;
+        private System.Windows.Forms.TextBox txtStartHire;
+        private System.Windows.Forms.Label lblstart;
         private System.Windows.Forms.TextBox txtVehicle;
         private System.Windows.Forms.Label lblVehicle;
-        private System.Windows.Forms.TextBox txtType;
-        private System.Windows.Forms.Label lblType;
+        private System.Windows.Forms.TextBox txtEndHire;
+        private System.Windows.Forms.Label lblend;
         private System.Windows.Forms.TextBox txtParking;
         private System.Windows.Forms.Label lblParking;
         private System.Windows.Forms.DataGridViewTextBoxColumn makt;

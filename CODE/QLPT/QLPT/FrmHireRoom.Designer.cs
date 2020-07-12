@@ -42,14 +42,13 @@
             this.lblCusID = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.grdContract = new System.Windows.Forms.DataGridView();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.btnadd = new System.Windows.Forms.Button();
             this.mathue = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.makt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mapt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ngaybd = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ngaykt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btnadd = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -60,9 +59,11 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.panel1);
-            this.groupBox1.Location = new System.Drawing.Point(2, 12);
+            this.groupBox1.Location = new System.Drawing.Point(2, 10);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(987, 151);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(740, 123);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
@@ -80,86 +81,94 @@
             this.panel1.Controls.Add(this.lblCusName);
             this.panel1.Controls.Add(this.lblCusID);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(3, 18);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Location = new System.Drawing.Point(2, 15);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(981, 130);
+            this.panel1.Size = new System.Drawing.Size(736, 106);
             this.panel1.TabIndex = 8;
             // 
             // dtto
             // 
-            this.dtto.Location = new System.Drawing.Point(603, 75);
+            this.dtto.Location = new System.Drawing.Point(452, 61);
+            this.dtto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtto.Name = "dtto";
-            this.dtto.Size = new System.Drawing.Size(200, 22);
+            this.dtto.Size = new System.Drawing.Size(151, 20);
             this.dtto.TabIndex = 26;
             this.dtto.ValueChanged += new System.EventHandler(this.dateTimePicker2_ValueChanged);
             // 
             // dtfrom
             // 
-            this.dtfrom.Location = new System.Drawing.Point(174, 75);
+            this.dtfrom.Location = new System.Drawing.Point(130, 61);
+            this.dtfrom.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtfrom.Name = "dtfrom";
-            this.dtfrom.Size = new System.Drawing.Size(200, 22);
+            this.dtfrom.Size = new System.Drawing.Size(151, 20);
             this.dtfrom.TabIndex = 25;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(456, 80);
+            this.label3.Location = new System.Drawing.Point(342, 65);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(95, 17);
+            this.label3.Size = new System.Drawing.Size(74, 13);
             this.label3.TabIndex = 24;
             this.label3.Text = "Ngày kết thúc";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(45, 80);
+            this.label2.Location = new System.Drawing.Point(34, 65);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(93, 17);
+            this.label2.Size = new System.Drawing.Size(72, 13);
             this.label2.TabIndex = 23;
             this.label2.Text = "Ngày bắt đầu";
             // 
             // cbroom
             // 
             this.cbroom.FormattingEnabled = true;
-            this.cbroom.Location = new System.Drawing.Point(771, 16);
+            this.cbroom.Location = new System.Drawing.Point(578, 13);
+            this.cbroom.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbroom.Name = "cbroom";
-            this.cbroom.Size = new System.Drawing.Size(121, 24);
+            this.cbroom.Size = new System.Drawing.Size(92, 21);
             this.cbroom.TabIndex = 22;
             this.cbroom.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // cbcus
             // 
             this.cbcus.FormattingEnabled = true;
-            this.cbcus.Location = new System.Drawing.Point(459, 18);
+            this.cbcus.Location = new System.Drawing.Point(344, 15);
+            this.cbcus.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbcus.Name = "cbcus";
-            this.cbcus.Size = new System.Drawing.Size(121, 24);
+            this.cbcus.Size = new System.Drawing.Size(92, 21);
             this.cbcus.TabIndex = 21;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(45, 21);
+            this.label1.Location = new System.Drawing.Point(34, 17);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 17);
+            this.label1.Size = new System.Drawing.Size(61, 13);
             this.label1.TabIndex = 20;
             this.label1.Text = "Contract ID";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // txtcon
             // 
-            this.txtcon.Location = new System.Drawing.Point(160, 18);
-            this.txtcon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtcon.Location = new System.Drawing.Point(120, 15);
+            this.txtcon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtcon.Name = "txtcon";
-            this.txtcon.Size = new System.Drawing.Size(123, 22);
+            this.txtcon.Size = new System.Drawing.Size(93, 20);
             this.txtcon.TabIndex = 19;
             // 
             // lblCusName
             // 
             this.lblCusName.AutoSize = true;
-            this.lblCusName.Location = new System.Drawing.Point(672, 23);
+            this.lblCusName.Location = new System.Drawing.Point(504, 19);
+            this.lblCusName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCusName.Name = "lblCusName";
-            this.lblCusName.Size = new System.Drawing.Size(62, 17);
+            this.lblCusName.Size = new System.Drawing.Size(49, 13);
             this.lblCusName.TabIndex = 2;
             this.lblCusName.Text = "Room ID";
             this.lblCusName.Click += new System.EventHandler(this.lblCusName_Click);
@@ -167,9 +176,10 @@
             // lblCusID
             // 
             this.lblCusID.AutoSize = true;
-            this.lblCusID.Location = new System.Drawing.Point(329, 23);
+            this.lblCusID.Location = new System.Drawing.Point(247, 19);
+            this.lblCusID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCusID.Name = "lblCusID";
-            this.lblCusID.Size = new System.Drawing.Size(85, 17);
+            this.lblCusID.Size = new System.Drawing.Size(65, 13);
             this.lblCusID.TabIndex = 0;
             this.lblCusID.Text = "Customer ID";
             this.lblCusID.Click += new System.EventHandler(this.lblCusID_Click);
@@ -177,9 +187,11 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.grdContract);
-            this.groupBox2.Location = new System.Drawing.Point(2, 227);
+            this.groupBox2.Location = new System.Drawing.Point(2, 184);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(987, 288);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Size = new System.Drawing.Size(740, 234);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Danh sách hợp đồng";
@@ -194,41 +206,13 @@
             this.ngaybd,
             this.ngaykt});
             this.grdContract.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grdContract.Location = new System.Drawing.Point(3, 18);
+            this.grdContract.Location = new System.Drawing.Point(2, 15);
+            this.grdContract.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.grdContract.Name = "grdContract";
             this.grdContract.RowTemplate.Height = 24;
-            this.grdContract.Size = new System.Drawing.Size(981, 267);
+            this.grdContract.Size = new System.Drawing.Size(736, 217);
             this.grdContract.TabIndex = 0;
             this.grdContract.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdContract_CellClick);
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.button2);
-            this.groupBox3.Controls.Add(this.btnadd);
-            this.groupBox3.Location = new System.Drawing.Point(5, 165);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(981, 56);
-            this.groupBox3.TabIndex = 2;
-            this.groupBox3.TabStop = false;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(792, 22);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // btnadd
-            // 
-            this.btnadd.Location = new System.Drawing.Point(431, 22);
-            this.btnadd.Name = "btnadd";
-            this.btnadd.Size = new System.Drawing.Size(75, 23);
-            this.btnadd.TabIndex = 0;
-            this.btnadd.Text = "Add";
-            this.btnadd.UseVisualStyleBackColor = true;
-            this.btnadd.Click += new System.EventHandler(this.btnadd_Click);
             // 
             // mathue
             // 
@@ -266,16 +250,42 @@
             this.ngaykt.HeaderText = "Ngày kết thúc";
             this.ngaykt.Name = "ngaykt";
             // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.btnadd);
+            this.groupBox3.Location = new System.Drawing.Point(4, 134);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Size = new System.Drawing.Size(736, 46);
+            this.groupBox3.TabIndex = 2;
+            this.groupBox3.TabStop = false;
+            // 
+            // btnadd
+            // 
+            this.btnadd.Location = new System.Drawing.Point(323, 18);
+            this.btnadd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnadd.Name = "btnadd";
+            this.btnadd.Size = new System.Drawing.Size(56, 19);
+            this.btnadd.TabIndex = 0;
+            this.btnadd.Text = "Add";
+            this.btnadd.UseVisualStyleBackColor = true;
+            this.btnadd.Click += new System.EventHandler(this.btnadd_Click);
+            // 
             // FrmHireRoom
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(993, 527);
+            this.ClientSize = new System.Drawing.Size(745, 428);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmHireRoom";
-            this.Text = "FrmHireRoom";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Hire Room";
             this.Load += new System.EventHandler(this.FrmHireRoom_Load);
             this.groupBox1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
@@ -304,7 +314,6 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView grdContract;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnadd;
         private System.Windows.Forms.DataGridViewTextBoxColumn mathue;
         private System.Windows.Forms.DataGridViewTextBoxColumn makt;

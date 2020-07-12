@@ -39,13 +39,6 @@
             this.grpHireCusInfo = new System.Windows.Forms.GroupBox();
             this.grdCusHireInfo = new System.Windows.Forms.DataGridView();
             this.btnAgree = new System.Windows.Forms.Button();
-            this.makt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mapt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hoten = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cmnd = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gioitinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nghenghiep = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sdt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grpHireRoom.SuspendLayout();
             this.grpHireCusInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdCusHireInfo)).BeginInit();
@@ -138,19 +131,15 @@
             // 
             // grdCusHireInfo
             // 
+            this.grdCusHireInfo.AllowUserToAddRows = false;
+            this.grdCusHireInfo.AllowUserToDeleteRows = false;
+            this.grdCusHireInfo.AllowUserToOrderColumns = true;
             this.grdCusHireInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grdCusHireInfo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.makt,
-            this.mapt,
-            this.hoten,
-            this.cmnd,
-            this.gioitinh,
-            this.nghenghiep,
-            this.sdt});
             this.grdCusHireInfo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grdCusHireInfo.Location = new System.Drawing.Point(2, 15);
             this.grdCusHireInfo.Margin = new System.Windows.Forms.Padding(2);
             this.grdCusHireInfo.Name = "grdCusHireInfo";
+            this.grdCusHireInfo.ReadOnly = true;
             this.grdCusHireInfo.RowTemplate.Height = 24;
             this.grdCusHireInfo.Size = new System.Drawing.Size(675, 133);
             this.grdCusHireInfo.TabIndex = 0;
@@ -165,55 +154,6 @@
             this.btnAgree.Text = "Agree";
             this.btnAgree.UseVisualStyleBackColor = true;
             this.btnAgree.Click += new System.EventHandler(this.btnAgree_Click);
-            // 
-            // makt
-            // 
-            this.makt.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.makt.DataPropertyName = "makt";
-            this.makt.HeaderText = "Customer ID";
-            this.makt.Name = "makt";
-            // 
-            // mapt
-            // 
-            this.mapt.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.mapt.DataPropertyName = "mapt";
-            this.mapt.HeaderText = "Room ID";
-            this.mapt.Name = "mapt";
-            // 
-            // hoten
-            // 
-            this.hoten.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.hoten.DataPropertyName = "hoten";
-            this.hoten.HeaderText = "Name";
-            this.hoten.Name = "hoten";
-            // 
-            // cmnd
-            // 
-            this.cmnd.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.cmnd.DataPropertyName = "cmnd";
-            this.cmnd.HeaderText = "Identification";
-            this.cmnd.Name = "cmnd";
-            // 
-            // gioitinh
-            // 
-            this.gioitinh.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.gioitinh.DataPropertyName = "gioitinh";
-            this.gioitinh.HeaderText = "Sex";
-            this.gioitinh.Name = "gioitinh";
-            // 
-            // nghenghiep
-            // 
-            this.nghenghiep.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.nghenghiep.DataPropertyName = "nghenghiep";
-            this.nghenghiep.HeaderText = "Job";
-            this.nghenghiep.Name = "nghenghiep";
-            // 
-            // sdt
-            // 
-            this.sdt.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.sdt.DataPropertyName = "sdt";
-            this.sdt.HeaderText = "Phone Number";
-            this.sdt.Name = "sdt";
             // 
             // FrmCheckOut
             // 
@@ -254,12 +194,5 @@
         private System.Windows.Forms.DataGridView grdCusHireInfo;
         private System.Windows.Forms.Button btnAgree;
         private System.Windows.Forms.TextBox txtRoomID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn makt;
-        private System.Windows.Forms.DataGridViewTextBoxColumn mapt;
-        private System.Windows.Forms.DataGridViewTextBoxColumn hoten;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cmnd;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gioitinh;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nghenghiep;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sdt;
     }
 }
