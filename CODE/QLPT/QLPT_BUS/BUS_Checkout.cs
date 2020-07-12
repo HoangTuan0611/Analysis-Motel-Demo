@@ -15,9 +15,9 @@ namespace QLPT_BUS
         {
             return sql.CreateTable(Condition);
         }
-        public DataTable GetIDHireRoomInfo(string Condition)
+        public DataTable GetIDRoomInfo(string Condition)
         {
-            return sql.GetHireRoomIDInfo(Condition);
+            return sql.GetRoomIDInfo(Condition);
         }
         public void UpdateRoomStatus(string Condition)
         {

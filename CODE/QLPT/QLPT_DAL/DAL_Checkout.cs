@@ -12,13 +12,13 @@ namespace QLPT_DAL
         ConnectDB cn = new ConnectDB();
         public DataTable CreateTable(string DieuKien)
         {
-            //return cn.GetDataTable("Select * from khachtro " + DieuKien);
-            return cn.GetDataTable("Select thuephong.mathue, thuephong.mapt, thuephong.makt, thuephong.ngaybd, thuephong.ngaykt, phongtro.trangthai from phongtro, thuephong " + DieuKien);
+            return cn.GetDataTable("Select * from phongtro " + DieuKien);
+            
         }
-        public DataTable GetHireRoomIDInfo(string DieuKien)
+        public DataTable GetRoomIDInfo(string DieuKien)
         {
-            //return cn.GetDataTable("Select mapt from phongtro " + DieuKien);
-            return cn.GetDataTable("Select mathue from thuephong " + DieuKien);
+            return cn.GetDataTable("Select mapt from phongtro " + DieuKien);
+            //return cn.GetDataTable("Select mathue from thuephong " + DieuKien);
         }
         public void UpdateRoomStatus(string DieuKien)
         {
