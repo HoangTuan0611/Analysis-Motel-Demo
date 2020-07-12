@@ -9,7 +9,7 @@ namespace QLPT_Entity
     public class E_Receipt
     {
         //private string _mapt;
-        private string _mathue;
+        private string _mapt;
         private string _tiendien;
         private string _tiennuoc;
         private string _tienmang;
@@ -35,12 +35,12 @@ namespace QLPT_Entity
         {
             get
             {
-                return _mathue;
+                return _mapt;
             }
 
             set
             {
-                _mathue = value;
+                _mapt = value;
             }
         }
 

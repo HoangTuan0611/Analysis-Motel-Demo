@@ -33,10 +33,10 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dgthongtinkhachthue = new System.Windows.Forms.DataGridView();
             this.grpHireInfo = new System.Windows.Forms.GroupBox();
-            this.txtEndHire = new System.Windows.Forms.TextBox();
-            this.lblend = new System.Windows.Forms.Label();
-            this.txtStartHire = new System.Windows.Forms.TextBox();
-            this.lblstart = new System.Windows.Forms.Label();
+            this.txtType = new System.Windows.Forms.TextBox();
+            this.lbltype = new System.Windows.Forms.Label();
+            this.txtFloor = new System.Windows.Forms.TextBox();
+            this.lblfloor = new System.Windows.Forms.Label();
             this.txtRoomName = new System.Windows.Forms.TextBox();
             this.txtRoomID = new System.Windows.Forms.TextBox();
             this.lblRoomID = new System.Windows.Forms.Label();
@@ -119,10 +119,10 @@
             // 
             // grpHireInfo
             // 
-            this.grpHireInfo.Controls.Add(this.txtEndHire);
-            this.grpHireInfo.Controls.Add(this.lblend);
-            this.grpHireInfo.Controls.Add(this.txtStartHire);
-            this.grpHireInfo.Controls.Add(this.lblstart);
+            this.grpHireInfo.Controls.Add(this.txtType);
+            this.grpHireInfo.Controls.Add(this.lbltype);
+            this.grpHireInfo.Controls.Add(this.txtFloor);
+            this.grpHireInfo.Controls.Add(this.lblfloor);
             this.grpHireInfo.Controls.Add(this.txtRoomName);
             this.grpHireInfo.Controls.Add(this.txtRoomID);
             this.grpHireInfo.Controls.Add(this.lblRoomID);
@@ -137,37 +137,37 @@
             this.grpHireInfo.TabStop = false;
             this.grpHireInfo.Text = "Hire Room Info";
             // 
-            // txtEndHire
+            // txtType
             // 
-            this.txtEndHire.Location = new System.Drawing.Point(301, 64);
-            this.txtEndHire.Name = "txtEndHire";
-            this.txtEndHire.Size = new System.Drawing.Size(83, 20);
-            this.txtEndHire.TabIndex = 7;
+            this.txtType.Location = new System.Drawing.Point(301, 64);
+            this.txtType.Name = "txtType";
+            this.txtType.Size = new System.Drawing.Size(83, 20);
+            this.txtType.TabIndex = 7;
             // 
-            // lblend
+            // lbltype
             // 
-            this.lblend.AutoSize = true;
-            this.lblend.Location = new System.Drawing.Point(237, 67);
-            this.lblend.Name = "lblend";
-            this.lblend.Size = new System.Drawing.Size(64, 13);
-            this.lblend.TabIndex = 6;
-            this.lblend.Text = "Data of End";
+            this.lbltype.AutoSize = true;
+            this.lbltype.Location = new System.Drawing.Point(237, 67);
+            this.lbltype.Name = "lbltype";
+            this.lbltype.Size = new System.Drawing.Size(31, 13);
+            this.lbltype.TabIndex = 6;
+            this.lbltype.Text = "Type";
             // 
-            // txtStartHire
+            // txtFloor
             // 
-            this.txtStartHire.Location = new System.Drawing.Point(301, 34);
-            this.txtStartHire.Name = "txtStartHire";
-            this.txtStartHire.Size = new System.Drawing.Size(83, 20);
-            this.txtStartHire.TabIndex = 5;
+            this.txtFloor.Location = new System.Drawing.Point(301, 34);
+            this.txtFloor.Name = "txtFloor";
+            this.txtFloor.Size = new System.Drawing.Size(83, 20);
+            this.txtFloor.TabIndex = 5;
             // 
-            // lblstart
+            // lblfloor
             // 
-            this.lblstart.AutoSize = true;
-            this.lblstart.Location = new System.Drawing.Point(237, 37);
-            this.lblstart.Name = "lblstart";
-            this.lblstart.Size = new System.Drawing.Size(67, 13);
-            this.lblstart.TabIndex = 4;
-            this.lblstart.Text = "Date of Start";
+            this.lblfloor.AutoSize = true;
+            this.lblfloor.Location = new System.Drawing.Point(237, 37);
+            this.lblfloor.Name = "lblfloor";
+            this.lblfloor.Size = new System.Drawing.Size(30, 13);
+            this.lblfloor.TabIndex = 4;
+            this.lblfloor.Text = "Floor";
             // 
             // txtRoomName
             // 
@@ -201,9 +201,9 @@
             this.lblCusID.Location = new System.Drawing.Point(7, 31);
             this.lblCusID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCusID.Name = "lblCusID";
-            this.lblCusID.Size = new System.Drawing.Size(65, 13);
+            this.lblCusID.Size = new System.Drawing.Size(35, 13);
             this.lblCusID.TabIndex = 0;
-            this.lblCusID.Text = "Customer ID";
+            this.lblCusID.Text = "Name";
             // 
             // cboChoseRoom
             // 
@@ -435,7 +435,7 @@
             // makt
             // 
             this.makt.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.makt.DataPropertyName = "mathue";
+            this.makt.DataPropertyName = "makt";
             this.makt.HeaderText = "Customer ID";
             this.makt.Name = "makt";
             // 
@@ -541,12 +541,12 @@
         private System.Windows.Forms.Label lblRoomMoney;
         private System.Windows.Forms.Label lbltotal;
         private System.Windows.Forms.Label lblElec;
-        private System.Windows.Forms.TextBox txtStartHire;
-        private System.Windows.Forms.Label lblstart;
+        private System.Windows.Forms.TextBox txtFloor;
+        private System.Windows.Forms.Label lblfloor;
         private System.Windows.Forms.TextBox txtVehicle;
         private System.Windows.Forms.Label lblVehicle;
-        private System.Windows.Forms.TextBox txtEndHire;
-        private System.Windows.Forms.Label lblend;
+        private System.Windows.Forms.TextBox txtType;
+        private System.Windows.Forms.Label lbltype;
         private System.Windows.Forms.TextBox txtParking;
         private System.Windows.Forms.Label lblParking;
         private System.Windows.Forms.DataGridViewTextBoxColumn makt;

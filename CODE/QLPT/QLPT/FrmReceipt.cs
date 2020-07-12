@@ -48,10 +48,10 @@ namespace QLPT
                     garbage = int.Parse(bus.getvalue2("tienrac", "'1'"));
                     discount = int.Parse(bus.getvalue2("giamtienlenphong", "'1'"));
                 }
-            //cboChoseRoom.DataSource = bus.GetRoomID(" where trangthai = 'Đang cho thuê' ");
-                cboChoseRoom.DataSource = bus.GetRoomID("");
-                cboChoseRoom.ValueMember = "mathue";
-                 cboChoseRoom.DisplayMember = "mathue";
+            cboChoseRoom.DataSource = bus.GetRoomID(" where trangthai = 'Đang cho thuê' ");
+                //cboChoseRoom.DataSource = bus.GetRoomID("");
+                cboChoseRoom.ValueMember = "mapt";
+                 cboChoseRoom.DisplayMember = "mapt";
             if (cboChoseRoom != null)
                 {
                     countcustomer = int.Parse(bus.countCustomer("'" + cboChoseRoom.Text + "'"));
@@ -59,15 +59,15 @@ namespace QLPT
 
                 //txtFloor.Text = bus.getvalue("tang", "'" + cboChoseRoom.Text + "'");
                 //txtType.Text = bus.getvalue("loai", "'" + cboChoseRoom.Text + "'");
-                txtRoomName.Text = bus.getvalue("mapt", "'" + cboChoseRoom.Text + "'");
-                txtRoomID.Text = bus.getvalue("makt", "'" + cboChoseRoom.Text + "'");
-                txtStartHire.Text = bus.getvalue("ngaybd", "'" + cboChoseRoom.Text + "'");
-                txtEndHire.Text = bus.getvalue("ngaykt", "'" + cboChoseRoom.Text + "'");
-                dgthongtinkhachthue.DataSource = bus.CreateTable("where mathue='" + txtRoomID.Text + "'");
+                txtRoomName.Text = bus.getvalue("tenphong", "'" + cboChoseRoom.Text + "'");
+                txtRoomID.Text = bus.getvalue("mapt", "'" + cboChoseRoom.Text + "'");
+                txtFloor.Text = bus.getvalue("tang", "'" + cboChoseRoom.Text + "'");
+                txtType.Text = bus.getvalue("loai", "'" + cboChoseRoom.Text + "'");
+                dgthongtinkhachthue.DataSource = bus.CreateTable("where mapt='" + txtRoomID.Text + "'");
                 //txtWater.Text = (countcustomer * water).ToString();
                 txtWater.Text = water.ToString();
                 txtInternet.Text = internet.ToString();
-                    if (txtEndHire.Text == "A")
+                    if (txtType.Text == "A")
                     {
                         txtRoomMoney.Text = smallroomcharge.ToString();
                     }
@@ -89,14 +89,14 @@ namespace QLPT
 
                 //txtFloor.Text = bus.getvalue("tang", "'" + cboChoseRoom.Text + "'");
                 //txtType.Text = bus.getvalue("loai", "'" + cboChoseRoom.Text + "'");
-                txtRoomName.Text = bus.getvalue("mapt", "'" + cboChoseRoom.Text + "'");
-                txtRoomID.Text = bus.getvalue("makt", "'" + cboChoseRoom.Text + "'");
-                txtStartHire.Text = bus.getvalue("ngaybd", "'" + cboChoseRoom.Text + "'");
-                txtEndHire.Text = bus.getvalue("ngaykt", "'" + cboChoseRoom.Text + "'");
-                dgthongtinkhachthue.DataSource = bus.CreateTable("where mathue='" + txtRoomID.Text + "'");
+                txtRoomName.Text = bus.getvalue("tenphong", "'" + cboChoseRoom.Text + "'");
+                txtRoomID.Text = bus.getvalue("mapt", "'" + cboChoseRoom.Text + "'");
+                txtFloor.Text = bus.getvalue("tang", "'" + cboChoseRoom.Text + "'");
+                txtType.Text = bus.getvalue("loai", "'" + cboChoseRoom.Text + "'");
+                dgthongtinkhachthue.DataSource = bus.CreateTable("where mapt='" + txtRoomID.Text + "'");
                 txtWater.Text = (countcustomer * water).ToString();
                 txtInternet.Text = internet.ToString();
-                if (txtEndHire.Text == "A")
+                if (txtType.Text == "A")
                 {
                     txtRoomMoney.Text = smallroomcharge.ToString();
                 }             
@@ -107,7 +107,7 @@ namespace QLPT
                     {
                         txtTotal.Text = (garbage + int.Parse(txtRoomMoney.Text) + int.Parse(txtElecMoney.Text)
                                        + int.Parse(txtWater.Text) + int.Parse(txtInternet.Text)
-                                       + int.Parse(txtParking.Text) - ((int.Parse(txtStartHire.Text) - 1) * discount)).ToString();
+                                       + int.Parse(txtParking.Text) - ((int.Parse(txtFloor.Text) - 1) * discount)).ToString();
                     }
                 }
                 catch { MessageBox.Show("Vui lòng kiểm tra lại tham số ở form qui định","Thông báo"); }
@@ -124,7 +124,7 @@ namespace QLPT
                 {
                     txtTotal.Text = (garbage + int.Parse(txtRoomMoney.Text) + int.Parse(txtElecMoney.Text)
                                        + int.Parse(txtWater.Text) + int.Parse(txtInternet.Text)
-                                       + int.Parse(txtParking.Text) - ((int.Parse(txtStartHire.Text) - 1) * discount)).ToString();
+                                       + int.Parse(txtParking.Text) - ((int.Parse(txtFloor.Text) - 1) * discount)).ToString();
                 }
             }
             catch { MessageBox.Show("Vui lòng kiểm tra lại tham số ở form qui định", "Thông báo"); }
@@ -139,7 +139,7 @@ namespace QLPT
                 {
                     txtTotal.Text = (garbage + int.Parse(txtRoomMoney.Text) + int.Parse(txtElecMoney.Text)
                                    + int.Parse(txtWater.Text) + int.Parse(txtInternet.Text)
-                                   + int.Parse(txtParking.Text) - ((int.Parse(txtStartHire.Text) - 1) * discount)).ToString();
+                                   + int.Parse(txtParking.Text) - ((int.Parse(txtFloor.Text) - 1) * discount)).ToString();
                 }
             }
             catch { MessageBox.Show("Please fill out this form", "Message"); }

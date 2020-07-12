@@ -13,16 +13,16 @@ namespace QLPT_DAL
         public DataTable GetRoomID(string DieuKien)
         {
             //return cn.GetDataTable("Select mapt from phongtro " + DieuKien);
-            return cn.GetDataTable("Select mathue from thuephong" + DieuKien);
+            return cn.GetDataTable("Select mapt from phongtro" + DieuKien);
         }
         public string getvalue(string DieuKien1, string DieuKien2)
         {
             //return cn.GetValue("Select " + DieuKien1 + " from phongtro where mapt = " + DieuKien2);
-            return cn.GetValue("Select " + DieuKien1 + " from thuephong where mathue = " + DieuKien2);
+            return cn.GetValue("Select " + DieuKien1 + " from phongtro where mapt = " + DieuKien2);
         }
         public DataTable CreateTable(string DieuKien)
         {
-            return cn.GetDataTable("Select mathue from thuephong " + DieuKien);
+            return cn.GetDataTable("Select * from khachtro " + DieuKien);
         }
         public string check()
         {
