@@ -21,15 +21,15 @@ namespace QLPT
 
         private void FrmCheckOut_Load(object sender, EventArgs e)
         {
-            cboRoom.DataSource = bus.GetIDRoomInfo(" where trangthai ='Đang cho thuê'");
+            cboRoom.DataSource = bus.GetIDRoomInfo(" where trangthai ='hiring'");
             cboRoom.ValueMember = "mapt";
             cboRoom.DisplayMember = "mapt";
             if (cboRoom != null)
             {
-                //txtRoomName.Text = bus.getvalue("tenphong", "'" + cboRoom.Text + "'");
-                //txtRoomID.Text = bus.getvalue("mapt", "'" + cboRoom.Text + "'");
+                txtRoomID.Text = bus.getvalue("mapt", "'" + cboRoom.Text + "'");
+                txtRoomName.Text = bus.getvalue("tenphong", "'" + cboRoom.Text + "'");
                 //grdCusHireInfo.DataSource = bus.CreateTable("where mapt='" + txtRoomID.Text + "'");
-                grdCusHireInfo.DataSource = bus.CreateTable("where mapt='" + cboRoom.Text + "'");
+                grdContract.DataSource = bus.CreateTable("where mapt='" + cboRoom.Text + "'");
             }
 
             //cboRoom.DataSource = bus.GetIDHireRoomInfo("");
@@ -47,9 +47,11 @@ namespace QLPT
 
         private void cboRoom_TextChanged(object sender, EventArgs e)
         {
+            txtRoomID.Text = bus.getvalue("mapt", "'" + cboRoom.Text + "'");
+            txtRoomName.Text = bus.getvalue("tenphong", "'" + cboRoom.Text + "'");
             //txtRoomName.Text = bus.getvalue("tenphong", "'" + cboRoom.Text + "'");
             //txtRoomID.Text = bus.getvalue("mapt", "'" + cboRoom.Text + "'");
-            grdCusHireInfo.DataSource = bus.CreateTable("where mapt='" +cboRoom.Text +"'");
+            grdContract.DataSource = bus.CreateTable("where mapt='" +cboRoom.Text +"'");
             //txtRoomName.Text = bus.getvalue("makt", "'" + cboRoom.Text + "'");
             //txtRoomID.Text = bus.getvalue("mapt", "'" + cboRoom.Text + "'");
             //grdCusHireInfo.DataSource = bus.CreateTable("where mathue='" + txtRoomID.Text + "'");
@@ -60,7 +62,7 @@ namespace QLPT
         {
             //bus.Delete("'"+txtRoomID.Text+"'");
             bus.UpdateRoomStatus("'" + cboRoom.Text + "'");
-            cboRoom.DataSource = bus.GetIDRoomInfo(" where trangthai ='Đang cho thuê'");
+            cboRoom.DataSource = bus.GetIDRoomInfo(" where trangthai ='hiring'");
             //cboRoom.DataSource = bus.GetIDRoomInfo("");
             cboRoom.ValueMember = "mapt";
             cboRoom.DisplayMember = "mapt";

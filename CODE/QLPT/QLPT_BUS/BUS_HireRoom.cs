@@ -30,5 +30,17 @@ namespace QLPT_BUS
         {
             return sql.GetCustomerID(Condition);
         }
+        public string countcustomer(string DieuKien)
+        {
+            return sql.countcustomer(DieuKien);
+        }
+        public string maxslot(string DieuKien)
+        {
+            return sql.maxslot(DieuKien);
+        }
+        public void updatestatusroom_1(string DieuKien)
+        {
+            sql.updatestatusroom_1(DieuKien);
+        }
     }
 }

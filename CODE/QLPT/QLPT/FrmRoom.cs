@@ -86,7 +86,7 @@ namespace QLPT
             if (btnAdd.Text == "Add")
             {               
                 OpenCondition();
-                cboStatus.Text = "Trống";
+                cboStatus.Text = "empty";
                 cboStatus.Enabled = false;
                 setnull();
                 txtRoomID.Focus();
@@ -140,7 +140,7 @@ namespace QLPT
             if (btnUpdate.Text == "Update")
             {
                 OpenCondition();
-                if (checkroomstatus != "Đang cho thuê")
+                if (checkroomstatus != "hiring")
                 {
                     cboStatus.Enabled = true;
                     txtRoomID.Focus();

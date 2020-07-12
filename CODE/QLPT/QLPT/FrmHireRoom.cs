@@ -15,6 +15,8 @@ namespace QLPT
 {
     public partial class FrmHireRoom : Form
     {
+        string checkstatusroom;
+        string text;
         public FrmHireRoom()
         {
             InitializeComponent();
@@ -30,12 +32,13 @@ namespace QLPT
             cbroom.Enabled = false;
             dtfrom.Enabled = false;
             dtto.Enabled = false;
+  
 
         }
 
         void OpenCondition()
         {
-            txtcon.Enabled = true;
+            
             cbcus.Enabled = true;
             cbroom.Enabled = true;
             dtfrom.Enabled = true;
@@ -50,7 +53,8 @@ namespace QLPT
             cbroom.Text = "";
             dtfrom.Text = "";
             dtto.Text = "";
-          
+       
+   
         }
         private void groupBox1_Enter(object sender, EventArgs e)
         {
@@ -72,11 +76,6 @@ namespace QLPT
 
         }
 
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
         {
 
@@ -89,14 +88,27 @@ namespace QLPT
 
         private void FrmHireRoom_Load(object sender, EventArgs e)
         {
-            cbroom.DataSource = bus.GetRoomID(" where trangthai != 'Bảo trì'");
-            cbroom.ValueMember = "mapt";
-            cbroom.DisplayMember = "mapt";
             cbcus.DataSource = bus.GetCustomerID(" where makt != ''");
             cbcus.ValueMember = "makt";
             cbcus.DisplayMember = "makt";
-            setnull();
-            LockCondition();
+            if (ckbemptyroom.Checked == true)
+            {
+                cbroom.DataSource = bus.GetRoomID(" where trangthai = 'empty'");
+                cbroom.ValueMember = "mapt";
+                cbroom.DisplayMember = "mapt";
+            }
+            else
+            {
+                cbroom.DataSource = bus.GetRoomID(" where trangthai != 'Bảo trì'");
+                cbroom.ValueMember = "mapt";
+                cbroom.DisplayMember = "mapt";
+            }
+            //if (cbroom != null)
+            //{
+            //    txtmaxslot.Text = bus.maxslot("'" + cbroom.Text + "'");
+            //    txtcurrentslot.Text = bus.countcustomer("'" + cbroom.Text + "'");
+            //}
+            LockCondition(); 
             Display("");
         }
 
@@ -127,12 +139,14 @@ namespace QLPT
                         ec.Dateto = dtto.Value;
                         ec.ConID = txtcon.Text;
                         bus.AddData(ec);
+                        bus.updatestatusroom_1("'" + cbroom.Text + "'");
                         MessageBox.Show("Added data !", "Message");
-                        //int a = int.Parse(txtCurrentSlot.Text);
-                        //int b = int.Parse(txtMaxSlot.Text);
-                        //if (a<b) {
+                        //int a = int.Parse(txtcurrentslot.Text);
+                        //int b = int.Parse(txtmaxslot.Text);
+                        //if (a < b)
+                        //{
                         //    bus.AddData(ec);
-                        //    bus.UpdateRoomStatus("'" + cboRoomID.Text + "'");
+                        //    bus.updatestatusroom_1("'" + cbroom.Text + "'");
                         //    MessageBox.Show("Added data !", "Message");
                         //}
                         //else { MessageBox.Show("Room full"); }
@@ -191,6 +205,7 @@ namespace QLPT
                 txtcon.Text = grdContract.Rows[dong].Cells[0].Value.ToString();
                 //cboRoomID.Text = grdCustomer.Rows[dong].Cells[1].Value.ToString();
                 //checkroomstatus = cboRoomID.Text;
+                checkstatusroom = cbroom.Text;
                 cbcus.Text = grdContract.Rows[dong].Cells[1].Value.ToString();
                 cbroom.Text = grdContract.Rows[dong].Cells[2].Value.ToString();
                 dtfrom.Text = grdContract.Rows[dong].Cells[3].Value.ToString();
@@ -206,6 +221,36 @@ namespace QLPT
         private void btn_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void ckbemptyroom_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ckbemptyroom.Checked == true)
+            {
+                cbroom.DataSource = bus.GetRoomID("where trangthai = 'empty'");
+                cbroom.ValueMember = "mapt";
+                cbroom.DisplayMember = "mapt";
+            }
+            else
+            {
+                cbroom.DataSource = bus.GetRoomID(" where trangthai != 'Bảo trì'");
+                cbroom.ValueMember = "mapt";
+                cbroom.DisplayMember = "mapt";
+            }
+        }
+
+        private void btncancel_Click(object sender, EventArgs e)
+        {
+            setnull();
+            cbcus.Focus();
+            btnadd.Text = "Add";
+            LockCondition();
+        }
+
+        private void cbroom_TextChanged(object sender, EventArgs e)
+        {
+            //txtmaxslot.Text = bus.maxslot("'" + cbroom.Text + "'");
+            //txtcurrentslot.Text = bus.countcustomer("'" + cbroom.Text + "'");
         }
     }
 }

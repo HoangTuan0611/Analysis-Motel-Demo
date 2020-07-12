@@ -30,10 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCustomer));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lblCurrentSlot = new System.Windows.Forms.Label();
-            this.lblMaxSlot = new System.Windows.Forms.Label();
-            this.txtCurrentSlot = new System.Windows.Forms.TextBox();
-            this.txtMaxSlot = new System.Windows.Forms.TextBox();
             this.optFemale = new System.Windows.Forms.RadioButton();
             this.optMale = new System.Windows.Forms.RadioButton();
             this.txtPhoneNumber = new System.Windows.Forms.TextBox();
@@ -68,10 +64,6 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.lblCurrentSlot);
-            this.panel1.Controls.Add(this.lblMaxSlot);
-            this.panel1.Controls.Add(this.txtCurrentSlot);
-            this.panel1.Controls.Add(this.txtMaxSlot);
             this.panel1.Controls.Add(this.optFemale);
             this.panel1.Controls.Add(this.optMale);
             this.panel1.Controls.Add(this.txtPhoneNumber);
@@ -90,44 +82,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1249, 150);
             this.panel1.TabIndex = 7;
-            // 
-            // lblCurrentSlot
-            // 
-            this.lblCurrentSlot.AutoSize = true;
-            this.lblCurrentSlot.Location = new System.Drawing.Point(763, 107);
-            this.lblCurrentSlot.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblCurrentSlot.Name = "lblCurrentSlot";
-            this.lblCurrentSlot.Size = new System.Drawing.Size(83, 17);
-            this.lblCurrentSlot.TabIndex = 18;
-            this.lblCurrentSlot.Text = "Current Slot";
-            // 
-            // lblMaxSlot
-            // 
-            this.lblMaxSlot.AutoSize = true;
-            this.lblMaxSlot.Location = new System.Drawing.Point(440, 107);
-            this.lblMaxSlot.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblMaxSlot.Name = "lblMaxSlot";
-            this.lblMaxSlot.Size = new System.Drawing.Size(61, 17);
-            this.lblMaxSlot.TabIndex = 17;
-            this.lblMaxSlot.Text = "Max Slot";
-            // 
-            // txtCurrentSlot
-            // 
-            this.txtCurrentSlot.Enabled = false;
-            this.txtCurrentSlot.Location = new System.Drawing.Point(879, 103);
-            this.txtCurrentSlot.Margin = new System.Windows.Forms.Padding(4);
-            this.txtCurrentSlot.Name = "txtCurrentSlot";
-            this.txtCurrentSlot.Size = new System.Drawing.Size(132, 22);
-            this.txtCurrentSlot.TabIndex = 16;
-            // 
-            // txtMaxSlot
-            // 
-            this.txtMaxSlot.Enabled = false;
-            this.txtMaxSlot.Location = new System.Drawing.Point(520, 103);
-            this.txtMaxSlot.Margin = new System.Windows.Forms.Padding(4);
-            this.txtMaxSlot.Name = "txtMaxSlot";
-            this.txtMaxSlot.Size = new System.Drawing.Size(132, 22);
-            this.txtMaxSlot.TabIndex = 15;
             // 
             // optFemale
             // 
@@ -181,7 +135,7 @@
             // 
             // txtCusName
             // 
-            this.txtCusName.Location = new System.Drawing.Point(160, 107);
+            this.txtCusName.Location = new System.Drawing.Point(160, 66);
             this.txtCusName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCusName.Name = "txtCusName";
             this.txtCusName.Size = new System.Drawing.Size(241, 22);
@@ -190,7 +144,7 @@
             // 
             // txtCusID
             // 
-            this.txtCusID.Location = new System.Drawing.Point(145, 25);
+            this.txtCusID.Location = new System.Drawing.Point(160, 18);
             this.txtCusID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCusID.Name = "txtCusID";
             this.txtCusID.Size = new System.Drawing.Size(123, 22);
@@ -235,7 +189,7 @@
             // lblCusName
             // 
             this.lblCusName.AutoSize = true;
-            this.lblCusName.Location = new System.Drawing.Point(45, 112);
+            this.lblCusName.Location = new System.Drawing.Point(45, 69);
             this.lblCusName.Name = "lblCusName";
             this.lblCusName.Size = new System.Drawing.Size(109, 17);
             this.lblCusName.TabIndex = 2;
@@ -425,10 +379,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView grdCustomer;
         private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.Label lblCurrentSlot;
-        private System.Windows.Forms.Label lblMaxSlot;
-        private System.Windows.Forms.TextBox txtCurrentSlot;
-        private System.Windows.Forms.TextBox txtMaxSlot;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.DataGridViewTextBoxColumn makt;
         private System.Windows.Forms.DataGridViewTextBoxColumn hoten;

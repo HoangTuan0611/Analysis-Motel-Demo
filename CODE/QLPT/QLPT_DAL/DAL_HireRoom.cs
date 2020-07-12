@@ -29,6 +29,18 @@ namespace QLPT_DAL
         {
             return cn.GetDataTable("Select makt from khachtro " + DieuKien);
         }
+        public string countcustomer(string DieuKien)
+        {
+            return cn.GetValue("Select COUNT(*) from thuephong where mapt = " + DieuKien);
+        }
+        public string maxslot(string DieuKien)
+        {
+            return cn.GetValue("Select sltoida from phongtro where mapt = " + DieuKien);
+        }
+        public void updatestatusroom_1(string DieuKien)
+        {
+            cn.ExcuteQuery("UPDATE phongtro SET trangthai ='hiring' where mapt = " + DieuKien);
+        }
     }
 
 }

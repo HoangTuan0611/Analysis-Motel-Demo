@@ -48,10 +48,10 @@ namespace QLPT
                     garbage = int.Parse(bus.getvalue2("tienrac", "'1'"));
                     discount = int.Parse(bus.getvalue2("giamtienlenphong", "'1'"));
                 }
-            cboChoseRoom.DataSource = bus.GetRoomID(" where trangthai = 'Đang cho thuê' ");
+                cboChoseRoom.DataSource = bus.GetRoomID(" where trangthai = 'hiring' ");
                 //cboChoseRoom.DataSource = bus.GetRoomID("");
                 cboChoseRoom.ValueMember = "mapt";
-                 cboChoseRoom.DisplayMember = "mapt";
+                cboChoseRoom.DisplayMember = "mapt";
             if (cboChoseRoom != null)
                 {
                     countcustomer = int.Parse(bus.countCustomer("'" + cboChoseRoom.Text + "'"));
@@ -63,7 +63,7 @@ namespace QLPT
                 txtRoomID.Text = bus.getvalue("mapt", "'" + cboChoseRoom.Text + "'");
                 txtFloor.Text = bus.getvalue("tang", "'" + cboChoseRoom.Text + "'");
                 txtType.Text = bus.getvalue("loai", "'" + cboChoseRoom.Text + "'");
-                dgthongtinkhachthue.DataSource = bus.CreateTable("where mapt='" + txtRoomID.Text + "'");
+                grdContract.DataSource = bus.CreateTable("where mapt='" + txtRoomID.Text + "'");
                 //txtWater.Text = (countcustomer * water).ToString();
                 txtWater.Text = water.ToString();
                 txtInternet.Text = internet.ToString();
@@ -93,7 +93,7 @@ namespace QLPT
                 txtRoomID.Text = bus.getvalue("mapt", "'" + cboChoseRoom.Text + "'");
                 txtFloor.Text = bus.getvalue("tang", "'" + cboChoseRoom.Text + "'");
                 txtType.Text = bus.getvalue("loai", "'" + cboChoseRoom.Text + "'");
-                dgthongtinkhachthue.DataSource = bus.CreateTable("where mapt='" + txtRoomID.Text + "'");
+                grdContract.DataSource = bus.CreateTable("where mapt='" + txtRoomID.Text + "'");
                 txtWater.Text = (countcustomer * water).ToString();
                 txtInternet.Text = internet.ToString();
                 if (txtType.Text == "A")

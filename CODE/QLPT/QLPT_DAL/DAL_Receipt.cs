@@ -22,7 +22,7 @@ namespace QLPT_DAL
         }
         public DataTable CreateTable(string DieuKien)
         {
-            return cn.GetDataTable("Select * from khachtro " + DieuKien);
+            return cn.GetDataTable("Select * from thuephong " + DieuKien);
         }
         public string check()
         {
@@ -34,7 +34,7 @@ namespace QLPT_DAL
         }
         public string countCustomer(string DieuKien)
         {
-            return cn.GetValue("Select COUNT(*) from khachtro where mapt = " + DieuKien);
+            return cn.GetValue("Select COUNT(*) from thuephong where mapt = " + DieuKien);
         }
         public string check2(string DieuKien1,string DieuKien2,string DieuKien3)
         {
