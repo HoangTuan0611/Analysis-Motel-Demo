@@ -27,7 +27,7 @@ namespace QLPT
         {
             tipSetting.Enabled = false;
             tipLogin.Enabled = true;
-            tipRoom.Enabled = false;
+            tipRoomManagement.Enabled = false;
             tipStastistic.Enabled = false;
             tipHireRoom.Enabled = false;
         }
@@ -35,7 +35,7 @@ namespace QLPT
         {
             tipSetting.Enabled = true;
             tipLogin.Enabled = true;
-            tipRoom.Enabled = true;
+            tipRoomManagement.Enabled = true;
             tipStastistic.Enabled = true;
             tipHireRoom.Enabled = true;
         }
@@ -84,17 +84,8 @@ namespace QLPT
             kt.ShowDialog();
         }
 
-        private void tipRoomManagement_Click(object sender, EventArgs e)
-        {
-            FrmRoom pt = new FrmRoom();
-            pt.ShowDialog();
-        }
 
-        private void tipCheckOut_Click(object sender, EventArgs e)
-        {
-            FrmCheckOut tp = new FrmCheckOut();
-            tp.ShowDialog();
-        }
+    
 
         private void tipSetting_Click(object sender, EventArgs e)
         {
@@ -102,11 +93,7 @@ namespace QLPT
             qd.ShowDialog();
         }
 
-        private void tipReceipt_Click(object sender, EventArgs e)
-        {
-            FrmReceipt tt = new FrmReceipt();
-            tt.ShowDialog();
-        }
+   
 
         private void tipStastistic_Click(object sender, EventArgs e)
         {
@@ -114,10 +101,30 @@ namespace QLPT
             tk.ShowDialog();
         }
 
-        private void toolStripButton1_Click(object sender, EventArgs e)
+    
+
+        private void hireRoomToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmHireRoom hr = new FrmHireRoom();
             hr.ShowDialog();
+        }
+
+        private void tipReceipt_Click_1(object sender, EventArgs e)
+        {
+            FrmReceipt tt = new FrmReceipt();
+            tt.ShowDialog();
+        }
+
+        private void tipCheckOut_Click_1(object sender, EventArgs e)
+        {
+            FrmCheckOut tp = new FrmCheckOut();
+            tp.ShowDialog();
+        }
+
+        private void tipRoomManagement_Click_1(object sender, EventArgs e)
+        {
+            FrmRoom pt = new FrmRoom();
+            pt.ShowDialog();
         }
     }
 }

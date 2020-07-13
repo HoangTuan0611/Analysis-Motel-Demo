@@ -32,15 +32,15 @@
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.tipLogin = new System.Windows.Forms.ToolStripButton();
             this.tipHireRoom = new System.Windows.Forms.ToolStripButton();
-            this.tipRoom = new System.Windows.Forms.ToolStripSplitButton();
-            this.tipRoomManagement = new System.Windows.Forms.ToolStripMenuItem();
+            this.tipRoomManagement = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripSplitButton();
+            this.hireRoomToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tipReceipt = new System.Windows.Forms.ToolStripMenuItem();
             this.tipCheckOut = new System.Windows.Forms.ToolStripMenuItem();
             this.tipStastistic = new System.Windows.Forms.ToolStripButton();
             this.tipSetting = new System.Windows.Forms.ToolStripButton();
             this.lbltaikhoan = new System.Windows.Forms.Label();
             this.lblUserName = new System.Windows.Forms.Label();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,7 +50,7 @@
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tipLogin,
             this.tipHireRoom,
-            this.tipRoom,
+            this.tipRoomManagement,
             this.toolStripButton1,
             this.tipStastistic,
             this.tipSetting});
@@ -79,41 +79,47 @@
             this.tipHireRoom.Text = "Customer";
             this.tipHireRoom.Click += new System.EventHandler(this.tipHireRoom_Click);
             // 
-            // tipRoom
-            // 
-            this.tipRoom.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tipRoomManagement,
-            this.tipReceipt,
-            this.tipCheckOut});
-            this.tipRoom.Image = ((System.Drawing.Image)(resources.GetObject("tipRoom.Image")));
-            this.tipRoom.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tipRoom.Name = "tipRoom";
-            this.tipRoom.Size = new System.Drawing.Size(88, 24);
-            this.tipRoom.Text = "Room";
-            // 
             // tipRoomManagement
             // 
             this.tipRoomManagement.Image = ((System.Drawing.Image)(resources.GetObject("tipRoomManagement.Image")));
+            this.tipRoomManagement.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tipRoomManagement.Name = "tipRoomManagement";
-            this.tipRoomManagement.Size = new System.Drawing.Size(216, 26);
-            this.tipRoomManagement.Text = "Room Management";
-            this.tipRoomManagement.Click += new System.EventHandler(this.tipRoomManagement_Click);
+            this.tipRoomManagement.Size = new System.Drawing.Size(73, 24);
+            this.tipRoomManagement.Text = "Room";
+            this.tipRoomManagement.Click += new System.EventHandler(this.tipRoomManagement_Click_1);
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.hireRoomToolStripMenuItem,
+            this.tipReceipt,
+            this.tipCheckOut});
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(116, 24);
+            this.toolStripButton1.Text = "HireRoom";
+            // 
+            // hireRoomToolStripMenuItem
+            // 
+            this.hireRoomToolStripMenuItem.Name = "hireRoomToolStripMenuItem";
+            this.hireRoomToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.hireRoomToolStripMenuItem.Text = "HireRoom";
+            this.hireRoomToolStripMenuItem.Click += new System.EventHandler(this.hireRoomToolStripMenuItem_Click);
             // 
             // tipReceipt
             // 
-            this.tipReceipt.Image = ((System.Drawing.Image)(resources.GetObject("tipReceipt.Image")));
             this.tipReceipt.Name = "tipReceipt";
             this.tipReceipt.Size = new System.Drawing.Size(216, 26);
             this.tipReceipt.Text = "Receipt";
-            this.tipReceipt.Click += new System.EventHandler(this.tipReceipt_Click);
+            this.tipReceipt.Click += new System.EventHandler(this.tipReceipt_Click_1);
             // 
             // tipCheckOut
             // 
-            this.tipCheckOut.Image = ((System.Drawing.Image)(resources.GetObject("tipCheckOut.Image")));
             this.tipCheckOut.Name = "tipCheckOut";
             this.tipCheckOut.Size = new System.Drawing.Size(216, 26);
-            this.tipCheckOut.Text = "Check Out";
-            this.tipCheckOut.Click += new System.EventHandler(this.tipCheckOut_Click);
+            this.tipCheckOut.Text = "Checkout";
+            this.tipCheckOut.Click += new System.EventHandler(this.tipCheckOut_Click_1);
             // 
             // tipStastistic
             // 
@@ -152,15 +158,6 @@
             this.lblUserName.TabIndex = 2;
             this.lblUserName.Text = "User Account";
             // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(101, 24);
-            this.toolStripButton1.Text = "HireRoom";
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
-            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -191,13 +188,13 @@
         private System.Windows.Forms.ToolStripButton tipLogin;
         private System.Windows.Forms.ToolStripButton tipHireRoom;
         private System.Windows.Forms.ToolStripButton tipStastistic;
-        private System.Windows.Forms.ToolStripSplitButton tipRoom;
-        private System.Windows.Forms.ToolStripMenuItem tipRoomManagement;
-        private System.Windows.Forms.ToolStripMenuItem tipReceipt;
-        private System.Windows.Forms.ToolStripMenuItem tipCheckOut;
         private System.Windows.Forms.Label lbltaikhoan;
         private System.Windows.Forms.Label lblUserName;
         private System.Windows.Forms.ToolStripButton tipSetting;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripSplitButton toolStripButton1;
+        private System.Windows.Forms.ToolStripMenuItem hireRoomToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tipReceipt;
+        private System.Windows.Forms.ToolStripMenuItem tipCheckOut;
+        private System.Windows.Forms.ToolStripButton tipRoomManagement;
     }
 }
