@@ -346,7 +346,7 @@
             this.MaximizeBox = false;
             this.Name = "FrmCustomer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Hire Room";
+            this.Text = "Customer";
             this.Load += new System.EventHandler(this.FrmHireRoom_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

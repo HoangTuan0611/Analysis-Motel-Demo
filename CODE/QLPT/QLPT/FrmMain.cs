@@ -25,6 +25,7 @@ namespace QLPT
         }
         void LockConditon()
         {
+            toolStripButton1.Enabled = false;
             tipSetting.Enabled = false;
             tipLogin.Enabled = true;
             tipRoomManagement.Enabled = false;
@@ -33,6 +34,7 @@ namespace QLPT
         }
         void OpenCondition()
         {
+            toolStripButton1.Enabled = true;
             tipSetting.Enabled = true;
             tipLogin.Enabled = true;
             tipRoomManagement.Enabled = true;
