@@ -18,6 +18,10 @@ namespace QLPT_BUS
         {
             sql.AddData(et);
         }
+        public void UpdateRoomStatus(string Condition)
+        {
+            sql.UpdateRoomStatus(Condition);
+        }
         public DataTable CreateTable(string Condition)
         {
             return sql.CreateTable(Condition);

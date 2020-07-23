@@ -41,6 +41,10 @@ namespace QLPT_DAL
         {
             cn.ExcuteQuery("UPDATE phongtro SET trangthai ='hiring' where mapt = " + DieuKien);
         }
+        public void UpdateRoomStatus(string DieuKien)
+        {
+            cn.ExcuteQuery("UPDATE phongtro SET trangthai ='empty' where mapt = " + DieuKien);
+        }
     }
 
 }

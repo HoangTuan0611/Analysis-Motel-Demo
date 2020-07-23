@@ -51,6 +51,7 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btncancel = new System.Windows.Forms.Button();
             this.btnadd = new System.Windows.Forms.Button();
+            this.btnCheckout = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -261,6 +262,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.btnCheckout);
             this.groupBox3.Controls.Add(this.btncancel);
             this.groupBox3.Controls.Add(this.btnadd);
             this.groupBox3.Location = new System.Drawing.Point(5, 165);
@@ -291,6 +293,17 @@
             this.btnadd.Text = "Add";
             this.btnadd.UseVisualStyleBackColor = true;
             this.btnadd.Click += new System.EventHandler(this.btnadd_Click);
+            // 
+            // btnCheckout
+            // 
+            this.btnCheckout.Location = new System.Drawing.Point(311, 22);
+            this.btnCheckout.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCheckout.Name = "btnCheckout";
+            this.btnCheckout.Size = new System.Drawing.Size(75, 23);
+            this.btnCheckout.TabIndex = 2;
+            this.btnCheckout.Text = "Checkout";
+            this.btnCheckout.UseVisualStyleBackColor = true;
+            this.btnCheckout.Click += new System.EventHandler(this.btnCheckout_Click);
             // 
             // FrmHireRoom
             // 
@@ -342,5 +355,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ngaykt;
         private System.Windows.Forms.CheckBox ckbemptyroom;
         private System.Windows.Forms.Button btncancel;
+        private System.Windows.Forms.Button btnCheckout;
     }
 }
