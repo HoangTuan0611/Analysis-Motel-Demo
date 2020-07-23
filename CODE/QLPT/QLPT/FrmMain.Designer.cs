@@ -36,7 +36,6 @@
             this.toolStripButton1 = new System.Windows.Forms.ToolStripSplitButton();
             this.hireRoomToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tipReceipt = new System.Windows.Forms.ToolStripMenuItem();
-            this.tipCheckOut = new System.Windows.Forms.ToolStripMenuItem();
             this.tipStastistic = new System.Windows.Forms.ToolStripButton();
             this.tipSetting = new System.Windows.Forms.ToolStripButton();
             this.lbltaikhoan = new System.Windows.Forms.Label();
@@ -92,8 +91,7 @@
             // 
             this.toolStripButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.hireRoomToolStripMenuItem,
-            this.tipReceipt,
-            this.tipCheckOut});
+            this.tipReceipt});
             this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
@@ -113,13 +111,6 @@
             this.tipReceipt.Size = new System.Drawing.Size(216, 26);
             this.tipReceipt.Text = "Receipt";
             this.tipReceipt.Click += new System.EventHandler(this.tipReceipt_Click_1);
-            // 
-            // tipCheckOut
-            // 
-            this.tipCheckOut.Name = "tipCheckOut";
-            this.tipCheckOut.Size = new System.Drawing.Size(216, 26);
-            this.tipCheckOut.Text = "Checkout";
-            this.tipCheckOut.Click += new System.EventHandler(this.tipCheckOut_Click_1);
             // 
             // tipStastistic
             // 
@@ -194,7 +185,6 @@
         private System.Windows.Forms.ToolStripSplitButton toolStripButton1;
         private System.Windows.Forms.ToolStripMenuItem hireRoomToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tipReceipt;
-        private System.Windows.Forms.ToolStripMenuItem tipCheckOut;
         private System.Windows.Forms.ToolStripButton tipRoomManagement;
     }
 }

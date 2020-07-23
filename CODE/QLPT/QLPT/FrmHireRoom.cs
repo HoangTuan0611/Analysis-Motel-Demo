@@ -252,5 +252,18 @@ namespace QLPT
             //txtmaxslot.Text = bus.maxslot("'" + cbroom.Text + "'");
             //txtcurrentslot.Text = bus.countcustomer("'" + cbroom.Text + "'");
         }
+
+        private void btnCheckout_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                bus.UpdateRoomStatus("'" + cbroom.Text + "'");
+                MessageBox.Show("Checkout Succsesful", "Message");
+            }
+            catch
+            {
+                MessageBox.Show("You have completed checkout", "Message");
+            }
+        }
     }
 }

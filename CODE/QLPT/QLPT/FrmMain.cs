@@ -117,11 +117,6 @@ namespace QLPT
             tt.ShowDialog();
         }
 
-        private void tipCheckOut_Click_1(object sender, EventArgs e)
-        {
-            FrmCheckOut tp = new FrmCheckOut();
-            tp.ShowDialog();
-        }
 
         private void tipRoomManagement_Click_1(object sender, EventArgs e)
         {
